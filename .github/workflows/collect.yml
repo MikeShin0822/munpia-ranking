@@ -4,6 +4,9 @@ on:
   schedule:
     - cron: '10 0 * * *' # 매일 09:10 KST
   workflow_dispatch:
+  push:
+    paths:
+      - '.automation/run-collect.txt'
 
 permissions:
   contents: write
