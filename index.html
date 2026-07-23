@@ -1,0 +1,108 @@
+<!doctype html>
+<html lang="ko">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta name="description" content="문피아 베스트 제목을 매일 수집하고 제목 키워드의 일간·주간·월간 흐름을 분석합니다.">
+  <title>문피아 제목 레이더</title>
+  <link rel="stylesheet" href="./styles.css">
+</head>
+<body>
+  <header class="site-header">
+    <a class="brand" href="#">
+      <span class="brand-mark">文</span>
+      <span><b>문피아 제목 레이더</b><small>Ranking title archive & insight</small></span>
+    </a>
+    <nav class="main-nav" aria-label="주요 메뉴">
+      <button class="nav-button active" data-view="titles">오늘의 제목</button>
+      <button class="nav-button" data-view="insights">통계 · 인사이트</button>
+    </nav>
+    <div id="updated-at" class="updated-at"></div>
+  </header>
+
+  <main>
+    <section id="titles-view" class="view-shell">
+      <div class="hero compact-hero">
+        <div>
+          <p class="eyebrow">TITLE ARCHIVE</p>
+          <h1>설명 없이, 제목만 빠르게.</h1>
+          <p>날짜와 베스트 종류를 고르면 매일 수집된 순위 제목을 1위부터 그대로 확인할 수 있습니다.</p>
+        </div>
+        <label class="date-control">기준일
+          <select id="title-date"></select>
+        </label>
+      </div>
+
+      <div id="category-tabs" class="category-tabs" aria-label="베스트 종류"></div>
+
+      <section class="panel title-panel">
+        <div class="panel-header">
+          <div><h2 id="titles-heading">무료 베스트</h2><p id="titles-meta"></p></div>
+          <label class="search-box"><span>검색</span><input id="title-search" type="search" placeholder="제목 안 단어 검색"></label>
+        </div>
+        <div id="title-list" class="title-list"></div>
+      </section>
+    </section>
+
+    <section id="insights-view" class="view-shell" hidden>
+      <div class="hero insights-hero">
+        <div>
+          <p class="eyebrow">TITLE SIGNALS</p>
+          <h1>제목 유행을 숫자로 읽습니다.</h1>
+          <p>등장 횟수와 순위 가중치를 함께 계산해 어떤 단어가 더 자주, 더 높은 곳에 등장했는지 보여줍니다.</p>
+        </div>
+        <div class="insight-controls">
+          <label class="date-control">기준일<select id="insight-date"></select></label>
+          <div class="period-switch" aria-label="분석 기간">
+            <button class="period-button active" data-period="day">일간</button>
+            <button class="period-button" data-period="week">주간</button>
+            <button class="period-button" data-period="month">월간</button>
+          </div>
+        </div>
+      </div>
+
+      <div class="filter-strip">
+        <div><span class="filter-label">분석 대상</span><div id="insight-categories" class="check-chips"></div></div>
+        <p id="period-label"></p>
+      </div>
+
+      <div class="stat-grid">
+        <article class="stat-card"><span>분석 제목</span><strong id="stat-total">0</strong><small>중복 순위 포함</small></article>
+        <article class="stat-card standout"><span>상위 신호</span><strong id="stat-keyword">—</strong><small id="stat-keyword-sub">데이터 없음</small></article>
+        <article class="stat-card"><span>고유 제목</span><strong id="stat-unique">0</strong><small>동일 작품 중복 제거</small></article>
+        <article class="stat-card"><span>수집 일수</span><strong id="stat-days">0</strong><small>선택 기간 내 실제 데이터</small></article>
+      </div>
+
+      <div class="insight-grid">
+        <section class="panel keyword-panel">
+          <div class="panel-header"><div><p class="eyebrow">RANK-WEIGHTED</p><h2>높은 순위를 차지한 단어</h2></div><span class="formula">순위점수 = 31 − 순위</span></div>
+          <div id="keyword-bars" class="bar-list"></div>
+        </section>
+
+        <section class="panel phrase-panel">
+          <div class="panel-header"><div><p class="eyebrow">REPEATED PHRASES</p><h2>반복되는 제목 조합</h2></div></div>
+          <div id="phrase-list" class="phrase-list"></div>
+          <div class="note-card"><b>읽는 법</b><p>빈도는 노출 규모를, 평균 순위와 순위점수는 상위권 장악력을 보여줍니다. 데이터가 쌓이면 일간·주간·월간 값이 자연스럽게 달라집니다.</p></div>
+        </section>
+      </div>
+
+      <section class="panel search-insight-panel">
+        <div class="panel-header search-insight-header">
+          <div><p class="eyebrow">KEYWORD LOOKUP</p><h2>궁금한 단어를 직접 조회</h2></div>
+          <form id="keyword-form" class="keyword-form"><input id="keyword-input" value="미국" placeholder="예: 미국, 집착, 천재"><button>분석</button></form>
+        </div>
+        <div class="keyword-summary">
+          <div><span id="keyword-result-title">“미국” 분석</span><strong id="keyword-result-count">0회</strong></div>
+          <div><span>상위권 영향력</span><strong id="keyword-result-score">순위점수 0</strong></div>
+          <div><span>순위 위치</span><strong id="keyword-result-rank">평균 순위 —</strong></div>
+        </div>
+        <div id="keyword-sparkline" class="sparkline-wrap"></div>
+        <div id="keyword-matches" class="match-list"></div>
+      </section>
+    </section>
+  </main>
+
+  <footer><p>문피아 공개 베스트 페이지의 제목을 연구·탐색 목적으로 정리합니다. 순위는 수집 시점의 스냅샷입니다.</p></footer>
+  <script type="module" src="./app.js"></script>
+</body>
+</html>
