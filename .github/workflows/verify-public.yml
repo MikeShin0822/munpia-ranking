@@ -1,0 +1,54 @@
+name: Verify public Munpia dashboard
+
+on:
+  workflow_dispatch:
+  push:
+    paths:
+      - '.automation/verify-public.txt'
+
+permissions:
+  contents: write
+
+jobs:
+  verify:
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v4
+      - name: Verify public site and latest data
+        shell: bash
+        run: |
+          set -euo pipefail
+          expected_date=$(TZ=Asia/Seoul date +%F)
+          checked_at=$(TZ=Asia/Seoul date --iso-8601=seconds)
+          site='https://mikeshin0822.github.io/munpia-ranking/'
+          data='https://raw.githubusercontent.com/MikeShin0822/munpia-ranking/main/data/rankings.json'
+          site_code=$(curl -L -sS -o /tmp/site.html -w '%{http_code}' "$site")
+          data_code=$(curl -L -sS -o /tmp/rankings.json -w '%{http_code}' "$data")
+          site_ok=false
+          data_ok=false
+          grep -q '문피아 제목 레이더' /tmp/site.html && site_ok=true
+          grep -q "\"date\":\"$expected_date\"" /tmp/rankings.json && data_ok=true
+          mkdir -p data
+          cat > data/public-verification.json <<EOF
+          {
+            "checkedAt": "$checked_at",
+            "expectedDate": "$expected_date",
+            "siteUrl": "$site",
+            "siteStatus": $site_code,
+            "siteContentOk": $site_ok,
+            "dataUrl": "$data",
+            "dataStatus": $data_code,
+            "latestDatePresent": $data_ok
+          }
+          EOF
+          test "$site_code" = '200'
+          test "$data_code" = '200'
+          test "$site_ok" = 'true'
+          test "$data_ok" = 'true'
+      - name: Commit verification result
+        run: |
+          git config user.name "github-actions[bot]"
+          git config user.email "41898282+github-actions[bot]@users.noreply.github.com"
+          git add data/public-verification.json
+          git commit -m "ci: record public dashboard verification"
+          git push
