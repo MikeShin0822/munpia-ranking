@@ -1,0 +1,29 @@
+name: Verify published Munpia dashboard
+
+on:
+  pull_request:
+    branches: [main]
+    paths:
+      - '.automation/pages-check/**'
+
+permissions:
+  contents: read
+
+jobs:
+  verify:
+    runs-on: ubuntu-latest
+    steps:
+      - name: Verify public site and latest data
+        shell: bash
+        run: |
+          set -u
+          expected_date=$(TZ=Asia/Seoul date +%F)
+          site='https://mikeshin0822.github.io/munpia-ranking/'
+          data='https://raw.githubusercontent.com/MikeShin0822/munpia-ranking/main/data/rankings.json'
+          site_code=$(curl -L -sS -o site.html -w '%{http_code}' "$site")
+          data_code=$(curl -L -sS -o live-rankings.json -w '%{http_code}' "$data")
+          echo "site_status=$site_code data_status=$data_code expected_date=$expected_date"
+          test "$site_code" = '200'
+          test "$data_code" = '200'
+          grep -q '문피아 제목 레이더' site.html
+          grep -q "\"date\":\"$expected_date\"" live-rankings.json
