@@ -12,6 +12,13 @@
 
 매일 오전 **09:10 KST**에 GitHub Actions가 각 목록의 1~30위를 수집해 `data/rankings.json`에 날짜별 스냅샷으로 저장합니다.
 
+## 공개 사이트
+
+- https://mikeshin0822.github.io/munpia-ranking/
+- 정적 화면은 `gh-pages` 브랜치에서 게시합니다.
+- 화면은 실행할 때마다 `main/data/rankings.json`의 최신 데이터를 우선 불러오므로, 매일 수집된 순위는 사이트 재배포 없이 반영됩니다.
+- 원격 데이터 접근이 실패하면 게시 브랜치에 포함된 로컬 데이터로 자동 전환합니다.
+
 ## 화면
 
 ### 오늘의 제목
