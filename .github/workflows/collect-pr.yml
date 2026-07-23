@@ -17,16 +17,21 @@ jobs:
       - uses: actions/setup-node@v4
         with:
           node-version: 20
-      - name: Capture Munpia page markup
+      - name: Capture Munpia AJAX responses
         continue-on-error: true
         shell: bash
         run: |
-          curl -L -sS --max-time 30 \
-            -A 'Mozilla/5.0 (compatible; MunpiaTitleArchive/1.0)' \
-            -H 'accept-language: ko-KR,ko;q=0.9' \
-            'https://mm.munpia.com/?action=list&menu=best&section=today' \
-            -o free-page1.html
-          grep -Eo 'href=["'"'][^"'"']+["'"']' free-page1.html > hrefs.txt || true
+          set -u
+          sections=(today plsa.eachtoday plsa.exclusive-eachtoday prefer plsa.bestseller)
+          for section in "${sections[@]}"; do
+            safe=${section//./_}
+            curl -L -sS --max-time 30 \
+              -A 'Mozilla/5.0 (compatible; MunpiaTitleArchive/1.0)' \
+              -H 'accept-language: ko-KR,ko;q=0.9' \
+              "https://mm.munpia.com/?ajx=1&menu=best&action=list&section=${section}&keyword=&page=1" \
+              -o "ajax-${safe}-1.json" || true
+            sleep 2
+          done
       - name: Collect rankings
         id: collect
         continue-on-error: true
@@ -48,6 +53,5 @@ jobs:
             data/rankings.json
             collect.log
             test.log
-            free-page1.html
-            hrefs.txt
+            ajax-*.json
           if-no-files-found: error
