@@ -1,0 +1,30 @@
+name: Pages smoke check
+
+on:
+  pull_request:
+    branches: [main]
+
+permissions:
+  contents: read
+
+jobs:
+  check:
+    runs-on: ubuntu-latest
+    steps:
+      - name: Verify public site
+        shell: bash
+        run: |
+          set -u
+          url="https://mikeshin0822.github.io/munpia-ranking/"
+          for attempt in {1..9}; do
+            code=$(curl -L -sS -o /tmp/site.html -w '%{http_code}' "$url" || true)
+            echo "attempt=$attempt status=$code"
+            if [ "$code" = "200" ] && grep -q "문피아 제목 레이더" /tmp/site.html; then
+              echo "Pages site is live."
+              exit 0
+            fi
+            sleep 10
+          done
+          echo "Pages site did not return the expected HTML."
+          cat /tmp/site.html || true
+          exit 1
