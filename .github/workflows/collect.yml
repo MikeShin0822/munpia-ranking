@@ -2,7 +2,7 @@ name: Collect Munpia rankings
 
 on:
   schedule:
-    - cron: '10 0 * * *' # 매일 09:10 KST
+    - cron: '10 22 * * *' # 매일 07:10 KST
   workflow_dispatch:
   push:
     paths:
@@ -18,7 +18,7 @@ jobs:
       - uses: actions/checkout@v4
       - uses: actions/setup-node@v4
         with:
-          node-version: 20
+          node-version: 24
       - name: Collect rankings
         run: npm run collect
       - name: Validate data and analytics
