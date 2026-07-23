@@ -22,7 +22,7 @@ jobs:
         shell: bash
         run: |
           set -u
-          sections=(today plsa.eachtoday plsa.exclusive-eachtoday prefer plsa.bestseller)
+          sections=(today plsa.eachtoday plsa.exclusive-eachtoday plsa.eachtoday.nv exclusive-eachtoday prefer plsa.bestseller)
           for section in "${sections[@]}"; do
             safe=${section//./_}
             curl -L -sS --max-time 30 \
@@ -32,6 +32,11 @@ jobs:
               -o "ajax-${safe}-1.json" || true
             sleep 2
           done
+          curl -L -sS --max-time 30 \
+            -A 'Mozilla/5.0 (compatible; MunpiaTitleArchive/1.0)' \
+            -H 'accept-language: ko-KR,ko;q=0.9' \
+            'https://www.munpia.com/best/plsa.exclusive-eachtoday' \
+            -o desktop-exclusive.html || true
       - name: Collect rankings
         id: collect
         continue-on-error: true
@@ -54,4 +59,5 @@ jobs:
             collect.log
             test.log
             ajax-*.json
+            desktop-exclusive.html
           if-no-files-found: error
