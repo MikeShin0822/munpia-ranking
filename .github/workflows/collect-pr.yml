@@ -16,7 +16,7 @@ jobs:
       - uses: actions/checkout@v4
       - uses: actions/setup-node@v4
         with:
-          node-version: 20
+          node-version: 24
       - name: Collect rankings
         id: collect
         continue-on-error: true
@@ -29,6 +29,21 @@ jobs:
         continue-on-error: true
         shell: bash
         run: npm test 2>&1 | tee test.log
+      - name: Verify published dashboard and live data
+        if: always()
+        shell: bash
+        run: |
+          set -u
+          expected_date=$(TZ=Asia/Seoul date +%F)
+          site='https://mikeshin0822.github.io/munpia-ranking/'
+          data='https://raw.githubusercontent.com/MikeShin0822/munpia-ranking/main/data/rankings.json'
+          site_code=$(curl -L -sS -o site.html -w '%{http_code}' "$site")
+          data_code=$(curl -L -sS -o live-rankings.json -w '%{http_code}' "$data")
+          echo "site_status=$site_code data_status=$data_code expected_date=$expected_date"
+          test "$site_code" = '200'
+          test "$data_code" = '200'
+          grep -q '문피아 제목 레이더' site.html
+          grep -q "\"date\":\"$expected_date\"" live-rankings.json
       - name: Upload ranking snapshot and diagnostics
         if: always()
         uses: actions/upload-artifact@v4
@@ -38,4 +53,6 @@ jobs:
             data/rankings.json
             collect.log
             test.log
+            site.html
+            live-rankings.json
           if-no-files-found: error
