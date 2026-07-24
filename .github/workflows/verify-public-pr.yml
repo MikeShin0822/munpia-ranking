@@ -1,0 +1,30 @@
+name: Verify public dashboard PR
+
+on:
+  pull_request:
+    branches: [main]
+    paths:
+      - '.automation/verify-public-pr.txt'
+
+permissions:
+  contents: read
+
+jobs:
+  verify:
+    runs-on: ubuntu-latest
+    steps:
+      - name: Verify site and live data
+        shell: bash
+        run: |
+          set -euo pipefail
+          expected_date='2026-07-25'
+          site='https://mikeshin0822.github.io/munpia-ranking/'
+          data='https://raw.githubusercontent.com/MikeShin0822/munpia-ranking/main/data/rankings.json'
+          site_code=$(curl -L -sS -o /tmp/site.html -w '%{http_code}' "$site")
+          data_code=$(curl -L -sS -o /tmp/rankings.json -w '%{http_code}' "$data")
+          echo "site_status=$site_code data_status=$data_code expected_date=$expected_date"
+          test "$site_code" = '200'
+          test "$data_code" = '200'
+          grep -q '문피아 제목 레이더' /tmp/site.html
+          grep -Eq '"date"[[:space:]]*:[[:space:]]*"2026-07-25"' /tmp/rankings.json
+          echo 'Published dashboard and latest data verified.'
