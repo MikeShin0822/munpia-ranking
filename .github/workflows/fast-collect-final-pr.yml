@@ -1,0 +1,147 @@
+name: Fast Munpia collection result
+
+on:
+  pull_request:
+    branches: [main]
+
+permissions:
+  contents: read
+
+jobs:
+  collect:
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v4
+      - uses: actions/setup-node@v4
+        with:
+          node-version: 24
+      - name: Fetch ranking endpoints in parallel
+        shell: bash
+        run: |
+          set -u
+          mkdir -p raw
+          ua='Mozilla/5.0 (compatible; MunpiaTitleArchive/1.2; +https://github.com/MikeShin0822/munpia-ranking)'
+          for section in today plsa.eachtoday prefer plsa.bestseller; do
+            safe=${section//./_}
+            for page in 1 2 3; do
+              url="https://mm.munpia.com/?ajx=1&menu=best&action=list&section=${section}&keyword=&page=${page}"
+              (curl -L -sS --fail --connect-timeout 10 --max-time 45 -A "$ua" -H 'accept-language: ko-KR,ko;q=0.9' "$url" -o "raw/${safe}-${page}.json" || true) &
+            done
+          done
+          (curl -L -sS --fail --connect-timeout 10 --max-time 45 -A "$ua" -H 'accept-language: ko-KR,ko;q=0.9' 'https://www.munpia.com/best/plsa.exclusive-eachtoday' -o raw/exclusive.html || true) &
+          wait
+      - name: Build today snapshot from raw responses
+        shell: python
+        run: |
+          import datetime as dt
+          import html
+          import json
+          import re
+          from pathlib import Path
+          from zoneinfo import ZoneInfo
+
+          root = Path('.')
+          raw = root / 'raw'
+          data_path = root / 'data' / 'rankings.json'
+          now = dt.datetime.now(ZoneInfo('Asia/Seoul'))
+          date = now.strftime('%Y-%m-%d')
+          iso = now.isoformat(timespec='seconds')
+
+          def clean(value):
+              value = html.unescape(str(value or ''))
+              value = re.sub(r'<[^>]+>', ' ', value)
+              value = re.sub(r'^\s*(NEW|완결|독점|공모전)\s*', '', value, flags=re.I)
+              return re.sub(r'\s+', ' ', value).strip()
+
+          def ajax(section, label):
+              titles, seen, errors = [], set(), []
+              safe = section.replace('.', '_')
+              collection_date = None
+              for page in range(1, 4):
+                  p = raw / f'{safe}-{page}.json'
+                  if not p.exists() or p.stat().st_size == 0:
+                      errors.append(f'{page}페이지 응답 없음')
+                      continue
+                  try:
+                      payload = json.loads(p.read_text(encoding='utf-8'))
+                      collection_date = collection_date or payload.get('get_date')
+                      entries = payload.get('list') or []
+                      if not entries:
+                          errors.append(f'{page}페이지 작품 없음')
+                      for entry in entries:
+                          title = clean(entry.get('nvTitle'))
+                          if title and title not in seen:
+                              seen.add(title); titles.append(title)
+                  except Exception as exc:
+                      errors.append(f'{page}페이지 해석 실패: {exc}')
+              return {
+                  'label': label,
+                  'collectedAt': iso,
+                  'collectionDate': collection_date,
+                  'status': 'complete' if len(titles) >= 30 else ('partial' if titles else 'failed'),
+                  'source': f'https://mm.munpia.com/?ajx=1&menu=best&action=list&section={section}&keyword=&page=1',
+                  **({'error': '; '.join(errors)} if errors else {}),
+                  'titles': titles[:30]
+              }
+
+          def exclusive():
+              p = raw / 'exclusive.html'
+              titles, seen, errors = [], set(), []
+              if p.exists() and p.stat().st_size:
+                  text = p.read_text(encoding='utf-8', errors='ignore')
+                  pattern = re.compile(r'<span\b[^>]*class=["\'][^"\']*\btitle-wrap\b[^"\']*["\'][^>]*>([\s\S]*?)</span>', re.I)
+                  for match in pattern.finditer(text):
+                      title = clean(match.group(1))
+                      if title and title not in seen and 2 <= len(title) <= 100:
+                          seen.add(title); titles.append(title)
+                      if len(titles) >= 30:
+                          break
+              else:
+                  errors.append('데스크톱 페이지 응답 없음')
+              if not titles and not errors:
+                  errors.append('데스크톱 페이지에서 작품을 찾지 못했습니다.')
+              return {
+                  'label': '선독점 베스트',
+                  'collectedAt': iso,
+                  'collectionDate': None,
+                  'status': 'complete' if len(titles) >= 30 else ('partial' if titles else 'failed'),
+                  'source': 'https://www.munpia.com/best/plsa.exclusive-eachtoday',
+                  **({'error': '; '.join(errors)} if errors else {}),
+                  'titles': titles[:30]
+              }
+
+          rankings = {
+              'free_today': ajax('today', '무료 베스트'),
+              'paid_today': ajax('plsa.eachtoday', '유료 베스트'),
+              'exclusive_today': exclusive(),
+              'favorites': ajax('prefer', '선호작 베스트'),
+              'bestseller': ajax('plsa.bestseller', '베스트셀러'),
+          }
+          data = json.loads(data_path.read_text(encoding='utf-8'))
+          snapshot = next((item for item in data['snapshots'] if item['date'] == date), None)
+          if snapshot is None:
+              snapshot = {'date': date, 'rankings': {}}
+              data['snapshots'].append(snapshot)
+          snapshot['rankings'] = rankings
+          data['snapshots'].sort(key=lambda item: item['date'])
+          data['updatedAt'] = iso
+          data.setdefault('collectionLog', []).append({
+              'date': date,
+              'message': ' · '.join(f"{value['label']} {len(value['titles'])}개" + (f" ({value.get('error')})" if value.get('error') else '') for value in rankings.values())
+          })
+          data['collectionLog'] = data['collectionLog'][-90:]
+          data_path.write_text(json.dumps(data, ensure_ascii=False, indent=2) + '\n', encoding='utf-8')
+          print(date, {key: len(value['titles']) for key, value in rankings.items()})
+      - name: Generate daily report
+        run: node scripts/report.mjs
+      - name: Validate data and analytics
+        run: npm test
+      - name: Upload final data
+        uses: actions/upload-artifact@v4
+        with:
+          name: munpia-final-2026-07-26
+          path: |
+            data/rankings.json
+            data/latest-report.json
+          if-no-files-found: error
+          retention-days: 1
