@@ -27,7 +27,7 @@ jobs:
           site_ok=false
           data_ok=false
           grep -q '문피아 제목 레이더' /tmp/site.html && site_ok=true
-          grep -q "\"date\":\"$expected_date\"" /tmp/rankings.json && data_ok=true
+          grep -q "\"date\": \"$expected_date\"" /tmp/rankings.json && data_ok=true
           mkdir -p data
           cat > data/public-verification.json <<EOF
           {
