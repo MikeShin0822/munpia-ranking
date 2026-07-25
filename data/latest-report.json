@@ -1,5 +1,5 @@
 {
-  "generatedAt": "2026-07-26T07:41:03+09:00",
+  "generatedAt": "2026-07-26T08:05:19+09:00",
   "date": "2026-07-26",
   "previousDate": "2026-07-25",
   "categories": {
@@ -7,7 +7,7 @@
       "label": "무료 베스트",
       "status": "complete",
       "count": 30,
-      "collectedAt": "2026-07-26T07:41:03+09:00",
+      "collectedAt": "2026-07-26T08:05:19+09:00",
       "collectionDate": "2026072607",
       "source": "https://mm.munpia.com/?ajx=1&menu=best&action=list&section=today&keyword=&page=1",
       "error": null,
@@ -140,7 +140,7 @@
       "label": "유료 베스트",
       "status": "complete",
       "count": 30,
-      "collectedAt": "2026-07-26T07:41:03+09:00",
+      "collectedAt": "2026-07-26T08:05:19+09:00",
       "collectionDate": "2026072607",
       "source": "https://mm.munpia.com/?ajx=1&menu=best&action=list&section=plsa.eachtoday&keyword=&page=1",
       "error": null,
@@ -313,7 +313,7 @@
       "label": "선독점 베스트",
       "status": "complete",
       "count": 30,
-      "collectedAt": "2026-07-26T07:41:03+09:00",
+      "collectedAt": "2026-07-26T08:05:19+09:00",
       "collectionDate": null,
       "source": "https://www.munpia.com/best/plsa.exclusive-eachtoday",
       "error": null,
@@ -486,7 +486,7 @@
       "label": "선호작 베스트",
       "status": "complete",
       "count": 30,
-      "collectedAt": "2026-07-26T07:41:03+09:00",
+      "collectedAt": "2026-07-26T08:05:19+09:00",
       "collectionDate": "2026072600",
       "source": "https://mm.munpia.com/?ajx=1&menu=best&action=list&section=prefer&keyword=&page=1",
       "error": null,
@@ -593,7 +593,7 @@
       "label": "베스트셀러",
       "status": "complete",
       "count": 30,
-      "collectedAt": "2026-07-26T07:41:03+09:00",
+      "collectedAt": "2026-07-26T08:05:19+09:00",
       "collectionDate": "2026072600",
       "source": "https://mm.munpia.com/?ajx=1&menu=best&action=list&section=plsa.bestseller&keyword=&page=1",
       "error": null,
@@ -1687,6 +1687,10 @@
     },
     {
       "date": "2026-07-25",
+      "message": "무료 베스트 30개 · 유료 베스트 30개 · 선독점 베스트 30개 · 선호작 베스트 30개 · 베스트셀러 30개"
+    },
+    {
+      "date": "2026-07-26",
       "message": "무료 베스트 30개 · 유료 베스트 30개 · 선독점 베스트 30개 · 선호작 베스트 30개 · 베스트셀러 30개"
     },
     {
