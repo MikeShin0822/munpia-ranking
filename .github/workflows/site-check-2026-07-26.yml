@@ -1,0 +1,33 @@
+name: Verify 2026-07-26 dashboard
+
+on:
+  pull_request:
+    branches: [main]
+
+permissions:
+  contents: read
+
+jobs:
+  verify:
+    runs-on: ubuntu-latest
+    steps:
+      - name: Verify public site and current data
+        shell: bash
+        run: |
+          set -u
+          site='https://mikeshin0822.github.io/munpia-ranking/'
+          data='https://raw.githubusercontent.com/MikeShin0822/munpia-ranking/main/data/rankings.json'
+          for attempt in {1..9}; do
+            site_code=$(curl -L -sS -o /tmp/site.html -w '%{http_code}' "$site" || true)
+            data_code=$(curl -L -sS -o /tmp/rankings.json -w '%{http_code}' "$data" || true)
+            echo "attempt=$attempt site_status=$site_code data_status=$data_code"
+            if [ "$site_code" = '200' ] && [ "$data_code" = '200' ] \
+              && grep -q '문피아 제목 레이더' /tmp/site.html \
+              && grep -q '"date": "2026-07-26"' /tmp/rankings.json; then
+              echo 'Dashboard and 2026-07-26 live data are available.'
+              exit 0
+            fi
+            sleep 10
+          done
+          echo 'Published dashboard verification failed.'
+          exit 1
