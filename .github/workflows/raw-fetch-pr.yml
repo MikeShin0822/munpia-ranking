@@ -1,0 +1,36 @@
+name: Raw Munpia fetch
+
+on:
+  pull_request:
+    branches: [main]
+
+permissions:
+  contents: read
+
+jobs:
+  fetch:
+    runs-on: ubuntu-latest
+    steps:
+      - name: Fetch ranking endpoints in parallel
+        shell: bash
+        run: |
+          set -u
+          mkdir -p raw
+          ua='Mozilla/5.0 (compatible; MunpiaTitleArchive/1.2; +https://github.com/MikeShin0822/munpia-ranking)'
+          for section in today plsa.eachtoday prefer plsa.bestseller; do
+            safe=${section//./_}
+            for page in 1 2 3; do
+              url="https://mm.munpia.com/?ajx=1&menu=best&action=list&section=${section}&keyword=&page=${page}"
+              (curl -L -sS --connect-timeout 10 --max-time 45 -A "$ua" -H 'accept-language: ko-KR,ko;q=0.9' "$url" -o "raw/${safe}-${page}.json" || true) &
+            done
+          done
+          (curl -L -sS --connect-timeout 10 --max-time 45 -A "$ua" -H 'accept-language: ko-KR,ko;q=0.9' 'https://www.munpia.com/best/plsa.exclusive-eachtoday' -o raw/exclusive.html || true) &
+          wait
+          find raw -type f -maxdepth 1 -printf '%f %s bytes\n' | sort
+      - name: Upload raw responses
+        uses: actions/upload-artifact@v4
+        with:
+          name: munpia-raw-2026-07-26
+          path: raw
+          if-no-files-found: error
+          retention-days: 1
