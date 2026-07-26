@@ -1,0 +1,26 @@
+name: Pages smoke check 2026-07-27
+
+on:
+  pull_request:
+    branches: [main]
+
+permissions:
+  contents: read
+
+jobs:
+  check:
+    runs-on: ubuntu-latest
+    steps:
+      - name: Verify public site and latest data
+        shell: bash
+        run: |
+          set -u
+          site='https://mikeshin0822.github.io/munpia-ranking/'
+          data='https://raw.githubusercontent.com/MikeShin0822/munpia-ranking/main/data/rankings.json'
+          site_code=$(curl -L -sS -o /tmp/site.html -w '%{http_code}' "$site" || true)
+          data_code=$(curl -L -sS -o /tmp/data.json -w '%{http_code}' "$data" || true)
+          echo "site_status=$site_code data_status=$data_code"
+          grep -q '문피아 제목 레이더' /tmp/site.html
+          grep -q '"date": "2026-07-27"' /tmp/data.json
+          test "$site_code" = '200'
+          test "$data_code" = '200'
