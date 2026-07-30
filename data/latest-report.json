@@ -1,5 +1,5 @@
 {
-  "generatedAt": "2026-07-31T07:03:38+09:00",
+  "generatedAt": "2026-07-31T08:15:47+09:00",
   "date": "2026-07-31",
   "previousDate": "2026-07-30",
   "categories": {
@@ -7,15 +7,14 @@
       "label": "무료 베스트",
       "status": "complete",
       "count": 30,
-      "collectedAt": "2026-07-31T07:03:38+09:00",
-      "collectionDate": "2026073106",
+      "collectedAt": "2026-07-31T08:15:47+09:00",
+      "collectionDate": "2026073108",
       "source": "https://mm.munpia.com/?ajx=1&menu=best&action=list&section=today&keyword=&page=1",
       "error": null,
       "top30": [
-        "주인공이 1층에서 안 올라감",
         "동유럽의 천재 유물 복원사",
-        "회귀 후 아르헨티나로 귀화했다",
         "기러기 아빠는 호주 재벌이 되었다",
+        "회귀 후 아르헨티나로 귀화했다",
         "은퇴당한 탱커가 힐 능력을 각성했다",
         "퓨전펑크 만렙 칼잡이",
         "병아리 힐러 탑에 오르다",
@@ -26,50 +25,63 @@
         "정자기증으로 재벌가 데릴사위",
         "월드컵 임시 감독이 되었다",
         "이름 없는 별들을 흡수했더니 전세계 첩보기관이 집착함",
-        "치유 마법사인데 계룡산 도사로 착각당했다",
-        "사진을 찍었을 뿐인데 전세계가 집착함.",
-        "전설급 신수들과 동물원에서 힐링합니다",
-        "달머리골 자연인은 잘 먹고 산다",
-        "외계인 앱으로 대재벌 되다",
-        "미국 시골에서 빈티지 가구 복원으로 대박남",
-        "CIA가 집착하는 미국 무당",
         "(경) 세종대왕님, 소갈치료원 입소 (축)",
-        "농사만 지었는데 북부대공이 되었다",
-        "방구석에 EX급 창고가 연결됨",
-        "신입사원이 천재였다",
+        "치유 마법사인데 계룡산 도사로 착각당했다",
         "내 훈수 한 번에 나락간 여배우가 극락감",
+        "미국에서 마사지해 줬는데 유명 스포츠 선수들이 줄을 섬",
+        "CIA가 집착하는 미국 무당",
+        "사진을 찍었을 뿐인데 전세계가 집착함.",
+        "외계인 앱으로 대재벌 되다",
+        "전설급 신수들과 동물원에서 힐링합니다",
+        "미국 시골에서 빈티지 가구 복원으로 대박남",
+        "농사만 지었는데 북부대공이 되었다",
+        "신입사원이 천재였다",
+        "방구석에 EX급 창고가 연결됨",
         "미국 시골 영양사에게 이웃들이 너무 집착함.",
+        "단전을 고쳐주니 무림 최고수들이 집착함",
         "TRPG 세계에서 전사로 살아남기",
-        "국가가 버린 소드마스터는 회귀 후 미국 헌터로 갈아탄다",
-        "경호원 출신 승무원이 너무 유능함"
+        "경호원 출신 승무원이 너무 유능함",
+        "다른 세상의 나 덕분에 만능 매니저가 됨"
       ],
       "changes": {
         "entered": [
           {
             "title": "소비에트가 쓰러지지 않아!",
-            "rank": 11
+            "rank": 10
           },
           {
             "title": "미국 시골에서 빈티지 가구 복원으로 대박남",
-            "rank": 20
+            "rank": 22
           },
           {
             "title": "미국 시골 영양사에게 이웃들이 너무 집착함.",
+            "rank": 26
+          },
+          {
+            "title": "단전을 고쳐주니 무림 최고수들이 집착함",
             "rank": 27
           },
           {
-            "title": "국가가 버린 소드마스터는 회귀 후 미국 헌터로 갈아탄다",
+            "title": "경호원 출신 승무원이 너무 유능함",
             "rank": 29
           },
           {
-            "title": "경호원 출신 승무원이 너무 유능함",
+            "title": "다른 세상의 나 덕분에 만능 매니저가 됨",
             "rank": 30
           }
         ],
         "exited": [
           {
+            "title": "주인공이 1층에서 안 올라감",
+            "previousRank": 1
+          },
+          {
             "title": "경험치 100만배로 탑 등반하는 EX급 마법사",
             "previousRank": 6
+          },
+          {
+            "title": "달머리골 자연인은 잘 먹고 산다",
+            "previousRank": 15
           },
           {
             "title": "아포칼립스의 재능 포식자",
@@ -80,32 +92,34 @@
             "previousRank": 24
           },
           {
-            "title": "미국에서 마사지해 줬는데 유명 스포츠 선수들이 줄을 섬",
-            "previousRank": 28
-          },
-          {
             "title": "집만 고쳤는데, 명예와 돈이 쏟아짐",
             "previousRank": 30
           }
         ],
         "movers": [
           {
-            "title": "내 훈수 한 번에 나락간 여배우가 극락감",
-            "rank": 26,
-            "previousRank": 10,
-            "change": -16
+            "title": "미국에서 마사지해 줬는데 유명 스포츠 선수들이 줄을 섬",
+            "rank": 17,
+            "previousRank": 28,
+            "change": 11
           },
           {
             "title": "이름 없는 별들을 흡수했더니 전세계 첩보기관이 집착함",
-            "rank": 14,
+            "rank": 13,
             "previousRank": 23,
-            "change": 9
+            "change": 10
           },
           {
-            "title": "사진을 찍었을 뿐인데 전세계가 집착함.",
+            "title": "(경) 세종대왕님, 소갈치료원 입소 (축)",
+            "rank": 14,
+            "previousRank": 21,
+            "change": 7
+          },
+          {
+            "title": "내 훈수 한 번에 나락간 여배우가 극락감",
             "rank": 16,
-            "previousRank": 22,
-            "change": 6
+            "previousRank": 10,
+            "change": -6
           },
           {
             "title": "농사만 지었는데 북부대공이 되었다",
@@ -115,38 +129,32 @@
           },
           {
             "title": "은퇴 당한 헌터가 재평가되었다",
-            "rank": 10,
+            "rank": 9,
             "previousRank": 13,
-            "change": 3
-          },
-          {
-            "title": "달머리골 자연인은 잘 먹고 산다",
-            "rank": 18,
-            "previousRank": 15,
-            "change": -3
-          },
-          {
-            "title": "CIA가 집착하는 미국 무당",
-            "rank": 21,
-            "previousRank": 18,
-            "change": -3
+            "change": 4
           },
           {
             "title": "병아리 힐러 탑에 오르다",
-            "rank": 7,
+            "rank": 6,
             "previousRank": 9,
-            "change": 2
+            "change": 3
           },
           {
             "title": "선협에서 땅굴을 숨김",
-            "rank": 9,
+            "rank": 8,
             "previousRank": 11,
-            "change": 2
+            "change": 3
           },
           {
-            "title": "치유 마법사인데 계룡산 도사로 착각당했다",
-            "rank": 15,
-            "previousRank": 17,
+            "title": "사진을 찍었을 뿐인데 전세계가 집착함.",
+            "rank": 19,
+            "previousRank": 22,
+            "change": 3
+          },
+          {
+            "title": "기러기 아빠는 호주 재벌이 되었다",
+            "rank": 2,
+            "previousRank": 4,
             "change": 2
           }
         ]
@@ -156,41 +164,41 @@
       "label": "유료 베스트",
       "status": "complete",
       "count": 30,
-      "collectedAt": "2026-07-31T07:03:38+09:00",
-      "collectionDate": "2026073106",
+      "collectedAt": "2026-07-31T08:15:47+09:00",
+      "collectionDate": "2026073108",
       "source": "https://mm.munpia.com/?ajx=1&menu=best&action=list&section=plsa.eachtoday&keyword=&page=1",
       "error": null,
       "top30": [
-        "비자발적 종신 독재자",
         "전능의 뇌를 얻었다",
+        "비자발적 종신 독재자",
+        "내 훈수 한 번에 월클들의 고질병이 고쳐짐",
         "막장드라마의 엔딩에 빙의했다",
         "허난설헌의 남편이 되었다?",
         "나 혼자 마법사인데 탑 등반",
-        "내 훈수 한 번에 월클들의 고질병이 고쳐짐",
         "회장님, 신점 보시려면 줄부터 서세요",
         "시간 정지 능력으로 탑 등반",
         "사천당가의 CIA 비밀 요원",
         "별 그리는 그림 천재",
         "갱단한테 곡 팔았더니 음악천재로 착각 당했다",
         "반강제적 제국주의자",
-        "단종 구하러 4군6진",
         "데뷔가 월드컵인 23살 축구 감독",
         "러시아 황제가 독재를 너무 잘함",
-        "즉사기 들고 무림에 떨어지다",
-        "미국에서 태권도장을 여니 이웃들이 내게 집착함",
-        "방구석 뱀파이어는 미궁에서 사업합니다",
-        "국정원 금강불괴 블랙요원",
+        "단종 구하러 4군6진",
         "세종이 집착하는 건축가가 되었다",
-        "정치인이 정치를 너무 잘함",
-        "축협아 배신 고맙다. 포르투갈 국대로 갈아탄다.",
-        "죽지않는 흑마법사",
-        "판초우의의 마법사",
-        "경험치 100만배로 탑 등반하는 EX급 마법사",
-        "전역하는 날 북한군이 쳐들어왔다",
-        "와인의 신",
+        "국정원 금강불괴 블랙요원",
+        "즉사기 들고 무림에 떨어지다",
+        "방구석 뱀파이어는 미궁에서 사업합니다",
         "이번 생은 무역왕",
+        "정치인이 정치를 너무 잘함",
+        "판초우의의 마법사",
+        "축협아 배신 고맙다. 포르투갈 국대로 갈아탄다.",
+        "전역하는 날 북한군이 쳐들어왔다",
+        "죽지않는 흑마법사",
+        "와인의 신",
         "퇴근 후 소소하게 힐링함",
-        "19세기 러시아에 웹소설을 풀었다"
+        "19세기 러시아에 웹소설을 풀었다",
+        "퓨전펑크에서 살아가는 법",
+        "중세 이단왕이 발전을 너무 잘함"
       ],
       "changes": {
         "entered": [
@@ -208,11 +216,11 @@
           },
           {
             "title": "판초우의의 마법사",
-            "rank": 24
+            "rank": 22
           },
           {
-            "title": "경험치 100만배로 탑 등반하는 EX급 마법사",
-            "rank": 25
+            "title": "중세 이단왕이 발전을 너무 잘함",
+            "rank": 30
           }
         ],
         "exited": [
@@ -221,8 +229,8 @@
             "previousRank": 14
           },
           {
-            "title": "퓨전펑크에서 살아가는 법",
-            "previousRank": 23
+            "title": "미국에서 태권도장을 여니 이웃들이 내게 집착함",
+            "previousRank": 15
           },
           {
             "title": "격투 천재가 미국 고교 최강 피지컬로 눈을 떴다",
@@ -239,63 +247,63 @@
         ],
         "movers": [
           {
-            "title": "전역하는 날 북한군이 쳐들어왔다",
-            "rank": 26,
-            "previousRank": 21,
-            "change": -5
-          },
-          {
-            "title": "데뷔가 월드컵인 23살 축구 감독",
-            "rank": 14,
-            "previousRank": 10,
-            "change": -4
-          },
-          {
-            "title": "19세기 러시아에 웹소설을 풀었다",
-            "rank": 30,
-            "previousRank": 26,
-            "change": -4
-          },
-          {
-            "title": "국정원 금강불괴 블랙요원",
-            "rank": 19,
-            "previousRank": 16,
-            "change": -3
-          },
-          {
-            "title": "와인의 신",
-            "rank": 27,
-            "previousRank": 24,
-            "change": -3
+            "title": "퓨전펑크에서 살아가는 법",
+            "rank": 29,
+            "previousRank": 23,
+            "change": -6
           },
           {
             "title": "이번 생은 무역왕",
-            "rank": 28,
+            "rank": 20,
             "previousRank": 25,
+            "change": 5
+          },
+          {
+            "title": "데뷔가 월드컵인 23살 축구 감독",
+            "rank": 13,
+            "previousRank": 10,
             "change": -3
+          },
+          {
+            "title": "단종 구하러 4군6진",
+            "rank": 15,
+            "previousRank": 12,
+            "change": -3
+          },
+          {
+            "title": "세종이 집착하는 건축가가 되었다",
+            "rank": 16,
+            "previousRank": 19,
+            "change": 3
+          },
+          {
+            "title": "축협아 배신 고맙다. 포르투갈 국대로 갈아탄다.",
+            "rank": 23,
+            "previousRank": 20,
+            "change": -3
+          },
+          {
+            "title": "전역하는 날 북한군이 쳐들어왔다",
+            "rank": 24,
+            "previousRank": 21,
+            "change": -3
+          },
+          {
+            "title": "죽지않는 흑마법사",
+            "rank": 25,
+            "previousRank": 22,
+            "change": -3
+          },
+          {
+            "title": "내 훈수 한 번에 월클들의 고질병이 고쳐짐",
+            "rank": 3,
+            "previousRank": 5,
+            "change": 2
           },
           {
             "title": "별 그리는 그림 천재",
             "rank": 10,
             "previousRank": 8,
-            "change": -2
-          },
-          {
-            "title": "러시아 황제가 독재를 너무 잘함",
-            "rank": 15,
-            "previousRank": 13,
-            "change": -2
-          },
-          {
-            "title": "미국에서 태권도장을 여니 이웃들이 내게 집착함",
-            "rank": 17,
-            "previousRank": 15,
-            "change": -2
-          },
-          {
-            "title": "축협아 배신 고맙다. 포르투갈 국대로 갈아탄다.",
-            "rank": 22,
-            "previousRank": 20,
             "change": -2
           }
         ]
@@ -305,48 +313,44 @@
       "label": "선독점 베스트",
       "status": "complete",
       "count": 30,
-      "collectedAt": "2026-07-31T07:03:38+09:00",
+      "collectedAt": "2026-07-31T08:15:47+09:00",
       "collectionDate": null,
       "source": "https://www.munpia.com/best/plsa.exclusive-eachtoday",
       "error": null,
       "top30": [
-        "내 훈수 한 번에 월클들의 고질병이 고쳐짐",
+        "나 혼자 마법사인데 탑 등반",
         "회장님, 신점 보시려면 줄부터 서세요",
         "시간 정지 능력으로 탑 등반",
         "사천당가의 CIA 비밀 요원",
         "별 그리는 그림 천재",
         "갱단한테 곡 팔았더니 음악천재로 착각 당했다",
         "반강제적 제국주의자",
-        "단종 구하러 4군6진",
         "데뷔가 월드컵인 23살 축구 감독",
         "러시아 황제가 독재를 너무 잘함",
-        "즉사기 들고 무림에 떨어지다",
-        "미국에서 태권도장을 여니 이웃들이 내게 집착함",
-        "방구석 뱀파이어는 미궁에서 사업합니다",
-        "국정원 금강불괴 블랙요원",
+        "단종 구하러 4군6진",
         "세종이 집착하는 건축가가 되었다",
-        "정치인이 정치를 너무 잘함",
-        "축협아 배신 고맙다. 포르투갈 국대로 갈아탄다.",
-        "죽지않는 흑마법사",
-        "판초우의의 마법사",
-        "경험치 100만배로 탑 등반하는 EX급 마법사",
-        "전역하는 날 북한군이 쳐들어왔다",
-        "와인의 신",
+        "국정원 금강불괴 블랙요원",
+        "즉사기 들고 무림에 떨어지다",
+        "방구석 뱀파이어는 미궁에서 사업합니다",
         "이번 생은 무역왕",
+        "정치인이 정치를 너무 잘함",
+        "판초우의의 마법사",
+        "축협아 배신 고맙다. 포르투갈 국대로 갈아탄다.",
+        "전역하는 날 북한군이 쳐들어왔다",
+        "죽지않는 흑마법사",
+        "와인의 신",
         "퇴근 후 소소하게 힐링함",
         "19세기 러시아에 웹소설을 풀었다",
-        "신입이라 후계 1순위를 들키면 안됨",
-        "미국 시골에서 올드카 복원으로 대박",
-        "방송했더니 천재 의사로 착각당했다",
+        "퓨전펑크에서 살아가는 법",
         "중세 이단왕이 발전을 너무 잘함",
-        "회귀한 천재게이머가 스타를 너무 잘함"
+        "무림맹 고문기술자는 경찰이 너무 쉽다",
+        "회귀한 천재게이머가 스타를 너무 잘함",
+        "미국 시골에서 올드카 복원으로 대박",
+        "고려에서 치트 없이 문명합니다",
+        "맛있다! 전생 천하제일숙수"
       ],
       "changes": {
         "entered": [
-          {
-            "title": "내 훈수 한 번에 월클들의 고질병이 고쳐짐",
-            "rank": 1
-          },
           {
             "title": "시간 정지 능력으로 탑 등반",
             "rank": 3
@@ -361,106 +365,94 @@
           },
           {
             "title": "판초우의의 마법사",
-            "rank": 19
+            "rank": 17
           },
           {
-            "title": "경험치 100만배로 탑 등반하는 EX급 마법사",
-            "rank": 20
-          },
-          {
-            "title": "방송했더니 천재 의사로 착각당했다",
-            "rank": 28
+            "title": "무림맹 고문기술자는 경찰이 너무 쉽다",
+            "rank": 26
           }
         ],
         "exited": [
-          {
-            "title": "나 혼자 마법사인데 탑 등반",
-            "previousRank": 1
-          },
           {
             "title": "프린스 레이지",
             "previousRank": 9
           },
           {
-            "title": "퓨전펑크에서 살아가는 법",
-            "previousRank": 18
+            "title": "미국에서 태권도장을 여니 이웃들이 내게 집착함",
+            "previousRank": 10
           },
           {
             "title": "격투 천재가 미국 고교 최강 피지컬로 눈을 떴다",
             "previousRank": 23
           },
           {
-            "title": "맛있다! 전생 천하제일숙수",
-            "previousRank": 28
+            "title": "신입이라 후계 1순위를 들키면 안됨",
+            "previousRank": 24
           },
           {
             "title": "방구석 버튜버가 신점을 너무 잘 봄",
             "previousRank": 29
-          },
-          {
-            "title": "고려에서 치트 없이 문명합니다",
-            "previousRank": 30
           }
         ],
         "movers": [
           {
-            "title": "전역하는 날 북한군이 쳐들어왔다",
-            "rank": 21,
-            "previousRank": 16,
-            "change": -5
-          },
-          {
-            "title": "데뷔가 월드컵인 23살 축구 감독",
-            "rank": 9,
-            "previousRank": 5,
-            "change": -4
-          },
-          {
-            "title": "19세기 러시아에 웹소설을 풀었다",
-            "rank": 25,
-            "previousRank": 21,
-            "change": -4
-          },
-          {
-            "title": "회귀한 천재게이머가 스타를 너무 잘함",
-            "rank": 30,
-            "previousRank": 26,
-            "change": -4
-          },
-          {
-            "title": "국정원 금강불괴 블랙요원",
-            "rank": 14,
-            "previousRank": 11,
-            "change": -3
-          },
-          {
-            "title": "와인의 신",
-            "rank": 22,
-            "previousRank": 19,
-            "change": -3
+            "title": "퓨전펑크에서 살아가는 법",
+            "rank": 24,
+            "previousRank": 18,
+            "change": -6
           },
           {
             "title": "이번 생은 무역왕",
-            "rank": 23,
+            "rank": 15,
             "previousRank": 20,
+            "change": 5
+          },
+          {
+            "title": "데뷔가 월드컵인 23살 축구 감독",
+            "rank": 8,
+            "previousRank": 5,
+            "change": -3
+          },
+          {
+            "title": "단종 구하러 4군6진",
+            "rank": 10,
+            "previousRank": 7,
+            "change": -3
+          },
+          {
+            "title": "세종이 집착하는 건축가가 되었다",
+            "rank": 11,
+            "previousRank": 14,
+            "change": 3
+          },
+          {
+            "title": "축협아 배신 고맙다. 포르투갈 국대로 갈아탄다.",
+            "rank": 18,
+            "previousRank": 15,
+            "change": -3
+          },
+          {
+            "title": "전역하는 날 북한군이 쳐들어왔다",
+            "rank": 19,
+            "previousRank": 16,
+            "change": -3
+          },
+          {
+            "title": "죽지않는 흑마법사",
+            "rank": 20,
+            "previousRank": 17,
+            "change": -3
+          },
+          {
+            "title": "미국 시골에서 올드카 복원으로 대박",
+            "rank": 28,
+            "previousRank": 25,
             "change": -3
           },
           {
             "title": "별 그리는 그림 천재",
             "rank": 5,
             "previousRank": 3,
-            "change": -2
-          },
-          {
-            "title": "러시아 황제가 독재를 너무 잘함",
-            "rank": 10,
-            "previousRank": 8,
-            "change": -2
-          },
-          {
-            "title": "미국에서 태권도장을 여니 이웃들이 내게 집착함",
-            "rank": 12,
-            "previousRank": 10,
             "change": -2
           }
         ]
@@ -470,7 +462,7 @@
       "label": "선호작 베스트",
       "status": "complete",
       "count": 30,
-      "collectedAt": "2026-07-31T07:03:38+09:00",
+      "collectedAt": "2026-07-31T08:15:47+09:00",
       "collectionDate": "2026073100",
       "source": "https://mm.munpia.com/?ajx=1&menu=best&action=list&section=prefer&keyword=&page=1",
       "error": null,
@@ -603,7 +595,7 @@
       "label": "베스트셀러",
       "status": "complete",
       "count": 30,
-      "collectedAt": "2026-07-31T07:03:38+09:00",
+      "collectedAt": "2026-07-31T08:15:47+09:00",
       "collectionDate": "2026073100",
       "source": "https://mm.munpia.com/?ajx=1&menu=best&action=list&section=plsa.bestseller&keyword=&page=1",
       "error": null,
@@ -651,110 +643,94 @@
       "startDate": "2026-07-31",
       "endDate": "2026-07-31",
       "titleEntries": 150,
-      "uniqueTitles": 86,
+      "uniqueTitles": 83,
       "collectionDays": 1,
       "keywords": [
         {
           "keyword": "천재",
-          "count": 15,
-          "score": 230,
-          "averageRank": 15.67,
-          "bestRank": 2,
-          "uniqueTitles": 9
+          "count": 14,
+          "score": 232,
+          "averageRank": 14.43,
+          "bestRank": 1,
+          "uniqueTitles": 8
         },
         {
           "keyword": "탑",
-          "count": 9,
-          "score": 186,
-          "averageRank": 10.33,
-          "bestRank": 3,
-          "uniqueTitles": 4
-        },
-        {
-          "keyword": "집착",
-          "count": 12,
-          "score": 166,
-          "averageRank": 17.17,
-          "bestRank": 8,
-          "uniqueTitles": 7
+          "count": 8,
+          "score": 199,
+          "averageRank": 6.13,
+          "bestRank": 1,
+          "uniqueTitles": 3
         },
         {
           "keyword": "마법사",
-          "count": 13,
-          "score": 148,
-          "averageRank": 19.62,
-          "bestRank": 5,
-          "uniqueTitles": 7
+          "count": 12,
+          "score": 160,
+          "averageRank": 17.67,
+          "bestRank": 1,
+          "uniqueTitles": 6
+        },
+        {
+          "keyword": "등반",
+          "count": 6,
+          "score": 154,
+          "averageRank": 5.33,
+          "bestRank": 1,
+          "uniqueTitles": 2
+        },
+        {
+          "keyword": "집착",
+          "count": 11,
+          "score": 147,
+          "averageRank": 17.64,
+          "bestRank": 8,
+          "uniqueTitles": 6
         },
         {
           "keyword": "능력",
           "count": 5,
-          "score": 128,
-          "averageRank": 5.4,
-          "bestRank": 3,
-          "uniqueTitles": 2
-        },
-        {
-          "keyword": "등반",
-          "count": 5,
-          "score": 125,
-          "averageRank": 6,
+          "score": 129,
+          "averageRank": 5.2,
           "bestRank": 3,
           "uniqueTitles": 2
         },
         {
           "keyword": "독재",
           "count": 5,
-          "score": 114,
-          "averageRank": 8.2,
-          "bestRank": 1,
+          "score": 115,
+          "averageRank": 8,
+          "bestRank": 2,
           "uniqueTitles": 2
         },
         {
           "keyword": "CIA",
           "count": 5,
-          "score": 111,
-          "averageRank": 8.8,
+          "score": 114,
+          "averageRank": 8.2,
           "bestRank": 2,
           "uniqueTitles": 2
-        },
-        {
-          "keyword": "미국",
-          "count": 9,
-          "score": 109,
-          "averageRank": 18.89,
-          "bestRank": 8,
-          "uniqueTitles": 7
         },
         {
           "keyword": "재벌",
           "count": 6,
-          "score": 107,
-          "averageRank": 13.17,
+          "score": 109,
+          "averageRank": 12.83,
           "bestRank": 2,
           "uniqueTitles": 3
         },
         {
-          "keyword": "훈수",
-          "count": 5,
-          "score": 104,
-          "averageRank": 10.2,
-          "bestRank": 1,
-          "uniqueTitles": 2
-        },
-        {
-          "keyword": "번에",
-          "count": 5,
-          "score": 104,
-          "averageRank": 10.2,
-          "bestRank": 1,
-          "uniqueTitles": 2
-        },
-        {
           "keyword": "무림",
-          "count": 6,
-          "score": 94,
-          "averageRank": 15.33,
+          "count": 8,
+          "score": 99,
+          "averageRank": 18.63,
+          "bestRank": 9,
+          "uniqueTitles": 4
+        },
+        {
+          "keyword": "잘함",
+          "count": 8,
+          "score": 95,
+          "averageRank": 19.13,
           "bestRank": 9,
           "uniqueTitles": 4
         },
@@ -763,40 +739,32 @@
           "count": 4,
           "score": 90,
           "averageRank": 8.5,
+          "bestRank": 4,
+          "uniqueTitles": 2
+        },
+        {
+          "keyword": "미국",
+          "count": 7,
+          "score": 89,
+          "averageRank": 18.29,
+          "bestRank": 8,
+          "uniqueTitles": 5
+        },
+        {
+          "keyword": "훈수",
+          "count": 4,
+          "score": 87,
+          "averageRank": 9.25,
           "bestRank": 3,
           "uniqueTitles": 2
         },
         {
-          "keyword": "잘함",
-          "count": 7,
-          "score": 85,
-          "averageRank": 18.86,
-          "bestRank": 10,
-          "uniqueTitles": 4
-        },
-        {
-          "keyword": "월클들",
-          "count": 3,
-          "score": 83,
-          "averageRank": 3.33,
-          "bestRank": 1,
-          "uniqueTitles": 1
-        },
-        {
-          "keyword": "고질병",
-          "count": 3,
-          "score": 83,
-          "averageRank": 3.33,
-          "bestRank": 1,
-          "uniqueTitles": 1
-        },
-        {
-          "keyword": "고쳐짐",
-          "count": 3,
-          "score": 83,
-          "averageRank": 3.33,
-          "bestRank": 1,
-          "uniqueTitles": 1
+          "keyword": "번에",
+          "count": 4,
+          "score": 87,
+          "averageRank": 9.25,
+          "bestRank": 3,
+          "uniqueTitles": 2
         },
         {
           "keyword": "회장",
@@ -840,11 +808,11 @@
         },
         {
           "keyword": "착각",
-          "count": 6,
-          "score": 81,
-          "averageRank": 17.5,
+          "count": 5,
+          "score": 78,
+          "averageRank": 15.4,
           "bestRank": 6,
-          "uniqueTitles": 3
+          "uniqueTitles": 2
         },
         {
           "keyword": "사천당가",
@@ -887,7 +855,31 @@
           "uniqueTitles": 1
         },
         {
+          "keyword": "퓨전펑크",
+          "count": 5,
+          "score": 72,
+          "averageRank": 16.6,
+          "bestRank": 3,
+          "uniqueTitles": 2
+        },
+        {
           "keyword": "별",
+          "count": 3,
+          "score": 71,
+          "averageRank": 7.33,
+          "bestRank": 5,
+          "uniqueTitles": 1
+        },
+        {
+          "keyword": "그리",
+          "count": 3,
+          "score": 71,
+          "averageRank": 7.33,
+          "bestRank": 5,
+          "uniqueTitles": 1
+        },
+        {
+          "keyword": "그림",
           "count": 3,
           "score": 71,
           "averageRank": 7.33,
@@ -897,51 +889,51 @@
       ],
       "watched": {
         "미국": {
-          "count": 9,
-          "score": 109,
-          "averageRank": 18.89,
+          "count": 7,
+          "score": 89,
+          "averageRank": 18.29,
           "bestRank": 8
         },
         "집착": {
-          "count": 12,
-          "score": 166,
-          "averageRank": 17.17,
+          "count": 11,
+          "score": 147,
+          "averageRank": 17.64,
           "bestRank": 8
         },
         "천재": {
-          "count": 15,
-          "score": 230,
-          "averageRank": 15.67,
-          "bestRank": 2
+          "count": 14,
+          "score": 232,
+          "averageRank": 14.43,
+          "bestRank": 1
         },
         "마법사": {
-          "count": 13,
-          "score": 148,
-          "averageRank": 19.62,
-          "bestRank": 5
+          "count": 12,
+          "score": 160,
+          "averageRank": 17.67,
+          "bestRank": 1
         },
         "탑": {
-          "count": 9,
-          "score": 186,
-          "averageRank": 10.33,
-          "bestRank": 3
+          "count": 8,
+          "score": 199,
+          "averageRank": 6.13,
+          "bestRank": 1
         },
         "회귀": {
-          "count": 4,
-          "score": 55,
-          "averageRank": 17.25,
+          "count": 3,
+          "score": 56,
+          "averageRank": 12.33,
           "bestRank": 3
         },
         "빙의": {
           "count": 2,
-          "score": 42,
-          "averageRank": 10,
-          "bestRank": 3
+          "score": 41,
+          "averageRank": 10.5,
+          "bestRank": 4
         },
         "재벌": {
           "count": 6,
-          "score": 107,
-          "averageRank": 13.17,
+          "score": 109,
+          "averageRank": 12.83,
           "bestRank": 2
         },
         "아포칼립스": {
@@ -952,8 +944,8 @@
         },
         "무당": {
           "count": 2,
-          "score": 33,
-          "averageRank": 14.5,
+          "score": 36,
+          "averageRank": 13,
           "bestRank": 8
         },
         "신점": {
@@ -963,9 +955,9 @@
           "bestRank": 1
         },
         "착각": {
-          "count": 6,
-          "score": 81,
-          "averageRank": 17.5,
+          "count": 5,
+          "score": 78,
+          "averageRank": 15.4,
           "bestRank": 6
         }
       }
@@ -974,94 +966,94 @@
       "startDate": "2026-07-25",
       "endDate": "2026-07-31",
       "titleEntries": 1050,
-      "uniqueTitles": 112,
+      "uniqueTitles": 110,
       "collectionDays": 7,
       "keywords": [
         {
           "keyword": "천재",
-          "count": 100,
-          "score": 1513,
-          "averageRank": 15.87,
+          "count": 99,
+          "score": 1515,
+          "averageRank": 15.7,
           "bestRank": 1,
-          "uniqueTitles": 12
+          "uniqueTitles": 11
         },
         {
           "keyword": "마법사",
-          "count": 81,
-          "score": 1217,
-          "averageRank": 15.98,
+          "count": 80,
+          "score": 1229,
+          "averageRank": 15.64,
           "bestRank": 1,
           "uniqueTitles": 7
         },
         {
           "keyword": "탑",
-          "count": 54,
-          "score": 1198,
-          "averageRank": 8.81,
+          "count": 53,
+          "score": 1211,
+          "averageRank": 8.15,
           "bestRank": 1,
           "uniqueTitles": 4
         },
         {
           "keyword": "미국",
-          "count": 78,
-          "score": 1031,
-          "averageRank": 17.78,
+          "count": 76,
+          "score": 1011,
+          "averageRank": 17.7,
           "bestRank": 5,
-          "uniqueTitles": 12
+          "uniqueTitles": 11
         },
         {
           "keyword": "집착",
-          "count": 63,
-          "score": 953,
-          "averageRank": 15.87,
+          "count": 62,
+          "score": 934,
+          "averageRank": 15.94,
           "bestRank": 4,
           "uniqueTitles": 8
         },
         {
           "keyword": "독재",
           "count": 34,
-          "score": 776,
-          "averageRank": 8.18,
-          "bestRank": 1,
+          "score": 777,
+          "averageRank": 8.15,
+          "bestRank": 2,
           "uniqueTitles": 2
         },
         {
           "keyword": "잘함",
-          "count": 54,
-          "score": 725,
-          "averageRank": 17.57,
+          "count": 55,
+          "score": 735,
+          "averageRank": 17.64,
           "bestRank": 3,
           "uniqueTitles": 5
         },
         {
           "keyword": "CIA",
           "count": 33,
-          "score": 724,
-          "averageRank": 9.06,
+          "score": 727,
+          "averageRank": 8.97,
+          "bestRank": 1,
+          "uniqueTitles": 2
+        },
+        {
+          "keyword": "등반",
+          "count": 29,
+          "score": 725,
+          "averageRank": 6,
           "bestRank": 1,
           "uniqueTitles": 2
         },
         {
           "keyword": "능력",
           "count": 27,
-          "score": 707,
-          "averageRank": 4.81,
+          "score": 708,
+          "averageRank": 4.78,
           "bestRank": 3,
-          "uniqueTitles": 2
-        },
-        {
-          "keyword": "등반",
-          "count": 28,
-          "score": 696,
-          "averageRank": 6.14,
-          "bestRank": 1,
           "uniqueTitles": 2
         },
         {
           "keyword": "재벌",
           "count": 41,
-          "score": 682,
-          "averageRank": 14.37,
+          "score": 684,
+          "averageRank": 14.32,
           "bestRank": 2,
           "uniqueTitles": 5
         },
@@ -1076,8 +1068,8 @@
         {
           "keyword": "러시아",
           "count": 35,
-          "score": 596,
-          "averageRank": 13.97,
+          "score": 602,
+          "averageRank": 13.8,
           "bestRank": 3,
           "uniqueTitles": 2
         },
@@ -1091,27 +1083,11 @@
         },
         {
           "keyword": "무림",
-          "count": 40,
-          "score": 547,
-          "averageRank": 17.32,
+          "count": 42,
+          "score": 552,
+          "averageRank": 17.86,
           "bestRank": 8,
           "uniqueTitles": 4
-        },
-        {
-          "keyword": "훈수",
-          "count": 24,
-          "score": 539,
-          "averageRank": 8.54,
-          "bestRank": 1,
-          "uniqueTitles": 2
-        },
-        {
-          "keyword": "번에",
-          "count": 24,
-          "score": 539,
-          "averageRank": 8.54,
-          "bestRank": 1,
-          "uniqueTitles": 2
         },
         {
           "keyword": "회장",
@@ -1144,6 +1120,22 @@
           "averageRank": 3.21,
           "bestRank": 1,
           "uniqueTitles": 1
+        },
+        {
+          "keyword": "훈수",
+          "count": 23,
+          "score": 522,
+          "averageRank": 8.3,
+          "bestRank": 1,
+          "uniqueTitles": 2
+        },
+        {
+          "keyword": "번에",
+          "count": 23,
+          "score": 522,
+          "averageRank": 8.3,
+          "bestRank": 1,
+          "uniqueTitles": 2
         },
         {
           "keyword": "사천당가",
@@ -1195,76 +1187,76 @@
         },
         {
           "keyword": "착각",
-          "count": 29,
-          "score": 455,
-          "averageRank": 15.31,
+          "count": 28,
+          "score": 452,
+          "averageRank": 14.86,
           "bestRank": 3,
+          "uniqueTitles": 2
+        },
+        {
+          "keyword": "얻었다",
+          "count": 23,
+          "score": 429,
+          "averageRank": 12.35,
+          "bestRank": 1,
           "uniqueTitles": 3
         },
         {
-          "keyword": "월클들",
-          "count": 16,
-          "score": 433,
-          "averageRank": 3.94,
+          "keyword": "회귀",
+          "count": 24,
+          "score": 428,
+          "averageRank": 13.17,
           "bestRank": 1,
-          "uniqueTitles": 1
-        },
-        {
-          "keyword": "고질병",
-          "count": 16,
-          "score": 433,
-          "averageRank": 3.94,
-          "bestRank": 1,
-          "uniqueTitles": 1
+          "uniqueTitles": 3
         }
       ],
       "watched": {
         "미국": {
-          "count": 78,
-          "score": 1031,
-          "averageRank": 17.78,
+          "count": 76,
+          "score": 1011,
+          "averageRank": 17.7,
           "bestRank": 5
         },
         "집착": {
-          "count": 63,
-          "score": 953,
-          "averageRank": 15.87,
+          "count": 62,
+          "score": 934,
+          "averageRank": 15.94,
           "bestRank": 4
         },
         "천재": {
-          "count": 100,
-          "score": 1513,
-          "averageRank": 15.87,
+          "count": 99,
+          "score": 1515,
+          "averageRank": 15.7,
           "bestRank": 1
         },
         "마법사": {
-          "count": 81,
-          "score": 1217,
-          "averageRank": 15.98,
+          "count": 80,
+          "score": 1229,
+          "averageRank": 15.64,
           "bestRank": 1
         },
         "탑": {
-          "count": 54,
-          "score": 1198,
-          "averageRank": 8.81,
+          "count": 53,
+          "score": 1211,
+          "averageRank": 8.15,
           "bestRank": 1
         },
         "회귀": {
-          "count": 25,
-          "score": 427,
-          "averageRank": 13.92,
+          "count": 24,
+          "score": 428,
+          "averageRank": 13.17,
           "bestRank": 1
         },
         "빙의": {
           "count": 14,
-          "score": 288,
-          "averageRank": 10.43,
+          "score": 287,
+          "averageRank": 10.5,
           "bestRank": 1
         },
         "재벌": {
           "count": 41,
-          "score": 682,
-          "averageRank": 14.37,
+          "score": 684,
+          "averageRank": 14.32,
           "bestRank": 2
         },
         "아포칼립스": {
@@ -1275,8 +1267,8 @@
         },
         "무당": {
           "count": 20,
-          "score": 261,
-          "averageRank": 17.95,
+          "score": 264,
+          "averageRank": 17.8,
           "bestRank": 8
         },
         "신점": {
@@ -1286,9 +1278,9 @@
           "bestRank": 1
         },
         "착각": {
-          "count": 29,
-          "score": 455,
-          "averageRank": 15.31,
+          "count": 28,
+          "score": 452,
+          "averageRank": 14.86,
           "bestRank": 3
         }
       }
@@ -1297,94 +1289,94 @@
       "startDate": "2026-07-02",
       "endDate": "2026-07-31",
       "titleEntries": 1330,
-      "uniqueTitles": 117,
+      "uniqueTitles": 116,
       "collectionDays": 9,
       "keywords": [
         {
           "keyword": "천재",
-          "count": 127,
-          "score": 1913,
-          "averageRank": 15.94,
+          "count": 126,
+          "score": 1915,
+          "averageRank": 15.8,
           "bestRank": 1,
           "uniqueTitles": 12
         },
         {
           "keyword": "탑",
-          "count": 71,
-          "score": 1571,
-          "averageRank": 8.87,
+          "count": 70,
+          "score": 1584,
+          "averageRank": 8.37,
           "bestRank": 1,
           "uniqueTitles": 4
         },
         {
           "keyword": "마법사",
-          "count": 103,
-          "score": 1562,
-          "averageRank": 15.83,
+          "count": 102,
+          "score": 1574,
+          "averageRank": 15.57,
           "bestRank": 1,
           "uniqueTitles": 7
         },
         {
           "keyword": "미국",
-          "count": 100,
-          "score": 1359,
-          "averageRank": 17.41,
+          "count": 98,
+          "score": 1339,
+          "averageRank": 17.34,
           "bestRank": 5,
-          "uniqueTitles": 13
+          "uniqueTitles": 12
         },
         {
           "keyword": "집착",
-          "count": 79,
-          "score": 1227,
-          "averageRank": 15.47,
+          "count": 78,
+          "score": 1208,
+          "averageRank": 15.51,
           "bestRank": 3,
           "uniqueTitles": 9
         },
         {
           "keyword": "독재",
           "count": 45,
-          "score": 1004,
-          "averageRank": 8.69,
-          "bestRank": 1,
+          "score": 1005,
+          "averageRank": 8.67,
+          "bestRank": 2,
           "uniqueTitles": 2
         },
         {
           "keyword": "등반",
-          "count": 39,
-          "score": 954,
-          "averageRank": 6.54,
+          "count": 40,
+          "score": 983,
+          "averageRank": 6.42,
           "bestRank": 1,
           "uniqueTitles": 2
         },
         {
           "keyword": "능력",
           "count": 37,
-          "score": 942,
-          "averageRank": 5.54,
+          "score": 943,
+          "averageRank": 5.51,
           "bestRank": 3,
           "uniqueTitles": 2
         },
         {
           "keyword": "CIA",
           "count": 42,
-          "score": 924,
-          "averageRank": 9,
+          "score": 927,
+          "averageRank": 8.93,
           "bestRank": 1,
           "uniqueTitles": 2
         },
         {
           "keyword": "잘함",
-          "count": 71,
-          "score": 899,
-          "averageRank": 18.34,
+          "count": 72,
+          "score": 909,
+          "averageRank": 18.38,
           "bestRank": 3,
           "uniqueTitles": 5
         },
         {
           "keyword": "재벌",
           "count": 51,
-          "score": 843,
-          "averageRank": 14.47,
+          "score": 845,
+          "averageRank": 14.43,
           "bestRank": 1,
           "uniqueTitles": 5
         },
@@ -1407,16 +1399,16 @@
         {
           "keyword": "러시아",
           "count": 43,
-          "score": 717,
-          "averageRank": 14.33,
+          "score": 723,
+          "averageRank": 14.19,
           "bestRank": 3,
           "uniqueTitles": 2
         },
         {
           "keyword": "무림",
-          "count": 50,
-          "score": 691,
-          "averageRank": 17.18,
+          "count": 52,
+          "score": 696,
+          "averageRank": 17.62,
           "bestRank": 7,
           "uniqueTitles": 4
         },
@@ -1454,17 +1446,17 @@
         },
         {
           "keyword": "훈수",
-          "count": 30,
-          "score": 677,
-          "averageRank": 8.43,
+          "count": 29,
+          "score": 660,
+          "averageRank": 8.24,
           "bestRank": 1,
           "uniqueTitles": 2
         },
         {
           "keyword": "번에",
-          "count": 30,
-          "score": 677,
-          "averageRank": 8.43,
+          "count": 29,
+          "score": 660,
+          "averageRank": 8.24,
           "bestRank": 1,
           "uniqueTitles": 2
         },
@@ -1519,75 +1511,75 @@
         {
           "keyword": "얻었다",
           "count": 30,
-          "score": 582,
-          "averageRank": 11.6,
+          "score": 583,
+          "averageRank": 11.57,
           "bestRank": 1,
           "uniqueTitles": 3
         },
         {
           "keyword": "월클들",
-          "count": 22,
-          "score": 571,
-          "averageRank": 5.05,
+          "count": 21,
+          "score": 544,
+          "averageRank": 5.1,
           "bestRank": 1,
           "uniqueTitles": 1
         },
         {
           "keyword": "고질병",
-          "count": 22,
-          "score": 571,
-          "averageRank": 5.05,
+          "count": 21,
+          "score": 544,
+          "averageRank": 5.1,
           "bestRank": 1,
           "uniqueTitles": 1
         }
       ],
       "watched": {
         "미국": {
-          "count": 100,
-          "score": 1359,
-          "averageRank": 17.41,
+          "count": 98,
+          "score": 1339,
+          "averageRank": 17.34,
           "bestRank": 5
         },
         "집착": {
-          "count": 79,
-          "score": 1227,
-          "averageRank": 15.47,
+          "count": 78,
+          "score": 1208,
+          "averageRank": 15.51,
           "bestRank": 3
         },
         "천재": {
-          "count": 127,
-          "score": 1913,
-          "averageRank": 15.94,
+          "count": 126,
+          "score": 1915,
+          "averageRank": 15.8,
           "bestRank": 1
         },
         "마법사": {
-          "count": 103,
-          "score": 1562,
-          "averageRank": 15.83,
+          "count": 102,
+          "score": 1574,
+          "averageRank": 15.57,
           "bestRank": 1
         },
         "탑": {
-          "count": 71,
-          "score": 1571,
-          "averageRank": 8.87,
+          "count": 70,
+          "score": 1584,
+          "averageRank": 8.37,
           "bestRank": 1
         },
         "회귀": {
-          "count": 33,
-          "score": 535,
-          "averageRank": 14.79,
+          "count": 32,
+          "score": 536,
+          "averageRank": 14.25,
           "bestRank": 1
         },
         "빙의": {
           "count": 19,
-          "score": 392,
-          "averageRank": 10.37,
+          "score": 391,
+          "averageRank": 10.42,
           "bestRank": 1
         },
         "재벌": {
           "count": 51,
-          "score": 843,
-          "averageRank": 14.47,
+          "score": 845,
+          "averageRank": 14.43,
           "bestRank": 1
         },
         "아포칼립스": {
@@ -1598,8 +1590,8 @@
         },
         "무당": {
           "count": 23,
-          "score": 312,
-          "averageRank": 17.43,
+          "score": 315,
+          "averageRank": 17.3,
           "bestRank": 8
         },
         "신점": {
@@ -1609,9 +1601,9 @@
           "bestRank": 1
         },
         "착각": {
-          "count": 36,
-          "score": 545,
-          "averageRank": 15.86,
+          "count": 35,
+          "score": 542,
+          "averageRank": 15.51,
           "bestRank": 3
         }
       }
@@ -1623,10 +1615,6 @@
       "message": "무료 베스트 30개 · 유료 베스트 30개 · 선독점 베스트 30개 · 선호작 베스트 30개 · 베스트셀러 30개"
     },
     {
-      "date": "2026-07-28",
-      "message": "무료 베스트 30개 · 유료 베스트 30개 · 선독점 베스트 30개 · 선호작 베스트 30개 · 베스트셀러 30개"
-    },
-    {
       "date": "2026-07-29",
       "message": "무료 베스트 30개 · 유료 베스트 30개 · 선독점 베스트 30개 · 선호작 베스트 30개 · 베스트셀러 30개"
     },
@@ -1640,6 +1628,10 @@
     },
     {
       "date": "2026-07-30",
+      "message": "무료 베스트 30개 · 유료 베스트 30개 · 선독점 베스트 30개 · 선호작 베스트 30개 · 베스트셀러 30개"
+    },
+    {
+      "date": "2026-07-31",
       "message": "무료 베스트 30개 · 유료 베스트 30개 · 선독점 베스트 30개 · 선호작 베스트 30개 · 베스트셀러 30개"
     },
     {
