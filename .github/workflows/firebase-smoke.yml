@@ -32,7 +32,7 @@ jobs:
         run: |
           set -euo pipefail
           npm install --no-save playwright-core@1.54.2
-          cat > /tmp/firebase-smoke.mjs <<'EOF'
+          cat > firebase-smoke.mjs <<'EOF'
           import { chromium } from 'playwright-core';
 
           const browser = await chromium.launch({
@@ -79,4 +79,4 @@ jobs:
 
           await browser.close();
           EOF
-          node /tmp/firebase-smoke.mjs
+          node firebase-smoke.mjs
