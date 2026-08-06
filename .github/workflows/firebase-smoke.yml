@@ -1,0 +1,82 @@
+name: Firebase Analytics smoke check
+
+on:
+  push:
+    branches: [main]
+    paths:
+      - firebase-analytics.js
+      - live-data.js
+      - .github/workflows/firebase-smoke.yml
+  workflow_dispatch:
+
+permissions:
+  contents: read
+
+jobs:
+  verify:
+    runs-on: ubuntu-latest
+    steps:
+      - name: Verify deployed resources
+        shell: bash
+        run: |
+          set -euo pipefail
+          base="https://mikeshin0822.github.io/munpia-ranking"
+          curl --fail --location --silent --show-error "$base/firebase-analytics.js?v=${GITHUB_SHA}" -o /tmp/firebase-analytics.js
+          grep -q "site_loaded" /tmp/firebase-analytics.js
+          grep -q "page_view" /tmp/firebase-analytics.js
+          curl --fail --location --silent --show-error "https://www.gstatic.com/firebasejs/12.17.0/firebase-app.js" -o /dev/null
+          curl --fail --location --silent --show-error "https://www.gstatic.com/firebasejs/12.17.0/firebase-analytics.js" -o /dev/null
+
+      - name: Verify browser sends Analytics request
+        shell: bash
+        run: |
+          set -euo pipefail
+          npm install --no-save playwright-core@1.54.2
+          cat > /tmp/firebase-smoke.mjs <<'EOF'
+          import { chromium } from 'playwright-core';
+
+          const browser = await chromium.launch({
+            executablePath: '/usr/bin/google-chrome',
+            headless: true,
+            args: ['--no-sandbox', '--disable-dev-shm-usage']
+          });
+          const page = await browser.newPage();
+          const analyticsRequests = [];
+          const consoleMessages = [];
+
+          page.on('request', request => {
+            const url = request.url();
+            if (url.includes('/g/collect') || url.includes('google-analytics.com')) {
+              analyticsRequests.push(url);
+            }
+          });
+          page.on('console', message => consoleMessages.push(`${message.type()}: ${message.text()}`));
+          page.on('pageerror', error => consoleMessages.push(`pageerror: ${error.message}`));
+
+          await page.goto('https://mikeshin0822.github.io/munpia-ranking/?firebase_debug=1', {
+            waitUntil: 'networkidle',
+            timeout: 60000
+          });
+          await page.waitForTimeout(8000);
+
+          const diagnostics = await page.evaluate(() => ({
+            status: document.documentElement.dataset.firebaseAnalytics || null,
+            runtime: window.munpiaAnalyticsStatus || null,
+            source: window.munpiaAnalytics?.source || null,
+            dataLayerEvents: Array.isArray(window.dataLayer)
+              ? window.dataLayer.filter(item => item?.[0] === 'event').map(item => item?.[1])
+              : []
+          }));
+
+          console.log(JSON.stringify({ diagnostics, analyticsRequests, consoleMessages }, null, 2));
+
+          if (!diagnostics.status || diagnostics.status === 'blocked') {
+            throw new Error(`Analytics did not initialize: ${JSON.stringify(diagnostics)}`);
+          }
+          if (!analyticsRequests.length) {
+            throw new Error('No Google Analytics collection request was observed.');
+          }
+
+          await browser.close();
+          EOF
+          node /tmp/firebase-smoke.mjs
