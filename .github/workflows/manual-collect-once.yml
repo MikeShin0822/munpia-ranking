@@ -4,6 +4,7 @@ on:
   push:
     paths:
       - '.automation/manual-collect-once.txt'
+      - '.github/workflows/manual-collect-once.yml'
 
 permissions:
   contents: write
@@ -16,36 +17,89 @@ jobs:
       - uses: actions/setup-node@v4
         with:
           node-version: 24
-      - name: Fetch ranking endpoints
+      - name: Fetch ranking endpoints with diagnostics
         shell: bash
         run: |
           set -u
           rm -rf raw
           mkdir -p raw
+          : > raw/status.log
           ua='Mozilla/5.0 (compatible; MunpiaTitleArchive/1.2; +https://github.com/MikeShin0822/munpia-ranking)'
+
+          fetch_one() {
+            name="$1"
+            url="$2"
+            out="raw/$name"
+            code=$(curl -L -sS -o "$out" -w '%{http_code}' --connect-timeout 10 --max-time 45 -A "$ua" -H 'accept-language: ko-KR,ko;q=0.9' "$url" || true)
+            size=0
+            if [ -f "$out" ]; then size=$(wc -c < "$out"); fi
+            printf '%s status=%s bytes=%s\n' "$name" "${code:-curl_error}" "$size" >> raw/status.log
+          }
+
           for section in today plsa.eachtoday prefer plsa.bestseller; do
             safe=${section//./_}
             for page in 1 2 3; do
               url="https://mm.munpia.com/?ajx=1&menu=best&action=list&section=${section}&keyword=&page=${page}"
-              (curl -L -sS --fail --connect-timeout 10 --max-time 45 -A "$ua" -H 'accept-language: ko-KR,ko;q=0.9' "$url" -o "raw/${safe}-${page}.json" || true) &
+              fetch_one "${safe}-${page}.json" "$url" &
             done
           done
-          (curl -L -sS --fail --connect-timeout 10 --max-time 45 -A "$ua" -H 'accept-language: ko-KR,ko;q=0.9' 'https://www.munpia.com/best/plsa.exclusive-eachtoday' -o raw/exclusive.html || true) &
+          fetch_one "exclusive.html" 'https://www.munpia.com/best/plsa.exclusive-eachtoday' &
           wait
-          find raw -maxdepth 1 -type f -printf '%f %s bytes\n' | sort
-      - name: Build snapshot and report
+          sort -o raw/status.log raw/status.log
+          cat raw/status.log
+
+      - name: Build snapshot and report without hiding failure
         shell: bash
         run: |
-          python scripts/build_snapshot_from_raw.py
-          node scripts/report.mjs
-      - name: Commit snapshot
+          set +e
+          python scripts/build_snapshot_from_raw.py > /tmp/build.log 2>&1
+          build_code=$?
+          cat /tmp/build.log
+          report_code=99
+          if [ "$build_code" -eq 0 ]; then
+            node scripts/report.mjs > /tmp/report.log 2>&1
+            report_code=$?
+            cat /tmp/report.log
+          else
+            : > /tmp/report.log
+          fi
+          echo "$build_code" > /tmp/build.code
+          echo "$report_code" > /tmp/report.code
+          exit 0
+
+      - name: Write diagnostic record
+        shell: bash
+        run: |
+          python - <<'PY'
+          import datetime as dt
+          import json
+          from pathlib import Path
+          from zoneinfo import ZoneInfo
+
+          status = Path('raw/status.log').read_text(encoding='utf-8', errors='replace').splitlines()
+          build_log = Path('/tmp/build.log').read_text(encoding='utf-8', errors='replace') if Path('/tmp/build.log').exists() else ''
+          report_log = Path('/tmp/report.log').read_text(encoding='utf-8', errors='replace') if Path('/tmp/report.log').exists() else ''
+          payload = {
+              'checkedAt': dt.datetime.now(ZoneInfo('Asia/Seoul')).isoformat(timespec='seconds'),
+              'endpointStatus': status,
+              'buildExitCode': int(Path('/tmp/build.code').read_text().strip()),
+              'reportExitCode': int(Path('/tmp/report.code').read_text().strip()),
+              'buildLog': build_log[-8000:],
+              'reportLog': report_log[-8000:],
+          }
+          Path('data/manual-collection-diagnostic.json').write_text(
+              json.dumps(payload, ensure_ascii=False, indent=2) + '\n', encoding='utf-8'
+          )
+          PY
+
+      - name: Commit snapshot and diagnostics
         shell: bash
         run: |
           git config user.name "github-actions[bot]"
           git config user.email "41898282+github-actions[bot]@users.noreply.github.com"
-          git add data/rankings.json data/latest-report.json
+          git add data/rankings.json data/latest-report.json data/manual-collection-diagnostic.json
           if git diff --cached --quiet; then
-            echo "No ranking changes"
+            echo "No changes"
           else
             git commit -m "data: collect Munpia rankings 2026-08-07 manual"
             git push origin HEAD:main
