@@ -1,0 +1,52 @@
+name: Manual Munpia collection once
+
+on:
+  push:
+    paths:
+      - '.automation/manual-collect-once.txt'
+
+permissions:
+  contents: write
+
+jobs:
+  collect:
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v4
+      - uses: actions/setup-node@v4
+        with:
+          node-version: 24
+      - name: Fetch ranking endpoints
+        shell: bash
+        run: |
+          set -u
+          rm -rf raw
+          mkdir -p raw
+          ua='Mozilla/5.0 (compatible; MunpiaTitleArchive/1.2; +https://github.com/MikeShin0822/munpia-ranking)'
+          for section in today plsa.eachtoday prefer plsa.bestseller; do
+            safe=${section//./_}
+            for page in 1 2 3; do
+              url="https://mm.munpia.com/?ajx=1&menu=best&action=list&section=${section}&keyword=&page=${page}"
+              (curl -L -sS --fail --connect-timeout 10 --max-time 45 -A "$ua" -H 'accept-language: ko-KR,ko;q=0.9' "$url" -o "raw/${safe}-${page}.json" || true) &
+            done
+          done
+          (curl -L -sS --fail --connect-timeout 10 --max-time 45 -A "$ua" -H 'accept-language: ko-KR,ko;q=0.9' 'https://www.munpia.com/best/plsa.exclusive-eachtoday' -o raw/exclusive.html || true) &
+          wait
+          find raw -maxdepth 1 -type f -printf '%f %s bytes\n' | sort
+      - name: Build snapshot and report
+        shell: bash
+        run: |
+          python scripts/build_snapshot_from_raw.py
+          node scripts/report.mjs
+      - name: Commit snapshot
+        shell: bash
+        run: |
+          git config user.name "github-actions[bot]"
+          git config user.email "41898282+github-actions[bot]@users.noreply.github.com"
+          git add data/rankings.json data/latest-report.json
+          if git diff --cached --quiet; then
+            echo "No ranking changes"
+          else
+            git commit -m "data: collect Munpia rankings 2026-08-07 manual"
+            git push origin HEAD:main
+          fi
