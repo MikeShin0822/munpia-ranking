@@ -21,4 +21,8 @@
 
     return nativeFetch(input, init);
   };
+
+  void import(new URL('./firebase-analytics.js', document.baseURI).href).catch(error => {
+    console.warn('Firebase Analytics 모듈을 불러오지 못했습니다.', error);
+  });
 })();
