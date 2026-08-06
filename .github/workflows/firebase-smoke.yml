@@ -10,12 +10,17 @@ on:
   workflow_dispatch:
 
 permissions:
-  contents: read
+  contents: write
 
 jobs:
   verify:
     runs-on: ubuntu-latest
     steps:
+      - uses: actions/checkout@v4
+      - uses: actions/setup-node@v4
+        with:
+          node-version: 24
+
       - name: Verify deployed resources
         shell: bash
         run: |
@@ -26,6 +31,34 @@ jobs:
           grep -q "page_view" /tmp/firebase-analytics.js
           curl --fail --location --silent --show-error "https://www.gstatic.com/firebasejs/12.17.0/firebase-app.js" -o /dev/null
           curl --fail --location --silent --show-error "https://www.gstatic.com/firebasejs/12.17.0/firebase-analytics.js" -o /dev/null
+
+      - name: Collect Munpia rankings when requested
+        if: contains(github.event.head_commit.message, '[munpia-collect]')
+        shell: bash
+        run: |
+          set -u
+          rm -rf raw
+          mkdir -p raw
+          ua='Mozilla/5.0 (compatible; MunpiaTitleArchive/1.2; +https://github.com/MikeShin0822/munpia-ranking)'
+          for section in today plsa.eachtoday prefer plsa.bestseller; do
+            safe=${section//./_}
+            for page in 1 2 3; do
+              url="https://mm.munpia.com/?ajx=1&menu=best&action=list&section=${section}&keyword=&page=${page}"
+              (curl -L -sS --fail --connect-timeout 10 --max-time 45 -A "$ua" -H 'accept-language: ko-KR,ko;q=0.9' "$url" -o "raw/${safe}-${page}.json" || true) &
+            done
+          done
+          (curl -L -sS --fail --connect-timeout 10 --max-time 45 -A "$ua" -H 'accept-language: ko-KR,ko;q=0.9' 'https://www.munpia.com/best/plsa.exclusive-eachtoday' -o raw/exclusive.html || true) &
+          wait
+          find raw -maxdepth 1 -type f -printf '%f %s bytes\n' | sort
+          python scripts/build_snapshot_from_raw.py
+          node scripts/report.mjs
+          git config user.name "github-actions[bot]"
+          git config user.email "41898282+github-actions[bot]@users.noreply.github.com"
+          git add data/rankings.json data/latest-report.json
+          if ! git diff --cached --quiet; then
+            git commit -m "data: collect daily Munpia rankings"
+            git push origin HEAD:main
+          fi
 
       - name: Verify browser sends Analytics request
         shell: bash
