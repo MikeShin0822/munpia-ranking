@@ -21,6 +21,80 @@ jobs:
         with:
           node-version: 24
 
+      - name: Collect Munpia rankings with diagnostics when requested
+        if: contains(github.event.head_commit.message, '[munpia-collect]')
+        shell: bash
+        run: |
+          set +e
+          rm -rf raw
+          mkdir -p raw
+          : > raw/status.log
+          ua='Mozilla/5.0 (compatible; MunpiaTitleArchive/1.2; +https://github.com/MikeShin0822/munpia-ranking)'
+
+          fetch_one() {
+            name="$1"
+            url="$2"
+            out="raw/$name"
+            code=$(curl -L -sS -o "$out" -w '%{http_code}' --connect-timeout 10 --max-time 45 -A "$ua" -H 'accept-language: ko-KR,ko;q=0.9' "$url")
+            curl_code=$?
+            size=0
+            if [ -f "$out" ]; then size=$(wc -c < "$out"); fi
+            printf '%s http=%s curl=%s bytes=%s\n' "$name" "${code:-none}" "$curl_code" "$size" >> raw/status.log
+          }
+
+          for section in today plsa.eachtoday prefer plsa.bestseller; do
+            safe=${section//./_}
+            for page in 1 2 3; do
+              url="https://mm.munpia.com/?ajx=1&menu=best&action=list&section=${section}&keyword=&page=${page}"
+              fetch_one "${safe}-${page}.json" "$url" &
+            done
+          done
+          fetch_one "exclusive.html" 'https://www.munpia.com/best/plsa.exclusive-eachtoday' &
+          wait
+          sort -o raw/status.log raw/status.log
+          cat raw/status.log
+
+          python scripts/build_snapshot_from_raw.py > /tmp/build.log 2>&1
+          build_code=$?
+          cat /tmp/build.log
+          report_code=99
+          if [ "$build_code" -eq 0 ]; then
+            node scripts/report.mjs > /tmp/report.log 2>&1
+            report_code=$?
+            cat /tmp/report.log
+          else
+            : > /tmp/report.log
+          fi
+
+          python - "$build_code" "$report_code" <<'PY'
+          import datetime as dt
+          import json
+          import sys
+          from pathlib import Path
+          from zoneinfo import ZoneInfo
+
+          payload = {
+              'checkedAt': dt.datetime.now(ZoneInfo('Asia/Seoul')).isoformat(timespec='seconds'),
+              'endpointStatus': Path('raw/status.log').read_text(encoding='utf-8', errors='replace').splitlines(),
+              'buildExitCode': int(sys.argv[1]),
+              'reportExitCode': int(sys.argv[2]),
+              'buildLog': Path('/tmp/build.log').read_text(encoding='utf-8', errors='replace')[-8000:],
+              'reportLog': Path('/tmp/report.log').read_text(encoding='utf-8', errors='replace')[-8000:],
+          }
+          Path('data/munpia-fetch-diagnostic.json').write_text(
+              json.dumps(payload, ensure_ascii=False, indent=2) + '\n', encoding='utf-8'
+          )
+          PY
+
+          git config user.name "github-actions[bot]"
+          git config user.email "41898282+github-actions[bot]@users.noreply.github.com"
+          git add data/rankings.json data/latest-report.json data/munpia-fetch-diagnostic.json
+          if ! git diff --cached --quiet; then
+            git commit -m "data: collect daily Munpia rankings"
+            git push origin HEAD:main
+          fi
+          exit 0
+
       - name: Verify deployed resources
         shell: bash
         run: |
@@ -31,34 +105,6 @@ jobs:
           grep -q "page_view" /tmp/firebase-analytics.js
           curl --fail --location --silent --show-error "https://www.gstatic.com/firebasejs/12.17.0/firebase-app.js" -o /dev/null
           curl --fail --location --silent --show-error "https://www.gstatic.com/firebasejs/12.17.0/firebase-analytics.js" -o /dev/null
-
-      - name: Collect Munpia rankings when requested
-        if: contains(github.event.head_commit.message, '[munpia-collect]')
-        shell: bash
-        run: |
-          set -u
-          rm -rf raw
-          mkdir -p raw
-          ua='Mozilla/5.0 (compatible; MunpiaTitleArchive/1.2; +https://github.com/MikeShin0822/munpia-ranking)'
-          for section in today plsa.eachtoday prefer plsa.bestseller; do
-            safe=${section//./_}
-            for page in 1 2 3; do
-              url="https://mm.munpia.com/?ajx=1&menu=best&action=list&section=${section}&keyword=&page=${page}"
-              (curl -L -sS --fail --connect-timeout 10 --max-time 45 -A "$ua" -H 'accept-language: ko-KR,ko;q=0.9' "$url" -o "raw/${safe}-${page}.json" || true) &
-            done
-          done
-          (curl -L -sS --fail --connect-timeout 10 --max-time 45 -A "$ua" -H 'accept-language: ko-KR,ko;q=0.9' 'https://www.munpia.com/best/plsa.exclusive-eachtoday' -o raw/exclusive.html || true) &
-          wait
-          find raw -maxdepth 1 -type f -printf '%f %s bytes\n' | sort
-          python scripts/build_snapshot_from_raw.py
-          node scripts/report.mjs
-          git config user.name "github-actions[bot]"
-          git config user.email "41898282+github-actions[bot]@users.noreply.github.com"
-          git add data/rankings.json data/latest-report.json
-          if ! git diff --cached --quiet; then
-            git commit -m "data: collect daily Munpia rankings"
-            git push origin HEAD:main
-          fi
 
       - name: Verify browser sends Analytics request
         shell: bash
