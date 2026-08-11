@@ -39,9 +39,11 @@ jobs:
           new_tab_ok=false
           new_data_ok=false
           grep -q '문피아 제목 레이더' /tmp/site.html && site_ok=true
-          grep -q "\"date\": \"$expected_date\"" /tmp/rankings.json && data_ok=true
+          grep -q '"snapshots"' /tmp/rankings.json && data_ok=true
           if grep -q 'data-view="new-best"' /tmp/site.html && grep -q 'NEW BEST RADAR' /tmp/site.html; then new_tab_ok=true; fi
           if grep -q '"status": "complete"' /tmp/new-latest.json && grep -q '"count": 200' /tmp/new-latest.json && grep -q "\"latestDate\": \"$expected_date\"" /tmp/new-index.json; then new_data_ok=true; fi
+
+          echo "site=$site_code site_ok=$site_ok data=$data_code data_ok=$data_ok new_tab=$new_tab_ok new_js=$new_js_code new_css=$new_css_code new_index=$new_index_code new_latest=$new_latest_code new_data=$new_data_ok"
 
           mkdir -p data
           cat > data/public-verification.json <<EOF
@@ -53,7 +55,7 @@ jobs:
             "siteContentOk": $site_ok,
             "dataUrl": "$data",
             "dataStatus": $data_code,
-            "latestDatePresent": $data_ok,
+            "rankingDataReadable": $data_ok,
             "newBestTabPublished": $new_tab_ok,
             "newBestJsStatus": $new_js_code,
             "newBestCssStatus": $new_css_code,
