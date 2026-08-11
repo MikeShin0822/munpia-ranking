@@ -3,7 +3,7 @@
 <head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <meta name="description" content="문피아 베스트 제목을 매일 수집하고 제목 키워드의 일간·주간·월간 흐름을 분석합니다.">
+  <meta name="description" content="문피아 베스트 제목을 매일 수집하고 제목 키워드의 일간·주간·월간 흐름과 신규 베스트 1~200위를 분석합니다.">
   <title>문피아 제목 레이더</title>
   <link rel="stylesheet" href="./styles.css">
 </head>
@@ -16,6 +16,7 @@
     <nav class="main-nav" aria-label="주요 메뉴">
       <button class="nav-button active" data-view="titles">오늘의 제목</button>
       <button class="nav-button" data-view="insights">통계 · 인사이트</button>
+      <button class="nav-button" data-view="new-best">신규 베스트</button>
     </nav>
     <div id="updated-at" class="updated-at"></div>
   </header>
@@ -98,6 +99,42 @@
         </div>
         <div id="keyword-sparkline" class="sparkline-wrap"></div>
         <div id="keyword-matches" class="match-list"></div>
+      </section>
+    </section>
+
+    <section id="new-best-view" class="view-shell" hidden>
+      <div class="hero new-best-hero">
+        <div>
+          <p class="eyebrow">NEW BEST RADAR</p>
+          <h1>신규 베스트 200위의 흐름.</h1>
+          <p>문피아 신규 베스트를 약 3시간 간격으로 저장합니다. 날짜와 수집 시점을 바꿔 1~200위, 조회수 컷과 순위 변화를 별도로 확인할 수 있습니다.</p>
+        </div>
+        <div class="new-best-controls">
+          <label class="date-control">날짜<select id="new-best-date"></select></label>
+          <label class="date-control">수집 시점<select id="new-best-snapshot"></select></label>
+        </div>
+      </div>
+
+      <div id="new-best-status" class="new-best-status"></div>
+
+      <div class="stat-grid new-best-stat-grid">
+        <article class="stat-card"><span>TOP 200 컷</span><strong id="cutoff-200">—</strong><small>200위 조회수</small></article>
+        <article class="stat-card"><span>TOP 100 컷</span><strong id="cutoff-100">—</strong><small>100위 조회수</small></article>
+        <article class="stat-card"><span>TOP 50 컷</span><strong id="cutoff-50">—</strong><small>50위 조회수</small></article>
+        <article class="stat-card standout"><span>TOP 20 컷</span><strong id="cutoff-20">—</strong><small>20위 조회수</small></article>
+      </div>
+
+      <section class="panel new-best-panel">
+        <div class="panel-header">
+          <div><h2>신규 베스트 1~200위</h2><p id="new-best-meta">수집 데이터를 불러오는 중입니다.</p></div>
+          <label class="search-box"><span>검색</span><input id="new-best-search" type="search" placeholder="제목 · 작가 · 장르 검색"></label>
+        </div>
+        <div class="new-best-table-wrap">
+          <div class="new-best-table-head" aria-hidden="true">
+            <span>순위</span><span>작품</span><span>작가</span><span>장르</span><span>조회</span><span>변동</span>
+          </div>
+          <div id="new-best-list" class="new-best-list"></div>
+        </div>
       </section>
     </section>
   </main>
