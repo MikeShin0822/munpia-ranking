@@ -1,15 +1,21 @@
 (() => {
   const nativeFetch = window.fetch.bind(window);
-  const liveDataUrl = 'https://raw.githubusercontent.com/MikeShin0822/munpia-ranking/main/data/rankings.json';
+  const rawRoot = 'https://raw.githubusercontent.com/MikeShin0822/munpia-ranking/main';
 
   window.fetch = async (input, init = {}) => {
     const requestedUrl = typeof input === 'string' ? input : input.url;
     const resolvedUrl = new URL(requestedUrl, window.location.href);
-    const isRankingData = resolvedUrl.pathname.endsWith('/data/rankings.json');
+    const rankingMatch = resolvedUrl.pathname.endsWith('/data/rankings.json');
+    const newBestMarker = '/data/new-best/';
+    const newBestIndex = resolvedUrl.pathname.indexOf(newBestMarker);
+    const isNewBestData = newBestIndex >= 0;
 
-    if (isRankingData && window.location.hostname.endsWith('github.io')) {
+    if ((rankingMatch || isNewBestData) && window.location.hostname.endsWith('github.io')) {
       try {
-        const response = await nativeFetch(`${liveDataUrl}?v=${Date.now()}`, {
+        const remoteUrl = rankingMatch
+          ? `${rawRoot}/data/rankings.json`
+          : `${rawRoot}${resolvedUrl.pathname.slice(newBestIndex)}`;
+        const response = await nativeFetch(`${remoteUrl}?v=${Date.now()}`, {
           ...init,
           cache: 'no-store'
         });
