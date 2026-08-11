@@ -22,12 +22,27 @@ jobs:
           checked_at=$(TZ=Asia/Seoul date --iso-8601=seconds)
           site='https://mikeshin0822.github.io/munpia-ranking/'
           data='https://raw.githubusercontent.com/MikeShin0822/munpia-ranking/main/data/rankings.json'
+          new_index='https://raw.githubusercontent.com/MikeShin0822/munpia-ranking/main/data/new-best/index.json'
+          new_latest='https://raw.githubusercontent.com/MikeShin0822/munpia-ranking/main/data/new-best/latest.json'
+          new_js='https://mikeshin0822.github.io/munpia-ranking/new-best.js'
+          new_css='https://mikeshin0822.github.io/munpia-ranking/new-best.css'
+
           site_code=$(curl -L -sS -o /tmp/site.html -w '%{http_code}' "$site")
           data_code=$(curl -L -sS -o /tmp/rankings.json -w '%{http_code}' "$data")
+          new_index_code=$(curl -L -sS -o /tmp/new-index.json -w '%{http_code}' "$new_index")
+          new_latest_code=$(curl -L -sS -o /tmp/new-latest.json -w '%{http_code}' "$new_latest")
+          new_js_code=$(curl -L -sS -o /tmp/new-best.js -w '%{http_code}' "$new_js")
+          new_css_code=$(curl -L -sS -o /tmp/new-best.css -w '%{http_code}' "$new_css")
+
           site_ok=false
           data_ok=false
+          new_tab_ok=false
+          new_data_ok=false
           grep -q '문피아 제목 레이더' /tmp/site.html && site_ok=true
           grep -q "\"date\": \"$expected_date\"" /tmp/rankings.json && data_ok=true
+          if grep -q 'data-view="new-best"' /tmp/site.html && grep -q 'NEW BEST RADAR' /tmp/site.html; then new_tab_ok=true; fi
+          if grep -q '"status": "complete"' /tmp/new-latest.json && grep -q '"count": 200' /tmp/new-latest.json && grep -q "\"latestDate\": \"$expected_date\"" /tmp/new-index.json; then new_data_ok=true; fi
+
           mkdir -p data
           cat > data/public-verification.json <<EOF
           {
@@ -38,17 +53,32 @@ jobs:
             "siteContentOk": $site_ok,
             "dataUrl": "$data",
             "dataStatus": $data_code,
-            "latestDatePresent": $data_ok
+            "latestDatePresent": $data_ok,
+            "newBestTabPublished": $new_tab_ok,
+            "newBestJsStatus": $new_js_code,
+            "newBestCssStatus": $new_css_code,
+            "newBestIndexStatus": $new_index_code,
+            "newBestLatestStatus": $new_latest_code,
+            "newBestDataComplete": $new_data_ok
           }
           EOF
+
           test "$site_code" = '200'
           test "$data_code" = '200'
           test "$site_ok" = 'true'
           test "$data_ok" = 'true'
+          test "$new_tab_ok" = 'true'
+          test "$new_js_code" = '200'
+          test "$new_css_code" = '200'
+          test "$new_index_code" = '200'
+          test "$new_latest_code" = '200'
+          test "$new_data_ok" = 'true'
       - name: Commit verification result
+        shell: bash
         run: |
           git config user.name "github-actions[bot]"
           git config user.email "41898282+github-actions[bot]@users.noreply.github.com"
           git add data/public-verification.json
           git commit -m "ci: record public dashboard verification"
-          git push
+          git pull --rebase origin main
+          git push origin HEAD:main
