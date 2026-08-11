@@ -1,10 +1,16 @@
 {
-  "checkedAt": "2026-07-26T07:45:12+09:00",
-  "expectedDate": "2026-07-26",
+  "checkedAt": "2026-08-12T02:42:17+09:00",
+  "expectedDate": "2026-08-12",
   "siteUrl": "https://mikeshin0822.github.io/munpia-ranking/",
   "siteStatus": 200,
   "siteContentOk": true,
   "dataUrl": "https://raw.githubusercontent.com/MikeShin0822/munpia-ranking/main/data/rankings.json",
   "dataStatus": 200,
-  "latestDatePresent": true
+  "rankingDataReadable": true,
+  "newBestTabPublished": true,
+  "newBestJsStatus": 200,
+  "newBestCssStatus": 200,
+  "newBestIndexStatus": 200,
+  "newBestLatestStatus": 200,
+  "newBestDataComplete": true
 }
