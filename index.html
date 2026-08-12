@@ -125,6 +125,23 @@
         <article class="stat-card standout"><span>TOP 20 컷</span><strong id="cutoff-20">—</strong><small>20위 조회수</small></article>
       </div>
 
+      <section class="new-best-movers" aria-labelledby="new-best-movers-heading">
+        <div class="mover-section-header">
+          <div><h2 id="new-best-movers-heading">급상승 · 급하락</h2><p>저장된 3시간 스냅샷끼리 동일 작품의 순위를 직접 비교합니다.</p></div>
+          <small id="new-best-mover-meta">직전 스냅샷을 확인하는 중입니다.</small>
+        </div>
+        <div class="mover-grid">
+          <article class="panel mover-panel">
+            <div class="panel-header"><h3>급상승 TOP 5</h3><span>직전 수집 대비 상승 폭</span></div>
+            <div id="new-best-rising" class="mover-list"></div>
+          </article>
+          <article class="panel mover-panel">
+            <div class="panel-header"><h3>급하락 TOP 5</h3><span>직전 수집 대비 하락 폭</span></div>
+            <div id="new-best-falling" class="mover-list"></div>
+          </article>
+        </div>
+      </section>
+
       <section class="panel new-best-panel">
         <div class="panel-header">
           <div><h2>신규 베스트 1~200위</h2><p id="new-best-meta">수집 데이터를 불러오는 중입니다.</p></div>
@@ -136,6 +153,13 @@
           </div>
           <div id="new-best-list" class="new-best-list"></div>
         </div>
+      </section>
+
+      <section class="panel cutoff-chart-panel" aria-labelledby="cutoff-chart-heading">
+        <div class="panel-header">
+          <div><h2 id="cutoff-chart-heading">조회수 컷 일중 변화</h2><p id="cutoff-chart-meta">수집 시점별 TOP 20·50·100·200 진입 조회수 컷을 비교합니다.</p></div>
+        </div>
+        <div id="cutoff-chart" class="cutoff-chart"></div>
       </section>
     </section>
   </main>
