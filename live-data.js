@@ -7,14 +7,19 @@
     const resolvedUrl = new URL(requestedUrl, window.location.href);
     const rankingMatch = resolvedUrl.pathname.endsWith('/data/rankings.json');
     const newBestMarker = '/data/new-best/';
+    const weeklyMarker = '/data/weekly-patterns/';
     const newBestIndex = resolvedUrl.pathname.indexOf(newBestMarker);
+    const weeklyIndex = resolvedUrl.pathname.indexOf(weeklyMarker);
     const isNewBestData = newBestIndex >= 0;
+    const isWeeklyData = weeklyIndex >= 0;
 
-    if ((rankingMatch || isNewBestData) && window.location.hostname.endsWith('github.io')) {
+    if ((rankingMatch || isNewBestData || isWeeklyData) && window.location.hostname.endsWith('github.io')) {
       try {
         const remoteUrl = rankingMatch
           ? `${rawRoot}/data/rankings.json`
-          : `${rawRoot}${resolvedUrl.pathname.slice(newBestIndex)}`;
+          : isNewBestData
+            ? `${rawRoot}${resolvedUrl.pathname.slice(newBestIndex)}`
+            : `${rawRoot}${resolvedUrl.pathname.slice(weeklyIndex)}`;
         const response = await nativeFetch(`${remoteUrl}?v=${Date.now()}`, {
           ...init,
           cache: 'no-store'
@@ -30,5 +35,9 @@
 
   void import(new URL('./firebase-analytics.js', document.baseURI).href).catch(error => {
     console.warn('Firebase Analytics 모듈을 불러오지 못했습니다.', error);
+  });
+
+  void import(new URL('./weekly-patterns.js', document.baseURI).href).catch(error => {
+    console.warn('주간 제목 패턴 모듈을 불러오지 못했습니다.', error);
   });
 })();
