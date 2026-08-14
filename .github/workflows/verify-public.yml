@@ -26,6 +26,10 @@ jobs:
           new_latest='https://raw.githubusercontent.com/MikeShin0822/munpia-ranking/main/data/new-best/latest.json'
           new_js='https://mikeshin0822.github.io/munpia-ranking/new-best.js'
           new_css='https://mikeshin0822.github.io/munpia-ranking/new-best.css'
+          weekly_index='https://raw.githubusercontent.com/MikeShin0822/munpia-ranking/main/data/weekly-patterns/index.json'
+          weekly_latest='https://raw.githubusercontent.com/MikeShin0822/munpia-ranking/main/data/weekly-patterns/latest.json'
+          weekly_js='https://mikeshin0822.github.io/munpia-ranking/weekly-patterns.js'
+          weekly_css='https://mikeshin0822.github.io/munpia-ranking/weekly-patterns.css'
 
           site_code=$(curl -L -sS -o /tmp/site.html -w '%{http_code}' "$site")
           data_code=$(curl -L -sS -o /tmp/rankings.json -w '%{http_code}' "$data")
@@ -33,6 +37,10 @@ jobs:
           new_latest_code=$(curl -L -sS -o /tmp/new-latest.json -w '%{http_code}' "$new_latest")
           new_js_code=$(curl -L -sS -o /tmp/new-best.js -w '%{http_code}' "$new_js")
           new_css_code=$(curl -L -sS -o /tmp/new-best.css -w '%{http_code}' "$new_css")
+          weekly_index_code=$(curl -L -sS -o /tmp/weekly-index.json -w '%{http_code}' "$weekly_index")
+          weekly_latest_code=$(curl -L -sS -o /tmp/weekly-latest.json -w '%{http_code}' "$weekly_latest")
+          weekly_js_code=$(curl -L -sS -o /tmp/weekly-patterns.js -w '%{http_code}' "$weekly_js")
+          weekly_css_code=$(curl -L -sS -o /tmp/weekly-patterns.css -w '%{http_code}' "$weekly_css")
 
           site_ok=false
           data_ok=false
@@ -41,6 +49,9 @@ jobs:
           cutoff_chart_ok=false
           new_js_syntax_ok=false
           new_data_ok=false
+          weekly_tab_ok=false
+          weekly_js_syntax_ok=false
+          weekly_data_ok=false
           grep -q '문피아 제목 레이더' /tmp/site.html && site_ok=true
           grep -q '"snapshots"' /tmp/rankings.json && data_ok=true
           if grep -q 'data-view="new-best"' /tmp/site.html && grep -q 'NEW BEST RADAR' /tmp/site.html; then new_tab_ok=true; fi
@@ -48,8 +59,11 @@ jobs:
           if grep -q 'id="cutoff-chart"' /tmp/site.html && grep -q '조회수 컷 일중 변화' /tmp/site.html; then cutoff_chart_ok=true; fi
           if node --check /tmp/new-best.js; then new_js_syntax_ok=true; fi
           if grep -q '"status": "complete"' /tmp/new-latest.json && grep -q '"count": 200' /tmp/new-latest.json && grep -q "\"latestDate\": \"$expected_date\"" /tmp/new-index.json; then new_data_ok=true; fi
+          if grep -q 'data-view = .weekly-patterns.' /tmp/weekly-patterns.js && grep -q 'WEEKLY TITLE GRAMMAR' /tmp/weekly-patterns.js && grep -q 'weekly-patterns-view' /tmp/weekly-patterns.js; then weekly_tab_ok=true; fi
+          if node --check /tmp/weekly-patterns.js; then weekly_js_syntax_ok=true; fi
+          if grep -q '"startDate": "2026-08-03"' /tmp/weekly-latest.json && grep -q '"endDate": "2026-08-09"' /tmp/weekly-latest.json && grep -q '"complete": true' /tmp/weekly-latest.json && grep -q '"latestKey": "2026-08-03_2026-08-09"' /tmp/weekly-index.json; then weekly_data_ok=true; fi
 
-          echo "site=$site_code site_ok=$site_ok data=$data_code data_ok=$data_ok new_tab=$new_tab_ok movers=$movers_ok cutoff_chart=$cutoff_chart_ok new_js=$new_js_code js_syntax=$new_js_syntax_ok new_css=$new_css_code new_index=$new_index_code new_latest=$new_latest_code new_data=$new_data_ok"
+          echo "site=$site_code site_ok=$site_ok data=$data_code data_ok=$data_ok new_tab=$new_tab_ok movers=$movers_ok cutoff_chart=$cutoff_chart_ok new_js=$new_js_code js_syntax=$new_js_syntax_ok new_css=$new_css_code new_index=$new_index_code new_latest=$new_latest_code new_data=$new_data_ok weekly_tab=$weekly_tab_ok weekly_js=$weekly_js_code weekly_js_syntax=$weekly_js_syntax_ok weekly_css=$weekly_css_code weekly_index=$weekly_index_code weekly_latest=$weekly_latest_code weekly_data=$weekly_data_ok"
 
           mkdir -p data
           cat > data/public-verification.json <<EOF
@@ -70,7 +84,14 @@ jobs:
             "newBestCssStatus": $new_css_code,
             "newBestIndexStatus": $new_index_code,
             "newBestLatestStatus": $new_latest_code,
-            "newBestDataComplete": $new_data_ok
+            "newBestDataComplete": $new_data_ok,
+            "weeklyPatternTabPublished": $weekly_tab_ok,
+            "weeklyPatternJsStatus": $weekly_js_code,
+            "weeklyPatternJsSyntaxOk": $weekly_js_syntax_ok,
+            "weeklyPatternCssStatus": $weekly_css_code,
+            "weeklyPatternIndexStatus": $weekly_index_code,
+            "weeklyPatternLatestStatus": $weekly_latest_code,
+            "weeklyPatternDataComplete": $weekly_data_ok
           }
           EOF
 
@@ -87,6 +108,13 @@ jobs:
           test "$new_index_code" = '200'
           test "$new_latest_code" = '200'
           test "$new_data_ok" = 'true'
+          test "$weekly_tab_ok" = 'true'
+          test "$weekly_js_code" = '200'
+          test "$weekly_js_syntax_ok" = 'true'
+          test "$weekly_css_code" = '200'
+          test "$weekly_index_code" = '200'
+          test "$weekly_latest_code" = '200'
+          test "$weekly_data_ok" = 'true'
       - name: Commit verification result
         shell: bash
         run: |
