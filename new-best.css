@@ -1,4 +1,5 @@
 .new-best-hero { align-items: flex-end; }
+.new-best-hero h1 { max-width: none; white-space: nowrap; font-size: clamp(32px, 3.6vw, 44px); }
 .new-best-controls { display: grid; grid-template-columns: repeat(2, minmax(180px, 230px)); gap: 12px; }
 .new-best-status { margin-bottom: 16px; }
 .new-best-notice { display: flex; align-items: center; justify-content: space-between; gap: 18px; padding: 13px 16px; border: 1px solid var(--line); border-radius: 14px; background: rgba(255,255,255,.5); color: var(--muted); font-size: 12px; }
@@ -77,6 +78,7 @@
 @media (max-width: 640px) {
   .main-nav { max-width: calc(100vw - 20px); overflow-x: auto; justify-content: flex-start; }
   .nav-button { flex: 0 0 auto; white-space: nowrap; padding-inline: 14px; }
+  .new-best-hero h1 { font-size: clamp(22px, 6.7vw, 30px); letter-spacing: -.055em; }
   .new-best-controls { grid-template-columns: 1fr; }
   .new-best-notice { align-items: flex-start; flex-direction: column; gap: 5px; }
   .mover-section-header { align-items: flex-start; flex-direction: column; gap: 4px; }
