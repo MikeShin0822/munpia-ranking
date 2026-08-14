@@ -1,0 +1,64 @@
+name: Build weekly Munpia title patterns
+
+on:
+  schedule:
+    - cron: '0 9 * * 1'
+      timezone: 'Asia/Seoul'
+  workflow_dispatch:
+  push:
+    paths:
+      - '.automation/run-weekly-patterns.txt'
+
+permissions:
+  contents: write
+
+concurrency:
+  group: munpia-weekly-pattern-report
+  cancel-in-progress: false
+
+jobs:
+  build-report:
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v4
+      - uses: actions/setup-python@v5
+        with:
+          python-version: '3.12'
+      - name: Build previous Monday-Sunday report
+        run: python scripts/build_weekly_patterns.py
+      - name: Validate weekly report
+        shell: bash
+        run: |
+          python - <<'PY'
+          import json
+          from datetime import date
+          from pathlib import Path
+          index = json.loads(Path('data/weekly-patterns/index.json').read_text(encoding='utf-8'))
+          latest = json.loads(Path('data/weekly-patterns/latest.json').read_text(encoding='utf-8'))
+          start = date.fromisoformat(latest['startDate'])
+          end = date.fromisoformat(latest['endDate'])
+          assert start.weekday() == 0, start
+          assert end.weekday() == 6, end
+          assert (end - start).days == 6
+          assert latest['dataQuality']['complete'] is True, latest['dataQuality']
+          assert 8 <= len(latest['patterns']) <= 10, len(latest['patterns'])
+          assert index['latestKey'] == f"{latest['startDate']}_{latest['endDate']}"
+          print('weekly pattern validation passed')
+          PY
+      - name: Validate weekly UI when present
+        shell: bash
+        run: |
+          test ! -f weekly-patterns.js || node --check weekly-patterns.js
+      - name: Commit weekly report
+        shell: bash
+        run: |
+          git config user.name 'github-actions[bot]'
+          git config user.email '41898282+github-actions[bot]@users.noreply.github.com'
+          git add data/weekly-patterns
+          if git diff --cached --quiet; then
+            echo 'No weekly report changes'
+            exit 0
+          fi
+          git commit -m 'report: update weekly Munpia title patterns'
+          git pull --rebase origin main
+          git push origin HEAD:main
