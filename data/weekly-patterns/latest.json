@@ -1,0 +1,365 @@
+{
+  "schemaVersion": 1,
+  "generatedAt": "2026-08-14T17:11:07+09:00",
+  "startDate": "2026-08-03",
+  "endDate": "2026-08-09",
+  "previousStartDate": "2026-07-27",
+  "previousEndDate": "2026-08-02",
+  "title": "08.03–08.09 문피아 주간 제목 패턴",
+  "headline": "최상급 재능·등급 선공개형",
+  "oneLineConclusion": "이번 주 문피아 제목에서는 최상급 재능·등급 선공개형 구조가 가장 넓게 반복됐고, 추락 후 반전 상승형 패턴이 전주 대비 가장 뚜렷하게 증가했습니다.",
+  "methodNote": "동일 제목은 고유 제목 수에서 한 번만 계산하고, 패턴은 서로 겹칠 수 있습니다. 순위 성과는 5개 베스트 목록의 일별 스냅샷을 기준으로 합니다.",
+  "dataQuality": {
+    "expectedDays": 7,
+    "collectedDays": 7,
+    "missingDays": [],
+    "complete": true
+  },
+  "summary": {
+    "entryCount": 1050,
+    "uniqueTitleCount": 119,
+    "patternCount": 10,
+    "categoryOccurrences": {
+      "무료": 210,
+      "유료": 210,
+      "선독점": 210,
+      "선호작": 210,
+      "베스트셀러": 210
+    }
+  },
+  "highlights": [
+    "가장 넓게 반복된 구조는 ‘최상급 재능·등급 선공개형’으로 고유 제목 20개가 포착됐습니다.",
+    "전주 대비 가장 많이 늘어난 구조는 ‘추락 후 반전 상승형’이며 고유 제목이 +5개 변했습니다.",
+    "상위권 장악력이 가장 높았던 구조는 ‘관계 한 번에 신분 점프형’으로 평균 11.7위, 최고 1위였습니다.",
+    "상대적으로 약해진 구조는 ‘해외 로컬 무대 정복형’으로 전주보다 1개 줄었습니다.",
+    "무료·선호작에서는 추락 뒤 재평가, 집착, 의외의 직업 전환형이 강했고 유료·선독점·베스트셀러에서는 권력자·역사·탑 공략형이 반복됐습니다."
+  ],
+  "patterns": [
+    {
+      "key": "max_grade_genius",
+      "name": "최상급 재능·등급 선공개형",
+      "formula": "[평범하거나 저평가된 인물] + [천재·전능·EX/SSS급] + [즉시 성과]",
+      "reason": "주인공의 상한선을 제목에서 미리 공개해 성장 속도와 압도적 우위를 빠르게 전달한다.",
+      "uniqueTitleCount": 20,
+      "previousUniqueTitleCount": 19,
+      "change": 1,
+      "trend": "상승",
+      "lifeStage": "현재 강세",
+      "occurrenceCount": 156,
+      "sharePercent": 16.8,
+      "averageRank": 16.1,
+      "bestRank": 1,
+      "top10TitleCount": 5,
+      "top30TitleCount": 20,
+      "categories": {
+        "베스트셀러": 46,
+        "선호작": 41,
+        "무료": 26,
+        "선독점": 22,
+        "유료": 21
+      },
+      "representativeTitles": [
+        "갱단한테 곡 팔았더니 음악천재로 착각 당했다",
+        "동유럽의 천재 유물 복원사",
+        "전능의 뇌를 얻었다",
+        "별 그리는 그림 천재"
+      ],
+      "score": 585
+    },
+    {
+      "key": "historical_alt_role",
+      "name": "역사·국가 배경 역할 전환형",
+      "formula": "[실존 시대·국가] + [현대적 능력/낯선 역할] + [역사 개변·생존]",
+      "reason": "익숙한 역사적 무대에 현대적 직업과 문제 해결 방식을 넣어 대체역사적 호기심을 자극한다.",
+      "uniqueTitleCount": 17,
+      "previousUniqueTitleCount": 13,
+      "change": 4,
+      "trend": "강한 상승",
+      "lifeStage": "현재 강세",
+      "occurrenceCount": 169,
+      "sharePercent": 14.3,
+      "averageRank": 17.8,
+      "bestRank": 1,
+      "top10TitleCount": 6,
+      "top30TitleCount": 17,
+      "categories": {
+        "선독점": 57,
+        "유료": 54,
+        "베스트셀러": 35,
+        "무료": 14,
+        "선호작": 9
+      },
+      "representativeTitles": [
+        "소비에트가 쓰러지지 않아!",
+        "허난설헌의 남편이 되었다?",
+        "러시아 황제가 독재를 너무 잘함",
+        "세종이 집착하는 건축가가 되었다"
+      ],
+      "score": 555
+    },
+    {
+      "key": "too_good_professional",
+      "name": "직업을 너무 잘하는 형",
+      "formula": "[직업·역할] + [행동] + [너무 잘함/너무 쉬움/압도적 유능함]",
+      "reason": "복잡한 설정 설명 없이 주인공의 압도적 숙련도와 사이다 전개를 직접 약속한다.",
+      "uniqueTitleCount": 12,
+      "previousUniqueTitleCount": 9,
+      "change": 3,
+      "trend": "상승",
+      "lifeStage": "현재 강세",
+      "occurrenceCount": 107,
+      "sharePercent": 10.1,
+      "averageRank": 17.8,
+      "bestRank": 3,
+      "top10TitleCount": 3,
+      "top30TitleCount": 12,
+      "categories": {
+        "선독점": 26,
+        "무료": 24,
+        "선호작": 22,
+        "유료": 21,
+        "베스트셀러": 14
+      },
+      "representativeTitles": [
+        "러시아 황제가 독재를 너무 잘함",
+        "사천당가 신의가 미국에서 환자를 너무 잘 고침",
+        "정치인이 정치를 너무 잘함",
+        "무림맹 고문기술자는 경찰이 너무 쉽다"
+      ],
+      "score": 374
+    },
+    {
+      "key": "grand_power_title",
+      "name": "평범한 출발에서 거대 권력자형",
+      "formula": "[원치 않거나 평범한 상태] + [되었다] + [독재자·황제·재벌·대공·지도자]",
+      "reason": "출발점과 최종 신분의 격차가 커서 권력 획득과 규모 확장의 기대를 만든다.",
+      "uniqueTitleCount": 10,
+      "previousUniqueTitleCount": 8,
+      "change": 2,
+      "trend": "상승",
+      "lifeStage": "안정적 반복",
+      "occurrenceCount": 116,
+      "sharePercent": 8.4,
+      "averageRank": 12.7,
+      "bestRank": 2,
+      "top10TitleCount": 6,
+      "top30TitleCount": 10,
+      "categories": {
+        "유료": 32,
+        "선독점": 30,
+        "베스트셀러": 28,
+        "무료": 16,
+        "선호작": 10
+      },
+      "representativeTitles": [
+        "기러기 아빠는 호주 재벌이 되었다",
+        "비자발적 종신 독재자",
+        "러시아 황제가 독재를 너무 잘함",
+        "반강제적 제국주의자"
+      ],
+      "score": 354
+    },
+    {
+      "key": "fall_then_rise",
+      "name": "추락 후 반전 상승형",
+      "formula": "[은퇴·퇴직·해고·좌천·배제] + [새 능력/새 무대] + [재평가·각성·성공]",
+      "reason": "먼저 손실과 억울함을 제시한 뒤 더 큰 보상을 예고해 지위 역전 기대를 만든다.",
+      "uniqueTitleCount": 11,
+      "previousUniqueTitleCount": 6,
+      "change": 5,
+      "trend": "강한 상승",
+      "lifeStage": "안정적 반복",
+      "occurrenceCount": 60,
+      "sharePercent": 9.2,
+      "averageRank": 13.6,
+      "bestRank": 1,
+      "top10TitleCount": 3,
+      "top30TitleCount": 11,
+      "categories": {
+        "선호작": 30,
+        "무료": 27,
+        "선독점": 2,
+        "유료": 1
+      },
+      "representativeTitles": [
+        "은퇴 당한 헌터가 재평가되었다",
+        "은퇴당한 탱커가 힐 능력을 각성했다",
+        "내 훈수 한 번에 나락간 여배우가 극락감",
+        "무고당한 헌터는 국가재앙급으로 각성했다"
+      ],
+      "score": 315
+    },
+    {
+      "key": "overseas_local_success",
+      "name": "해외 로컬 무대 정복형",
+      "formula": "[미국·호주·러시아 등 해외 공간] + [전문 기술/생계 활동] + [대박·인정·집착]",
+      "reason": "낯선 해외 공간과 익숙한 직업을 결합해 이국성, 생활 판타지, 사회적 인정을 한 번에 약속한다.",
+      "uniqueTitleCount": 10,
+      "previousUniqueTitleCount": 11,
+      "change": -1,
+      "trend": "유지",
+      "lifeStage": "과포화 가능성",
+      "occurrenceCount": 84,
+      "sharePercent": 8.4,
+      "averageRank": 14.4,
+      "bestRank": 2,
+      "top10TitleCount": 6,
+      "top30TitleCount": 10,
+      "categories": {
+        "무료": 32,
+        "선호작": 20,
+        "선독점": 17,
+        "유료": 15
+      },
+      "representativeTitles": [
+        "기러기 아빠는 호주 재벌이 되었다",
+        "사천당가 신의가 미국에서 환자를 너무 잘 고침",
+        "회귀 후 아르헨티나로 귀화했다",
+        "미국 시골 영양사에게 이웃들이 너무 집착함."
+      ],
+      "score": 314
+    },
+    {
+      "key": "expert_new_stage",
+      "name": "전문가의 의외 무대 이식형",
+      "formula": "[기존 전문직·전투직] + [의외의 업계/공간] + [기존 능력으로 압도]",
+      "reason": "서로 멀어 보이는 직업과 무대를 결합해 익숙한 능력이 새 환경에서 어떻게 통할지 궁금하게 만든다.",
+      "uniqueTitleCount": 8,
+      "previousUniqueTitleCount": 7,
+      "change": 1,
+      "trend": "상승",
+      "lifeStage": "안정적 반복",
+      "occurrenceCount": 74,
+      "sharePercent": 6.7,
+      "averageRank": 13.5,
+      "bestRank": 2,
+      "top10TitleCount": 6,
+      "top30TitleCount": 8,
+      "categories": {
+        "무료": 31,
+        "선호작": 29,
+        "유료": 7,
+        "선독점": 7
+      },
+      "representativeTitles": [
+        "데뷔가 월드컵인 23살 축구 감독",
+        "사천당가 신의가 미국에서 환자를 너무 잘 고침",
+        "미국 시골 영양사에게 이웃들이 너무 집착함.",
+        "무당 매니저가 탑스타들을 극락 보냄"
+      ],
+      "score": 268
+    },
+    {
+      "key": "relationship_status_jump",
+      "name": "관계 한 번에 신분 점프형",
+      "formula": "[남편·사위·손녀·아들·후계] + [재벌·회장·권력가] + [관계로 인한 신분 변화]",
+      "reason": "사적 관계가 곧 사회적 지위 변화로 이어져 로맨스와 권력 판타지를 함께 암시한다.",
+      "uniqueTitleCount": 7,
+      "previousUniqueTitleCount": 6,
+      "change": 1,
+      "trend": "상승",
+      "lifeStage": "안정적 반복",
+      "occurrenceCount": 68,
+      "sharePercent": 5.9,
+      "averageRank": 11.7,
+      "bestRank": 1,
+      "top10TitleCount": 3,
+      "top30TitleCount": 7,
+      "categories": {
+        "선호작": 19,
+        "베스트셀러": 14,
+        "무료": 13,
+        "유료": 12,
+        "선독점": 10
+      },
+      "representativeTitles": [
+        "회장님, 신점 보시려면 줄부터 서세요",
+        "기러기 아빠는 호주 재벌이 되었다",
+        "정자기증으로 재벌가 데릴사위",
+        "신입이라 후계 1순위를 들키면 안됨"
+      ],
+      "score": 227
+    },
+    {
+      "key": "ability_tower",
+      "name": "초월 능력으로 탑 돌파형",
+      "formula": "[초월 능력·특수 정보] + [탑/공략] + [빠른 등반·압도적 해결]",
+      "reason": "성장 목표와 해결 수단이 제목 안에서 동시에 제시돼 장르와 보상 구조가 즉시 읽힌다.",
+      "uniqueTitleCount": 7,
+      "previousUniqueTitleCount": 4,
+      "change": 3,
+      "trend": "상승",
+      "lifeStage": "안정적 반복",
+      "occurrenceCount": 60,
+      "sharePercent": 5.9,
+      "averageRank": 13.0,
+      "bestRank": 1,
+      "top10TitleCount": 3,
+      "top30TitleCount": 7,
+      "categories": {
+        "베스트셀러": 19,
+        "무료": 11,
+        "유료": 11,
+        "선독점": 10,
+        "선호작": 9
+      },
+      "representativeTitles": [
+        "시간 정지 능력으로 탑 등반",
+        "나 혼자 마법사인데 탑 등반",
+        "병아리 힐러 탑에 오르다",
+        "탑에서 신점보니 전 세계가 집착함"
+      ],
+      "score": 227
+    },
+    {
+      "key": "small_action_big_reaction",
+      "name": "작은 행동에 세계가 과잉 반응형",
+      "formula": "[평범하거나 작은 행동] + [했더니/뿐인데] + [거대 집단의 집착·극찬·과잉 반응]",
+      "reason": "행동과 결과의 규모 차이가 커서 의외성과 즉각적인 보상 기대를 동시에 만든다.",
+      "uniqueTitleCount": 7,
+      "previousUniqueTitleCount": 5,
+      "change": 2,
+      "trend": "상승",
+      "lifeStage": "안정적 반복",
+      "occurrenceCount": 53,
+      "sharePercent": 5.9,
+      "averageRank": 12.2,
+      "bestRank": 1,
+      "top10TitleCount": 3,
+      "top30TitleCount": 7,
+      "categories": {
+        "선호작": 21,
+        "무료": 19,
+        "베스트셀러": 7,
+        "유료": 5,
+        "선독점": 1
+      },
+      "representativeTitles": [
+        "내 훈수 한 번에 월클들의 고질병이 고쳐짐",
+        "내 훈수 한 번에 나락간 여배우가 극락감",
+        "이름 없는 별들을 흡수했더니 전세계 첩보기관이 집착함",
+        "탑에서 신점보니 전 세계가 집착함"
+      ],
+      "score": 216
+    }
+  ],
+  "risingPatterns": [
+    "fall_then_rise",
+    "historical_alt_role",
+    "too_good_professional",
+    "ability_tower"
+  ],
+  "fallingPatterns": [
+    "overseas_local_success"
+  ],
+  "watchlist": [
+    "추락 후 반전 상승형",
+    "역사·국가 배경 역할 전환형",
+    "직업을 너무 잘하는 형"
+  ],
+  "newBest": {
+    "available": false,
+    "note": "해당 기간에는 신규베스트 3시간 수집이 아직 시작되지 않아 초기 성과를 계산하지 않았습니다.",
+    "snapshotCount": 0
+  }
+}
