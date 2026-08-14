@@ -1,6 +1,6 @@
 {
-  "checkedAt": "2026-08-12T13:37:48+09:00",
-  "expectedDate": "2026-08-12",
+  "checkedAt": "2026-08-14T17:18:53+09:00",
+  "expectedDate": "2026-08-14",
   "siteUrl": "https://mikeshin0822.github.io/munpia-ranking/",
   "siteStatus": 200,
   "siteContentOk": true,
@@ -15,5 +15,12 @@
   "newBestCssStatus": 200,
   "newBestIndexStatus": 200,
   "newBestLatestStatus": 200,
-  "newBestDataComplete": true
+  "newBestDataComplete": true,
+  "weeklyPatternTabPublished": true,
+  "weeklyPatternJsStatus": 200,
+  "weeklyPatternJsSyntaxOk": true,
+  "weeklyPatternCssStatus": 200,
+  "weeklyPatternIndexStatus": 200,
+  "weeklyPatternLatestStatus": 200,
+  "weeklyPatternDataComplete": true
 }
