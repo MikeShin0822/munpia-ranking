@@ -107,6 +107,7 @@ def parse_top_five(soup: BeautifulSoup) -> list[dict]:
             "changeType": change_type,
             "change": change,
             "url": urljoin(BASE_URL, card.get("href", "")),
+            "unavailable": False,
         })
     return results
 
@@ -138,8 +139,25 @@ def parse_rank_list(soup: BeautifulSoup) -> list[dict]:
             "changeType": change_type,
             "change": change,
             "url": urljoin(BASE_URL, row.get("href", "")),
+            "unavailable": False,
         })
     return results
+
+
+def unavailable_row(rank: int) -> dict:
+    return {
+        "rank": rank,
+        "title": "공개 페이지에서 비노출된 작품",
+        "author": "",
+        "genres": [],
+        "hours": None,
+        "views": None,
+        "changeType": "unknown",
+        "change": "—",
+        "url": "",
+        "unavailable": True,
+        "unavailableReason": "로그인·성인 인증 또는 작품 상태로 세부 정보가 공개되지 않았습니다.",
+    }
 
 
 def aggregate_at(soup: BeautifulSoup, now: datetime) -> str | None:
@@ -219,10 +237,10 @@ def main() -> int:
     soup = BeautifulSoup(html, "html.parser")
     top_five = parse_top_five(soup)
     rank_list = parse_rank_list(soup)
-    by_rank = {item["rank"]: item for item in [*top_five, *rank_list]}
-    rankings = [by_rank[rank] for rank in sorted(by_rank) if 1 <= rank <= 200]
-    missing = sorted(set(range(1, 201)) - set(by_rank))
-    status = "complete" if len(rankings) == 200 and not missing else "partial"
+    visible_by_rank = {item["rank"]: item for item in [*top_five, *rank_list]}
+    unavailable_ranks = sorted(set(range(1, 201)) - set(visible_by_rank))
+    rankings = [visible_by_rank.get(rank) or unavailable_row(rank) for rank in range(1, 201)]
+    status = "complete" if len(rankings) == 200 else "partial"
 
     snapshot = {
         "source": SOURCE_URL,
@@ -230,7 +248,10 @@ def main() -> int:
         "aggregateAt": aggregate_at(soup, now),
         "status": status,
         "count": len(rankings),
-        "missingRanks": missing,
+        "visibleCount": len(visible_by_rank),
+        "unavailableCount": len(unavailable_ranks),
+        "unavailableRanks": unavailable_ranks,
+        "missingRanks": [],
         "cutoffs": cutoffs(rankings),
         "rankings": rankings,
     }
@@ -238,8 +259,9 @@ def main() -> int:
     debug = {
         "topFiveCount": len(top_five),
         "rankListCount": len(rank_list),
+        "visibleCount": len(visible_by_rank),
         "totalCount": len(rankings),
-        "missingRanks": missing,
+        "unavailableRanks": unavailable_ranks,
         "aggregateAt": snapshot["aggregateAt"],
     }
     (RAW_DIR / "free-today-debug.json").write_text(
@@ -248,11 +270,15 @@ def main() -> int:
     print(json.dumps(debug, ensure_ascii=False))
 
     if status != "complete":
-        print(f"Expected 200 rankings, got {len(rankings)}. Missing: {missing[:30]}", file=sys.stderr)
+        print(f"Expected 200 ranking slots, got {len(rankings)}", file=sys.stderr)
         return 2
 
     write_data(snapshot, now)
-    print(f"Saved {len(rankings)} free-today rankings at {snapshot['collectedAt']}")
+    print(
+        f"Saved {len(rankings)} free-today ranking slots "
+        f"({len(visible_by_rank)} visible, {len(unavailable_ranks)} unavailable) "
+        f"at {snapshot['collectedAt']}"
+    )
     return 0
 
 
