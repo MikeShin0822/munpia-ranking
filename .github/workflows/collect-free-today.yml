@@ -49,7 +49,9 @@ jobs:
           assert latest['count'] == 200, latest['count']
           assert len(latest['rankings']) == 200, len(latest['rankings'])
           assert [item['rank'] for item in latest['rankings']] == list(range(1, 201))
-          assert latest['cutoffs']['200'] is not None
+          assert latest['visibleCount'] + latest['unavailableCount'] == 200
+          assert latest['visibleCount'] >= 180, latest['visibleCount']
+          assert set(latest['cutoffs']) == {'10', '20', '50', '100', '200'}
           print('free-today validation passed')
           PY
       - name: Validate free today UI module
