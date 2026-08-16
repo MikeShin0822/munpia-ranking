@@ -26,6 +26,10 @@ jobs:
           new_latest='https://raw.githubusercontent.com/MikeShin0822/munpia-ranking/main/data/new-best/latest.json'
           new_js='https://mikeshin0822.github.io/munpia-ranking/new-best.js'
           new_css='https://mikeshin0822.github.io/munpia-ranking/new-best.css'
+          free_index='https://raw.githubusercontent.com/MikeShin0822/munpia-ranking/main/data/free-today/index.json'
+          free_latest='https://raw.githubusercontent.com/MikeShin0822/munpia-ranking/main/data/free-today/latest.json'
+          free_js='https://mikeshin0822.github.io/munpia-ranking/free-today.js'
+          free_css='https://mikeshin0822.github.io/munpia-ranking/free-today.css'
           weekly_index='https://raw.githubusercontent.com/MikeShin0822/munpia-ranking/main/data/weekly-patterns/index.json'
           weekly_latest='https://raw.githubusercontent.com/MikeShin0822/munpia-ranking/main/data/weekly-patterns/latest.json'
           weekly_js='https://mikeshin0822.github.io/munpia-ranking/weekly-patterns.js'
@@ -37,6 +41,10 @@ jobs:
           new_latest_code=$(curl -L -sS -o /tmp/new-latest.json -w '%{http_code}' "$new_latest")
           new_js_code=$(curl -L -sS -o /tmp/new-best.js -w '%{http_code}' "$new_js")
           new_css_code=$(curl -L -sS -o /tmp/new-best.css -w '%{http_code}' "$new_css")
+          free_index_code=$(curl -L -sS -o /tmp/free-index.json -w '%{http_code}' "$free_index")
+          free_latest_code=$(curl -L -sS -o /tmp/free-latest.json -w '%{http_code}' "$free_latest")
+          free_js_code=$(curl -L -sS -o /tmp/free-today.js -w '%{http_code}' "$free_js")
+          free_css_code=$(curl -L -sS -o /tmp/free-today.css -w '%{http_code}' "$free_css")
           weekly_index_code=$(curl -L -sS -o /tmp/weekly-index.json -w '%{http_code}' "$weekly_index")
           weekly_latest_code=$(curl -L -sS -o /tmp/weekly-latest.json -w '%{http_code}' "$weekly_latest")
           weekly_js_code=$(curl -L -sS -o /tmp/weekly-patterns.js -w '%{http_code}' "$weekly_js")
@@ -49,6 +57,9 @@ jobs:
           cutoff_chart_ok=false
           new_js_syntax_ok=false
           new_data_ok=false
+          free_tab_ok=false
+          free_js_syntax_ok=false
+          free_data_ok=false
           weekly_tab_ok=false
           weekly_js_syntax_ok=false
           weekly_data_ok=false
@@ -59,11 +70,14 @@ jobs:
           if grep -q 'id="cutoff-chart"' /tmp/site.html && grep -q '조회수 컷 일중 변화' /tmp/site.html; then cutoff_chart_ok=true; fi
           if node --check /tmp/new-best.js; then new_js_syntax_ok=true; fi
           if grep -q '"status": "complete"' /tmp/new-latest.json && grep -q '"count": 200' /tmp/new-latest.json && grep -q "\"latestDate\": \"$expected_date\"" /tmp/new-index.json; then new_data_ok=true; fi
+          if grep -q "button.dataset.view = 'free-today'" /tmp/free-today.js && grep -q 'FREE TODAY RADAR' /tmp/free-today.js && grep -q 'free-today-view' /tmp/free-today.js; then free_tab_ok=true; fi
+          if node --check /tmp/free-today.js; then free_js_syntax_ok=true; fi
+          if grep -q '"status": "complete"' /tmp/free-latest.json && grep -q '"count": 200' /tmp/free-latest.json && grep -q '"visibleCount"' /tmp/free-latest.json && grep -q '"unavailableCount"' /tmp/free-latest.json && grep -q "\"latestDate\": \"$expected_date\"" /tmp/free-index.json; then free_data_ok=true; fi
           if grep -q "button.dataset.view = 'weekly-patterns'" /tmp/weekly-patterns.js && grep -q 'WEEKLY TITLE GRAMMAR' /tmp/weekly-patterns.js && grep -q 'weekly-patterns-view' /tmp/weekly-patterns.js; then weekly_tab_ok=true; fi
           if node --check /tmp/weekly-patterns.js; then weekly_js_syntax_ok=true; fi
           if grep -q '"startDate": "2026-08-03"' /tmp/weekly-latest.json && grep -q '"endDate": "2026-08-09"' /tmp/weekly-latest.json && grep -q '"complete": true' /tmp/weekly-latest.json && grep -q '"latestKey": "2026-08-03_2026-08-09"' /tmp/weekly-index.json; then weekly_data_ok=true; fi
 
-          echo "site=$site_code site_ok=$site_ok data=$data_code data_ok=$data_ok new_tab=$new_tab_ok movers=$movers_ok cutoff_chart=$cutoff_chart_ok new_js=$new_js_code js_syntax=$new_js_syntax_ok new_css=$new_css_code new_index=$new_index_code new_latest=$new_latest_code new_data=$new_data_ok weekly_tab=$weekly_tab_ok weekly_js=$weekly_js_code weekly_js_syntax=$weekly_js_syntax_ok weekly_css=$weekly_css_code weekly_index=$weekly_index_code weekly_latest=$weekly_latest_code weekly_data=$weekly_data_ok"
+          echo "site=$site_code site_ok=$site_ok data=$data_code data_ok=$data_ok new_tab=$new_tab_ok movers=$movers_ok cutoff_chart=$cutoff_chart_ok new_js=$new_js_code js_syntax=$new_js_syntax_ok new_css=$new_css_code new_index=$new_index_code new_latest=$new_latest_code new_data=$new_data_ok free_tab=$free_tab_ok free_js=$free_js_code free_js_syntax=$free_js_syntax_ok free_css=$free_css_code free_index=$free_index_code free_latest=$free_latest_code free_data=$free_data_ok weekly_tab=$weekly_tab_ok weekly_js=$weekly_js_code weekly_js_syntax=$weekly_js_syntax_ok weekly_css=$weekly_css_code weekly_index=$weekly_index_code weekly_latest=$weekly_latest_code weekly_data=$weekly_data_ok"
 
           mkdir -p data
           cat > data/public-verification.json <<EOF
@@ -85,6 +99,13 @@ jobs:
             "newBestIndexStatus": $new_index_code,
             "newBestLatestStatus": $new_latest_code,
             "newBestDataComplete": $new_data_ok,
+            "freeTodayTabPublished": $free_tab_ok,
+            "freeTodayJsStatus": $free_js_code,
+            "freeTodayJsSyntaxOk": $free_js_syntax_ok,
+            "freeTodayCssStatus": $free_css_code,
+            "freeTodayIndexStatus": $free_index_code,
+            "freeTodayLatestStatus": $free_latest_code,
+            "freeTodayDataComplete": $free_data_ok,
             "weeklyPatternTabPublished": $weekly_tab_ok,
             "weeklyPatternJsStatus": $weekly_js_code,
             "weeklyPatternJsSyntaxOk": $weekly_js_syntax_ok,
@@ -108,6 +129,13 @@ jobs:
           test "$new_index_code" = '200'
           test "$new_latest_code" = '200'
           test "$new_data_ok" = 'true'
+          test "$free_tab_ok" = 'true'
+          test "$free_js_code" = '200'
+          test "$free_js_syntax_ok" = 'true'
+          test "$free_css_code" = '200'
+          test "$free_index_code" = '200'
+          test "$free_latest_code" = '200'
+          test "$free_data_ok" = 'true'
           test "$weekly_tab_ok" = 'true'
           test "$weekly_js_code" = '200'
           test "$weekly_js_syntax_ok" = 'true'
