@@ -17,7 +17,7 @@ TZ = ZoneInfo("Asia/Seoul")
 ROOT = Path(__file__).resolve().parents[1]
 DATA_DIR = ROOT / "data" / "free-today"
 RAW_DIR = ROOT / "raw"
-USER_AGENT = "Mozilla/5.0 (compatible; MunpiaTitleArchive/1.4; +https://github.com/MikeShin0822/munpia-ranking)"
+USER_AGENT = "Mozilla/5.0 (compatible; MunpiaTitleArchive/1.5; +https://github.com/MikeShin0822/munpia-ranking)"
 
 
 def clean(value: str | None) -> str:
@@ -182,6 +182,47 @@ def snapshot_identity(snapshot: dict) -> str:
     return snapshot.get("aggregateAt") or snapshot.get("collectedAt", "")
 
 
+def comparable_ranking(item: dict) -> dict:
+    # `hours` is elapsed-time metadata and can change even when the ranking snapshot itself has not.
+    # Ignore it, along with collection/aggregation timestamps, when deciding whether a new snapshot is meaningful.
+    return {
+        "rank": item.get("rank"),
+        "title": item.get("title"),
+        "author": item.get("author"),
+        "genres": item.get("genres", []),
+        "views": item.get("views"),
+        "changeType": item.get("changeType"),
+        "change": item.get("change"),
+        "url": item.get("url"),
+        "unavailable": item.get("unavailable", False),
+        "unavailableReason": item.get("unavailableReason"),
+    }
+
+
+def comparable_snapshot(snapshot: dict) -> dict:
+    return {
+        "status": snapshot.get("status"),
+        "count": snapshot.get("count"),
+        "visibleCount": snapshot.get("visibleCount"),
+        "unavailableCount": snapshot.get("unavailableCount"),
+        "unavailableRanks": snapshot.get("unavailableRanks", []),
+        "missingRanks": snapshot.get("missingRanks", []),
+        "cutoffs": snapshot.get("cutoffs", {}),
+        "rankings": [comparable_ranking(item) for item in snapshot.get("rankings", [])],
+    }
+
+
+def is_unchanged_from_latest(snapshot: dict) -> bool:
+    latest_path = DATA_DIR / "latest.json"
+    if not latest_path.exists():
+        return False
+    try:
+        latest = json.loads(latest_path.read_text(encoding="utf-8"))
+    except (OSError, json.JSONDecodeError):
+        return False
+    return comparable_snapshot(latest) == comparable_snapshot(snapshot)
+
+
 def write_data(snapshot: dict, now: datetime) -> None:
     DATA_DIR.mkdir(parents=True, exist_ok=True)
     aggregate = snapshot.get("aggregateAt")
@@ -272,6 +313,10 @@ def main() -> int:
     if status != "complete":
         print(f"Expected 200 ranking slots, got {len(rankings)}", file=sys.stderr)
         return 2
+
+    if is_unchanged_from_latest(snapshot):
+        print("Free-today ranking data is unchanged from latest snapshot; skipping data files and commit.")
+        return 0
 
     write_data(snapshot, now)
     print(
