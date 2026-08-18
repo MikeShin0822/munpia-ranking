@@ -1,5 +1,5 @@
 {
-  "updatedAt": "2026-08-18T16:57:42+09:00",
+  "updatedAt": "2026-08-18T17:00:30+09:00",
   "latestKey": "2026-08-10_2026-08-16",
   "reports": [
     {
@@ -7,14 +7,16 @@
       "startDate": "2026-08-03",
       "endDate": "2026-08-09",
       "title": "08.03–08.09 문피아 주간 제목 패턴",
-      "generatedAt": "2026-08-14T17:18:47+09:00"
+      "generatedAt": "2026-08-14T17:18:47+09:00",
+      "analysisMethod": "rule_based_legacy"
     },
     {
       "key": "2026-08-10_2026-08-16",
       "startDate": "2026-08-10",
       "endDate": "2026-08-16",
       "title": "08.10–08.16 문피아 주간 제목 패턴",
-      "generatedAt": "2026-08-18T16:57:42+09:00"
+      "generatedAt": "2026-08-18T17:00:30+09:00",
+      "analysisMethod": "llm_semantic_with_quantitative_support"
     }
   ]
 }
