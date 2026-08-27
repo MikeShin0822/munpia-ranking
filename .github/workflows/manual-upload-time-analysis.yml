@@ -1,0 +1,43 @@
+name: Analyze Munpia upload time once
+
+on:
+  workflow_dispatch:
+  push:
+    paths:
+      - '.automation/run-upload-time-analysis.txt'
+
+permissions:
+  contents: read
+
+concurrency:
+  group: munpia-upload-time-analysis-once
+  cancel-in-progress: true
+
+jobs:
+  analyze:
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v4
+      - uses: actions/setup-python@v5
+        with:
+          python-version: '3.12'
+      - name: Analyze upload time windows
+        run: python scripts/analyze_upload_times_once.py
+      - name: Validate report
+        shell: bash
+        run: |
+          python - <<'PY'
+          import json
+          from pathlib import Path
+          path = Path('tmp/upload-time-analysis/upload-time-analysis.json')
+          report = json.loads(path.read_text(encoding='utf-8'))
+          assert report['coverage']['estimatedUploadEvents'] > 100
+          assert len(report['combinedBinsByTime']) == 8
+          assert len(report['recommendedWindows']) >= 2
+          print(report['coverage'])
+          PY
+      - uses: actions/upload-artifact@v4
+        with:
+          name: munpia-upload-time-analysis-${{ github.run_id }}
+          path: tmp/upload-time-analysis/
+          retention-days: 1
