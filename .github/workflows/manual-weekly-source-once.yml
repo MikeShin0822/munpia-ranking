@@ -1,4 +1,4 @@
-name: Export one weekly Munpia title pattern source
+name: Build one weekly Munpia pattern baseline
 
 on:
   workflow_dispatch:
@@ -14,199 +14,34 @@ concurrency:
   cancel-in-progress: false
 
 jobs:
-  export:
+  build:
     runs-on: ubuntu-latest
     steps:
       - uses: actions/checkout@v4
       - uses: actions/setup-python@v5
         with:
           python-version: '3.12'
-      - name: Export compact weekly analysis source
+      - name: Generate quantitative baseline
+        run: python scripts/build_weekly_patterns.py --start 2026-08-24 --end 2026-08-30
+      - name: Validate baseline
         shell: bash
         run: |
           python - <<'PY'
-          from __future__ import annotations
           import json
-          from collections import Counter, defaultdict
-          from datetime import date, datetime, timedelta
           from pathlib import Path
-          from zoneinfo import ZoneInfo
-
-          root = Path('.')
-          start = date(2026, 8, 24)
-          end = date(2026, 8, 30)
-          previous_end = start - timedelta(days=1)
-          previous_start = previous_end - timedelta(days=6)
-          tz = ZoneInfo('Asia/Seoul')
-          category_labels = {
-              'free_today': '무료',
-              'paid_today': '유료',
-              'exclusive_today': '선독점',
-              'favorites': '선호작',
-              'bestseller': '베스트셀러',
-          }
-
-          rankings = json.loads((root / 'data/rankings.json').read_text(encoding='utf-8'))
-
-          def collect_entries(range_start: date, range_end: date):
-              entries = []
-              dates = set()
-              status_by_date = {}
-              for snapshot in rankings.get('snapshots', []):
-                  day = date.fromisoformat(snapshot['date'])
-                  if not range_start <= day <= range_end:
-                      continue
-                  dates.add(snapshot['date'])
-                  status_by_date[snapshot['date']] = {}
-                  for category, payload in snapshot.get('rankings', {}).items():
-                      status_by_date[snapshot['date']][category] = {
-                          'status': payload.get('status'),
-                          'count': len(payload.get('titles', [])),
-                      }
-                      for rank, title in enumerate(payload.get('titles', []), start=1):
-                          entries.append({
-                              'date': snapshot['date'],
-                              'category': category,
-                              'categoryLabel': category_labels.get(category, category),
-                              'rank': rank,
-                              'title': title.strip(),
-                          })
-              expected = [(range_start + timedelta(days=i)).isoformat() for i in range((range_end-range_start).days+1)]
-              return entries, expected, sorted(set(expected) - dates), status_by_date
-
-          def summarize(entries):
-              by_title = defaultdict(list)
-              for item in entries:
-                  by_title[item['title']].append(item)
-              titles = []
-              for title, items in by_title.items():
-                  category_counts = Counter(item['categoryLabel'] for item in items)
-                  category_best = {}
-                  for item in items:
-                      label = item['categoryLabel']
-                      category_best[label] = min(category_best.get(label, 999), item['rank'])
-                  titles.append({
-                      'title': title,
-                      'occurrenceCount': len(items),
-                      'bestRank': min(item['rank'] for item in items),
-                      'averageRank': round(sum(item['rank'] for item in items) / len(items), 2),
-                      'top10OccurrenceCount': sum(1 for item in items if item['rank'] <= 10),
-                      'dates': sorted({item['date'] for item in items}),
-                      'categoryOccurrences': dict(category_counts),
-                      'categoryBestRanks': category_best,
-                  })
-              titles.sort(key=lambda item: (item['bestRank'], -item['occurrenceCount'], item['title']))
-              return {
-                  'entryCount': len(entries),
-                  'uniqueTitleCount': len(titles),
-                  'categoryOccurrences': dict(Counter(item['categoryLabel'] for item in entries)),
-                  'titles': titles,
-              }
-
-          current_entries, expected_dates, missing_dates, current_status = collect_entries(start, end)
-          previous_entries, previous_expected, previous_missing, previous_status = collect_entries(previous_start, previous_end)
-
-          new_best_titles = defaultdict(list)
-          new_best_snapshot_count = 0
-          new_best_days = []
-          day = start
-          while day <= end:
-              path = root / 'data/new-best' / f'{day.isoformat()}.json'
-              if path.exists():
-                  payload = json.loads(path.read_text(encoding='utf-8'))
-                  snapshots = payload.get('snapshots', [])
-                  if snapshots:
-                      new_best_days.append(day.isoformat())
-                  for snapshot in snapshots:
-                      new_best_snapshot_count += 1
-                      seen_at = snapshot.get('aggregateAt') or snapshot.get('collectedAt')
-                      for item in snapshot.get('rankings', []):
-                          key = item.get('url') or item.get('title')
-                          new_best_titles[key].append({
-                              'title': item.get('title', ''),
-                              'url': item.get('url', ''),
-                              'rank': item.get('rank'),
-                              'views': item.get('views'),
-                              'seenAt': seen_at,
-                          })
-              day += timedelta(days=1)
-
-          new_best_summary = []
-          for key, items in new_best_titles.items():
-              ranks = [item['rank'] for item in items if isinstance(item.get('rank'), int)]
-              views = [item['views'] for item in items if isinstance(item.get('views'), int)]
-              if not ranks:
-                  continue
-              title = next((item['title'] for item in items if item.get('title')), '')
-              url = next((item['url'] for item in items if item.get('url')), '')
-              times = sorted(item['seenAt'] for item in items if item.get('seenAt'))
-              new_best_summary.append({
-                  'title': title,
-                  'url': url,
-                  'bestRank': min(ranks),
-                  'averageRank': round(sum(ranks) / len(ranks), 2),
-                  'snapshotCount': len(ranks),
-                  'peakViews': max(views) if views else None,
-                  'firstSeenAt': times[0] if times else None,
-                  'lastSeenAt': times[-1] if times else None,
-                  'reachedTop20': min(ranks) <= 20,
-                  'reachedTop50': min(ranks) <= 50,
-                  'reachedTop100': min(ranks) <= 100,
-              })
-          new_best_summary.sort(key=lambda item: (item['bestRank'], -item['snapshotCount'], item['title']))
-
-          source = {
-              'schemaVersion': 1,
-              'generatedAt': datetime.now(tz).replace(microsecond=0).isoformat(),
-              'startDate': start.isoformat(),
-              'endDate': end.isoformat(),
-              'previousStartDate': previous_start.isoformat(),
-              'previousEndDate': previous_end.isoformat(),
-              'dataQuality': {
-                  'expectedDays': len(expected_dates),
-                  'collectedDays': len(expected_dates) - len(missing_dates),
-                  'missingDays': missing_dates,
-                  'statusByDate': current_status,
-                  'complete': not missing_dates and all(
-                      item.get('status') == 'complete' and item.get('count') == 30
-                      for categories in current_status.values()
-                      for item in categories.values()
-                  ),
-              },
-              'previousDataQuality': {
-                  'expectedDays': len(previous_expected),
-                  'collectedDays': len(previous_expected) - len(previous_missing),
-                  'missingDays': previous_missing,
-                  'statusByDate': previous_status,
-              },
-              'current': summarize(current_entries),
-              'previous': summarize(previous_entries),
-              'newBest': {
-                  'available': bool(new_best_summary),
-                  'dayCount': len(new_best_days),
-                  'days': new_best_days,
-                  'snapshotCount': new_best_snapshot_count,
-                  'titleCount': len(new_best_summary),
-                  'titles': new_best_summary,
-              },
-          }
-          assert source['dataQuality']['complete'], source['dataQuality']
-          out = root / 'data/weekly-patterns/_source-2026-08-24_2026-08-30.json'
-          out.parent.mkdir(parents=True, exist_ok=True)
-          out.write_text(json.dumps(source, ensure_ascii=False, indent=2) + '\n', encoding='utf-8')
-          print(json.dumps({
-              'currentEntries': source['current']['entryCount'],
-              'currentTitles': source['current']['uniqueTitleCount'],
-              'newBestSnapshots': source['newBest']['snapshotCount'],
-              'newBestTitles': source['newBest']['titleCount'],
-          }, ensure_ascii=False))
+          report = json.loads(Path('data/weekly-patterns/2026-08-24_2026-08-30.json').read_text(encoding='utf-8'))
+          assert report['startDate'] == '2026-08-24'
+          assert report['endDate'] == '2026-08-30'
+          assert report['dataQuality']['complete'] is True
+          assert 8 <= len(report['patterns']) <= 10
+          print('baseline validation passed')
           PY
-      - name: Commit compact source
+      - name: Commit baseline
         shell: bash
         run: |
           git config user.name 'github-actions[bot]'
           git config user.email '41898282+github-actions[bot]@users.noreply.github.com'
-          git add data/weekly-patterns/_source-2026-08-24_2026-08-30.json
-          git commit -m 'chore: export 2026-08-24 weekly pattern source'
+          git add data/weekly-patterns
+          git commit -m 'chore: generate 2026-08-24 weekly pattern baseline'
           git pull --rebase origin main
           git push origin HEAD:main
