@@ -1,0 +1,56 @@
+name: Export weekly Munpia source 2026-08-31
+
+on:
+  workflow_dispatch:
+  push:
+    paths:
+      - '.automation/run-weekly-source-2026-08-31.txt'
+
+permissions:
+  contents: write
+
+concurrency:
+  group: munpia-weekly-source-2026-08-31
+  cancel-in-progress: false
+
+jobs:
+  export:
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v4
+      - uses: actions/setup-python@v5
+        with:
+          python-version: '3.12'
+      - name: Export compact weekly analysis source
+        run: python .automation/export_weekly_source_2026_08_31.py
+      - name: Validate source
+        shell: bash
+        run: |
+          python - <<'PY'
+          import json
+          from pathlib import Path
+          path = Path('data/weekly-patterns/_source-2026-08-31_2026-09-06.json')
+          payload = json.loads(path.read_text(encoding='utf-8'))
+          assert payload['startDate'] == '2026-08-31'
+          assert payload['endDate'] == '2026-09-06'
+          assert payload['dataQuality']['complete'] is True
+          assert payload['previousDataQuality']['complete'] is True
+          assert payload['current']['entryCount'] == 1050
+          assert payload['newBest']['dayCount'] == 7
+          print('weekly source validation passed')
+          PY
+      - name: Upload source artifact
+        uses: actions/upload-artifact@v4
+        with:
+          name: weekly-source-2026-08-31
+          path: data/weekly-patterns/_source-2026-08-31_2026-09-06.json
+          retention-days: 1
+      - name: Commit source
+        shell: bash
+        run: |
+          git config user.name 'github-actions[bot]'
+          git config user.email '41898282+github-actions[bot]@users.noreply.github.com'
+          git add data/weekly-patterns/_source-2026-08-31_2026-09-06.json
+          git commit -m 'chore: export 2026-08-31 weekly pattern source'
+          git pull --rebase origin main
+          git push origin HEAD:main
