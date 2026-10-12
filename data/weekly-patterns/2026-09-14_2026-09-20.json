@@ -1,0 +1,470 @@
+{
+  "schemaVersion": 2,
+  "analysisMethod": "llm_semantic_with_quantitative_support",
+  "analysisLabel": "LLM 의미 분석 + 수집 데이터 정량 집계",
+  "generatedAt": "2026-10-13T02:45:00+09:00",
+  "startDate": "2026-09-14",
+  "endDate": "2026-09-20",
+  "previousStartDate": "2026-09-07",
+  "previousEndDate": "2026-09-13",
+  "periodType": "weekly",
+  "title": "09.14–09.20 문피아 주간 제목 패턴",
+  "headline": "SF 공모전 유입이 돈·셸터·직장 해고의 언어로 번역",
+  "oneLineConclusion": "고유 제목이 108개에서 117개로 넓어진 가운데 돈·자산형, 능력 등급형, 숨은 거점형, 버림 뒤 보상형이 함께 증가했다. 특히 신규베스트에서는 서버관리자·특이점·텔레포트·셸터처럼 SF 개념을 퇴사·돈·생존으로 번역한 제목 8개 중 6개가 Top 20에 들어 공모전 유입의 초기 반응이 선명했다.",
+  "methodNote": "패턴의 이름·슬롯·시장 해석은 LLM이 117개 고유 제목과 신규베스트 405개 작품을 의미 단위로 검토해 작성했습니다. 출현 수·평균 순위·카테고리 분포는 저장소 데이터를 사용했고, 전주 비교 수치는 이번 주에 정의한 동일 패턴 기준을 9월 7일~13일 제목에도 다시 적용했습니다. 한 제목은 여러 패턴에 중복 포함될 수 있으며 신규베스트 성과는 200위 안에 포착된 작품만 대상으로 한 조건부 비교입니다.",
+  "dataQuality": {
+    "expectedDays": 7,
+    "collectedDays": 7,
+    "missingDays": [],
+    "complete": true
+  },
+  "summary": {
+    "entryCount": 1050,
+    "uniqueTitleCount": 117,
+    "previousUniqueTitleCount": 108,
+    "newTitleCount": 26,
+    "exitedTitleCount": 17,
+    "patternCount": 10,
+    "categoryOccurrences": {
+      "무료": 210,
+      "유료": 210,
+      "선독점": 210,
+      "선호작": 210,
+      "베스트셀러": 210
+    }
+  },
+  "highlights": [
+    "주간 고유 제목은 108개에서 117개로 늘었다. 신규 26개·이탈 17개로, SF 공모전과 자산형 신작이 기존 상위권에 대거 진입한 확장 주간이었다.",
+    "돈·자산을 먼저 지급하는 현실 탈출형은 16개에서 20개로 늘었다. 파워볼·재벌·무인도·보물·1,000조처럼 보상의 규모를 제목에서 즉시 공개했다.",
+    "능력 등급형은 20개에서 23개, 숨은 거점형은 5개에서 8개, 버림 뒤 보상형은 9개에서 12개로 함께 증가했다. 강한 능력보다 능력으로 확보하는 자산·공간·보상이 더 구체화됐다.",
+    "SF를 현실 직업과 생계로 번역한 형은 2개에서 4개로 늘었고, 신규베스트에서는 관련 8개 중 6개가 Top 20에 도달했다.",
+    "신분·상태를 충돌시키는 모순 문장형은 16개에서 19개로 늘고 평균 11.9위를 기록했다. ‘재벌인데 알바’, ‘서버관리자인데 퇴사’, ‘모두 갇혔는데 나만 출퇴근’처럼 앞뒤의 불일치가 클릭 빈칸을 만들었다."
+  ],
+  "patterns": [
+    {
+      "key": "cash_escape",
+      "name": "현금·자산을 먼저 지급하는 현실 탈출형",
+      "formula": "[퇴사·평범한 신분] + [파워볼·재벌·보물·무인도] + [즉시 부와 인생 역전]",
+      "reason": "성장 과정을 길게 설명하기보다 돈·토지·보물·재벌 신분을 제목에서 선지급한다. 고유 제목이 16개에서 20개로 늘었고 무료·선호작 노출이 특히 많아 현실 탈출 욕구가 강한 확산 구간으로 보인다.",
+      "uniqueTitleCount": 20,
+      "previousUniqueTitleCount": 16,
+      "change": 4,
+      "trend": "강한 상승",
+      "lifeStage": "확장 중·과포화 주의",
+      "occurrenceCount": 131,
+      "sharePercent": 17.1,
+      "averageRank": 17.7,
+      "bestRank": 1,
+      "top10TitleCount": 7,
+      "top30TitleCount": 20,
+      "categories": {
+        "무료": 44,
+        "선호작": 43,
+        "유료": 17,
+        "선독점": 16,
+        "베스트셀러": 11
+      },
+      "representativeTitles": [
+        "전업주부인데 재벌보다 돈이 많음",
+        "퇴사 당했는데 파워볼 당첨되어 미국에서 호텔영업합니다",
+        "무인도에 낙원 마트",
+        "1,000조 재벌"
+      ],
+      "newBest": {
+        "titleCount": 66,
+        "top20Count": 12,
+        "top50Count": 25,
+        "top100Count": 43,
+        "bestRank": 1
+      }
+    },
+    {
+      "key": "max_grade_genius",
+      "name": "능력 등급이 곧 장르 설명서형",
+      "formula": "[천재·초월급·EX/S급] + [직업·장르 정체성] + [압도적 성과 암시]",
+      "reason": "주인공의 상한선을 제목에서 바로 공개하는 기본 문법이다. 20개에서 23개로 늘었지만 등급 단어만으로는 부족해, 국가의 오판·구체 직업·퇴사 같은 두 번째 훅과 결합하는 제목이 늘었다.",
+      "uniqueTitleCount": 23,
+      "previousUniqueTitleCount": 20,
+      "change": 3,
+      "trend": "강한 상승",
+      "lifeStage": "기본값·결합형 확장",
+      "occurrenceCount": 169,
+      "sharePercent": 19.7,
+      "averageRank": 14.3,
+      "bestRank": 1,
+      "top10TitleCount": 11,
+      "top30TitleCount": 23,
+      "categories": {
+        "무료": 54,
+        "선호작": 47,
+        "베스트셀러": 28,
+        "유료": 24,
+        "선독점": 16
+      },
+      "representativeTitles": [
+        "초월급 헌터가 국가에게 버림받음",
+        "천재 뮤지션이었던 전생을 각성함",
+        "정보기관이 집착하는 천재해커가 되었다",
+        "12살 고아인데 대문호로 착각당했다"
+      ],
+      "newBest": {
+        "titleCount": 76,
+        "top20Count": 11,
+        "top50Count": 28,
+        "top100Count": 49,
+        "bestRank": 1
+      }
+    },
+    {
+      "key": "hidden_base_resource",
+      "name": "숨은 거점·자원을 독점하는 형",
+      "formula": "[셸터·무인도·땅굴·마트] + [숨겨진 자원·안전지대] + [생존·사업·영지 확장]",
+      "reason": "작은 공간 안에 독점 가능한 자원을 숨겨 발견·경영·확장의 재미를 동시에 제공한다. 5개에서 8개로 늘었고, 아포칼립스 셸터와 무인도처럼 공간 자체가 보상이 되는 제목이 강화됐다.",
+      "uniqueTitleCount": 8,
+      "previousUniqueTitleCount": 5,
+      "change": 3,
+      "trend": "강한 상승",
+      "lifeStage": "SF·생존물과 결합 확장",
+      "occurrenceCount": 46,
+      "sharePercent": 6.8,
+      "averageRank": 19.1,
+      "bestRank": 4,
+      "top10TitleCount": 2,
+      "top30TitleCount": 8,
+      "categories": {
+        "무료": 17,
+        "선호작": 13,
+        "선독점": 8,
+        "유료": 6,
+        "베스트셀러": 2
+      },
+      "representativeTitles": [
+        "특이점 세상에서 셸터를 만들었다",
+        "무인도에 낙원 마트",
+        "선협에서 땅굴을 숨김",
+        "방구석 뱀파이어는 미궁에서 사업합니다"
+      ],
+      "newBest": {
+        "titleCount": 14,
+        "top20Count": 3,
+        "top50Count": 6,
+        "top100Count": 10,
+        "bestRank": 4
+      }
+    },
+    {
+      "key": "fall_then_rise",
+      "name": "버림·퇴직 뒤 보상을 회수하는 형",
+      "formula": "[퇴사·해고·버림·좌천] + [숨은 능력/새 무대] + [재평가·각성·보상]",
+      "reason": "부당한 손실을 먼저 제시해 감정적 빚을 만들고, 뒤에서 더 큰 보상을 약속한다. 9개에서 12개로 늘었고 평균 11.5위로 공급 확대와 순위 효율이 함께 강했다.",
+      "uniqueTitleCount": 12,
+      "previousUniqueTitleCount": 9,
+      "change": 3,
+      "trend": "강한 상승",
+      "lifeStage": "고효율 재확산",
+      "occurrenceCount": 93,
+      "sharePercent": 10.3,
+      "averageRank": 11.5,
+      "bestRank": 1,
+      "top10TitleCount": 7,
+      "top30TitleCount": 12,
+      "categories": {
+        "무료": 35,
+        "선호작": 31,
+        "유료": 14,
+        "선독점": 13
+      },
+      "representativeTitles": [
+        "나 혼자 서버관리자인데 퇴사당함",
+        "초월급 헌터가 국가에게 버림받음",
+        "퇴출당한 복원사가 손대면 국보가 된다",
+        "퇴사 당했는데 파워볼 당첨되어 미국에서 호텔영업합니다"
+      ],
+      "newBest": {
+        "titleCount": 43,
+        "top20Count": 8,
+        "top50Count": 19,
+        "top100Count": 29,
+        "bestRank": 1
+      }
+    },
+    {
+      "key": "identity_contrast",
+      "name": "신분·상태를 뒤집는 모순 문장형",
+      "formula": "[강한 능력·신분/평범한 직업] + [인데·나만·모른다] + [상식과 반대되는 사건]",
+      "reason": "한 문장 안에서 앞뒤를 충돌시켜 원인을 확인하고 싶은 빈칸을 만든다. 16개에서 19개로 늘었고 평균 11.9위, Top 10 경험 11개로 순위 효율도 높았다.",
+      "uniqueTitleCount": 19,
+      "previousUniqueTitleCount": 16,
+      "change": 3,
+      "trend": "강한 상승",
+      "lifeStage": "공모전·현대판타지 공통 강세",
+      "occurrenceCount": 147,
+      "sharePercent": 16.2,
+      "averageRank": 11.9,
+      "bestRank": 1,
+      "top10TitleCount": 11,
+      "top30TitleCount": 19,
+      "categories": {
+        "무료": 52,
+        "선호작": 42,
+        "베스트셀러": 24,
+        "선독점": 17,
+        "유료": 12
+      },
+      "representativeTitles": [
+        "나 혼자 서버관리자인데 퇴사당함",
+        "500억 자산가 교사인데 학부모가 고소함",
+        "재벌인데 편의점 알바함",
+        "모두 탑에 갇혔는데 나만 출퇴근한다"
+      ],
+      "newBest": {
+        "titleCount": 49,
+        "top20Count": 8,
+        "top50Count": 18,
+        "top100Count": 31,
+        "bestRank": 1
+      }
+    },
+    {
+      "key": "sf_everyday_hook",
+      "name": "SF를 현실 직업·돈·생존으로 번역하는 형",
+      "formula": "[서버관리자·퇴사·쌀먹·셸터] + [AI·우주·텔레포트·특이점] + [즉시 생계·직위·안전 보상]",
+      "reason": "추상적인 SF 개념을 직장·돈·생존 문제로 바꿔 독자가 첫 보상을 바로 이해하게 한다. 표준 베스트에서는 2개에서 4개로 늘었고, 신규베스트에서는 관련 8개 중 6개가 Top 20에 들어 공모전 초기 유입이 매우 강했다.",
+      "uniqueTitleCount": 4,
+      "previousUniqueTitleCount": 2,
+      "change": 2,
+      "trend": "상승",
+      "lifeStage": "공모전 유입 급상승",
+      "occurrenceCount": 27,
+      "sharePercent": 3.4,
+      "averageRank": 14.1,
+      "bestRank": 1,
+      "top10TitleCount": 2,
+      "top30TitleCount": 4,
+      "categories": {
+        "무료": 13,
+        "선호작": 8,
+        "유료": 3,
+        "선독점": 3
+      },
+      "representativeTitles": [
+        "나 혼자 서버관리자인데 퇴사당함",
+        "특이점 세상에서 셸터를 만들었다",
+        "텔레포트 하나로 현실에서도 쌀먹합니다",
+        "퇴사 후 우주전함 함장합니다"
+      ],
+      "newBest": {
+        "titleCount": 8,
+        "top20Count": 6,
+        "top50Count": 7,
+        "top100Count": 8,
+        "bestRank": 1
+      }
+    },
+    {
+      "key": "historical_alt_role",
+      "name": "국가·시대 좌표에 역할을 박는 형",
+      "formula": "[실존 국가·시대] + [현대적 직업·낯선 역할] + [역사 개변·생존·성공]",
+      "reason": "구체적인 국가와 시대가 세계관 규모를 빠르게 설명한다. 15개에서 17개로 늘었지만 유료·선독점·베스트셀러 집중도가 높아 신규 무료 훅보다 장르 독자의 안정적 선택에 가깝다.",
+      "uniqueTitleCount": 17,
+      "previousUniqueTitleCount": 15,
+      "change": 2,
+      "trend": "상승",
+      "lifeStage": "유료권 장기 강세",
+      "occurrenceCount": 184,
+      "sharePercent": 14.5,
+      "averageRank": 18.3,
+      "bestRank": 1,
+      "top10TitleCount": 5,
+      "top30TitleCount": 17,
+      "categories": {
+        "선독점": 60,
+        "유료": 56,
+        "베스트셀러": 55,
+        "무료": 10,
+        "선호작": 3
+      },
+      "representativeTitles": [
+        "1926 대한민국",
+        "허난설헌의 남편이 되었다?",
+        "러시아 황제가 독재를 너무 잘함",
+        "아프리카 반란군 사령관이 되었다"
+      ],
+      "newBest": {
+        "titleCount": 27,
+        "top20Count": 3,
+        "top50Count": 9,
+        "top100Count": 17,
+        "bestRank": 5
+      }
+    },
+    {
+      "key": "too_good_professional",
+      "name": "직업을 결과로 증명하는 ‘너무 잘함’형",
+      "formula": "[구체 직업·역할] + [핵심 업무] + [너무 잘함·쉽다·씹어먹음]",
+      "reason": "직업의 핵심 성과를 제목에 바로 붙여 유능함을 설명한다. 5개에서 7개로 늘었고 평균 13.4위로, 추상적인 천재보다 시장·교사·국세청 말단처럼 현실 직무를 붙인 제목이 강했다.",
+      "uniqueTitleCount": 7,
+      "previousUniqueTitleCount": 5,
+      "change": 2,
+      "trend": "상승",
+      "lifeStage": "구체 직업 중심 회복",
+      "occurrenceCount": 66,
+      "sharePercent": 6.0,
+      "averageRank": 13.4,
+      "bestRank": 1,
+      "top10TitleCount": 3,
+      "top30TitleCount": 7,
+      "categories": {
+        "무료": 20,
+        "선호작": 19,
+        "선독점": 11,
+        "유료": 9,
+        "베스트셀러": 7
+      },
+      "representativeTitles": [
+        "29살 시장이 도시를 너무 잘 키움",
+        "러시아 황제가 독재를 너무 잘함",
+        "미국 국세청 말단인데, 온갖 거물들이 나를 두려워함",
+        "500억 자산가 교사인데 학부모가 고소함"
+      ],
+      "newBest": {
+        "titleCount": 24,
+        "top20Count": 6,
+        "top50Count": 12,
+        "top100Count": 16,
+        "bestRank": 1
+      }
+    },
+    {
+      "key": "institution_judgment",
+      "name": "거대 조직·집단이 개인의 가치를 판정하는 형",
+      "formula": "[말단·배제된 개인] + [국가·기관·재벌·학부모] + [집착·두려움·버림·공식 인정]",
+      "reason": "주인공이 대단하다고 직접 말하기보다 권위 있는 집단의 반응으로 사회적 가치를 증명한다. 12개에서 13개로 소폭 늘었고, 국가의 오판과 기관의 집착이 능력 등급의 두 번째 훅으로 기능했다.",
+      "uniqueTitleCount": 13,
+      "previousUniqueTitleCount": 12,
+      "change": 1,
+      "trend": "상승",
+      "lifeStage": "강세 유지",
+      "occurrenceCount": 112,
+      "sharePercent": 11.1,
+      "averageRank": 13.7,
+      "bestRank": 1,
+      "top10TitleCount": 7,
+      "top30TitleCount": 13,
+      "categories": {
+        "무료": 36,
+        "선호작": 29,
+        "유료": 17,
+        "선독점": 16,
+        "베스트셀러": 14
+      },
+      "representativeTitles": [
+        "초월급 헌터가 국가에게 버림받음",
+        "미국 국세청 말단인데, 온갖 거물들이 나를 두려워함",
+        "정보기관이 집착하는 천재해커가 되었다",
+        "500억 자산가 교사인데 학부모가 고소함"
+      ],
+      "newBest": {
+        "titleCount": 38,
+        "top20Count": 8,
+        "top50Count": 15,
+        "top100Count": 26,
+        "bestRank": 1
+      }
+    },
+    {
+      "key": "misunderstanding_status",
+      "name": "착각·오해가 위상을 올리는 형",
+      "formula": "[작은 행동·낮은 신분] + [착각·흑막 오해] + [천재·대문호·충신으로 상승]",
+      "reason": "주인공의 실제 의도보다 주변의 과대평가가 더 큰 지위를 만든다. 4개에서 5개로 늘고 평균 12.2위였으며, 신분 격차가 큰 제목일수록 코미디와 상승 욕구를 동시에 자극했다.",
+      "uniqueTitleCount": 5,
+      "previousUniqueTitleCount": 4,
+      "change": 1,
+      "trend": "상승",
+      "lifeStage": "소수 고효율 유지",
+      "occurrenceCount": 41,
+      "sharePercent": 4.3,
+      "averageRank": 12.2,
+      "bestRank": 1,
+      "top10TitleCount": 3,
+      "top30TitleCount": 5,
+      "categories": {
+        "무료": 15,
+        "선호작": 10,
+        "베스트셀러": 7,
+        "유료": 5,
+        "선독점": 4
+      },
+      "representativeTitles": [
+        "12살 고아인데 대문호로 착각당했다",
+        "갱단한테 곡 팔았더니 음악천재로 착각 당했다",
+        "탐관오리가 충신으로 착각당함",
+        "위기감지 능력으로 투자했더니 흑막으로 착각당했다"
+      ],
+      "newBest": {
+        "titleCount": 8,
+        "top20Count": 2,
+        "top50Count": 4,
+        "top100Count": 6,
+        "bestRank": 4
+      }
+    }
+  ],
+  "risingPatterns": [
+    "cash_escape",
+    "max_grade_genius",
+    "hidden_base_resource",
+    "fall_then_rise"
+  ],
+  "fallingPatterns": [],
+  "watchlist": [
+    "SF를 현실 직업·돈·생존으로 번역하는 형",
+    "숨은 거점·자원을 독점하는 형",
+    "버림·퇴직 뒤 보상을 회수하는 형",
+    "신분·상태를 뒤집는 모순 문장형"
+  ],
+  "newBest": {
+    "available": true,
+    "dayCount": 7,
+    "snapshotCount": 27,
+    "titleCount": 405,
+    "note": "2026-09-14~2026-09-20 신규베스트 7일, 유효 스냅샷 27개, 고유 작품 405개를 보조 분석했습니다. SF 현실 번역형은 8개 중 6개, 버림 뒤 보상형은 43개 중 8개가 Top 20에 들어 공모전·감정 역전 제목의 초기 반응이 강했습니다. 단, 신규베스트 200위 안에 포착된 작품만 대상으로 한 조건부 비교입니다.",
+    "signals": [
+      {
+        "key": "sf_everyday_hook",
+        "titleCount": 8,
+        "top20Count": 6,
+        "top50Count": 7,
+        "top100Count": 8
+      },
+      {
+        "key": "fall_then_rise",
+        "titleCount": 43,
+        "top20Count": 8,
+        "top50Count": 19,
+        "top100Count": 29
+      },
+      {
+        "key": "cash_escape",
+        "titleCount": 66,
+        "top20Count": 12,
+        "top50Count": 25,
+        "top100Count": 43
+      },
+      {
+        "key": "identity_contrast",
+        "titleCount": 49,
+        "top20Count": 8,
+        "top50Count": 18,
+        "top100Count": 31
+      }
+    ],
+    "representativeTitles": [
+      "나 혼자 서버관리자인데 퇴사당함",
+      "특이점 세상에서 셸터를 만들었다",
+      "텔레포트 하나로 현실에서도 쌀먹합니다",
+      "퇴사 후 우주전함 함장합니다",
+      "초월급 헌터가 국가에게 버림받음"
+    ]
+  }
+}
