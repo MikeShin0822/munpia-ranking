@@ -1,6 +1,6 @@
 {
-  "updatedAt": "2026-09-16T20:45:57+09:00",
-  "latestKey": "2026-09-07_2026-09-13",
+  "updatedAt": "2026-10-13T02:45:00+09:00",
+  "latestKey": "2026-10-05_2026-10-13",
   "reports": [
     {
       "key": "2026-08-03_2026-08-09",
@@ -49,6 +49,42 @@
       "title": "09.07–09.13 문피아 주간 제목 패턴",
       "generatedAt": "2026-09-16T20:45:57+09:00",
       "analysisMethod": "llm_semantic_with_quantitative_support"
+    },
+    {
+      "key": "2026-09-14_2026-09-20",
+      "startDate": "2026-09-14",
+      "endDate": "2026-09-20",
+      "title": "09.14–09.20 문피아 주간 제목 패턴",
+      "generatedAt": "2026-10-13T02:45:00+09:00",
+      "analysisMethod": "llm_semantic_with_quantitative_support",
+      "periodType": "weekly"
+    },
+    {
+      "key": "2026-09-21_2026-09-27",
+      "startDate": "2026-09-21",
+      "endDate": "2026-09-27",
+      "title": "09.21–09.27 문피아 주간 제목 패턴",
+      "generatedAt": "2026-10-13T02:45:00+09:00",
+      "analysisMethod": "llm_semantic_with_quantitative_support",
+      "periodType": "weekly"
+    },
+    {
+      "key": "2026-09-28_2026-10-04",
+      "startDate": "2026-09-28",
+      "endDate": "2026-10-04",
+      "title": "09.28–10.04 문피아 주간 제목 패턴",
+      "generatedAt": "2026-10-13T02:45:00+09:00",
+      "analysisMethod": "llm_semantic_with_quantitative_support",
+      "periodType": "weekly"
+    },
+    {
+      "key": "2026-10-05_2026-10-13",
+      "startDate": "2026-10-05",
+      "endDate": "2026-10-13",
+      "title": "10.05–10.13 문피아 제목 패턴 (9일 확장)",
+      "generatedAt": "2026-10-13T02:45:00+09:00",
+      "analysisMethod": "llm_semantic_with_quantitative_support",
+      "periodType": "extended_9_day"
     }
   ]
 }

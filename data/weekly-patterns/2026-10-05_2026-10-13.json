@@ -1,0 +1,528 @@
+{
+  "schemaVersion": 2,
+  "analysisMethod": "llm_semantic_with_quantitative_support",
+  "analysisLabel": "LLM 의미 분석 + 수집 데이터 정량 집계",
+  "generatedAt": "2026-10-13T02:45:00+09:00",
+  "startDate": "2026-10-05",
+  "endDate": "2026-10-13",
+  "previousStartDate": "2026-09-28",
+  "previousEndDate": "2026-10-04",
+  "periodType": "extended_9_day",
+  "title": "10.05–10.13 문피아 제목 패턴 (9일 확장)",
+  "headline": "해고 후 회사 붕괴가 정점, 무속·사이비 비즈니스가 새 변주",
+  "oneLineConclusion": "요청대로 9일을 묶은 확장 구간에서 회사 후회형은 10개·평균 9.8위, 신규베스트 77개 중 23개 Top 20으로 가장 강했다. 동시에 무당·사이비 교주·성물 판매를 연예계·인방·사업에 붙인 미세 패턴이 늘었고, 파워볼·재벌 중심의 현금형은 13개로 축소됐다.",
+  "methodNote": "패턴의 이름·슬롯·시장 해석은 LLM이 120개 고유 제목과 신규베스트 407개 작품을 의미 단위로 검토해 작성했습니다. 출현 수·평균 순위·카테고리 분포는 저장소 데이터를 사용했고, 전주 비교 수치는 이번 리포트의 동일 패턴 기준을 이전 구간 제목에도 다시 적용했습니다. 한 제목은 여러 패턴에 중복 포함될 수 있으며 신규베스트 성과는 200위 안에 포착된 작품만 대상으로 한 조건부 비교입니다. 10월 5일~13일은 사용자 요청에 따른 9일 확장 구간이므로 추세 판정은 원시 고유 제목 수보다 일평균 노출률 변화를 우선 사용했습니다. 또한 10월 13일은 한국시간 02시대 당일 초반 스냅샷이므로 완결된 하루 마감 데이터가 아닙니다.",
+  "dataQuality": {
+    "expectedDays": 9,
+    "collectedDays": 9,
+    "missingDays": [],
+    "complete": true,
+    "coverageNote": "10월 13일은 한국시간 02시대에 수집된 당일 초반 스냅샷입니다. 따라서 10월 13일 하루 전체의 마감 순위를 뜻하지 않습니다."
+  },
+  "summary": {
+    "entryCount": 1350,
+    "uniqueTitleCount": 120,
+    "previousUniqueTitleCount": 117,
+    "newTitleCount": 25,
+    "exitedTitleCount": 22,
+    "patternCount": 10,
+    "categoryOccurrences": {
+      "무료": 270,
+      "유료": 270,
+      "선독점": 270,
+      "선호작": 270,
+      "베스트셀러": 270
+    }
+  },
+  "highlights": [
+    "이번 리포트는 10월 5일~13일의 9일 확장 구간이다. 1,350개 순위 항목과 고유 제목 120개를 분석했으며, 전주 7일과의 원시 개수는 직접 비교하지 않고 일별 노출률과 순위 효율을 함께 봤다.",
+    "회사가 핵심 인재를 잘못 내보내는 형은 고유 제목 10개, 평균 9.8위로 가장 높은 효율을 보였다. 신규베스트에서는 관련 77개 중 23개가 Top 20에 들어 해고·권고사직 훅의 과열이 확인됐다.",
+    "거대 조직 판정형은 원시 고유 제목 수로는 8개에서 12개로 늘었지만, 9일 구간을 일평균 노출률로 보정하면 약 13% 낮아졌다. 다만 외계어를 알아듣는 개인에게 전 세계가 집착하거나 정보기관이 천재해커를 추적하는 식의 SF 결합 변주는 계속 눈에 띄었다.",
+    "무속·사이비 능력을 사업으로 바꾸는 형은 2개에서 4개로 늘었다. 신점·무당·사이비 교주가 연예계·인방·성물 판매로 이동하며 종교 능력이 생활형 비즈니스 문법으로 변주됐다.",
+    "현금·자산형은 17개에서 13개로 줄었다. 파워볼·재벌의 즉시 보상보다 “회사가 나를 잘못 잘랐다”는 감정적 손실 회수가 더 강한 전면 훅이 됐다."
+  ],
+  "patterns": [
+    {
+      "key": "workplace_regret",
+      "name": "회사가 핵심 인재를 잘못 내보내는 형",
+      "formula": "[핵심 실무자] + [해고·퇴사·좌천] + [회사·거래처의 붕괴·후회·재영입]",
+      "reason": "직장 내 저평가와 부당한 퇴출을 먼저 보여 준 뒤, 회사·거래처가 입는 손실이나 재영입 요구로 주인공의 가치를 증명한다. 독자는 복잡한 능력 설명보다 “없어지고 나서야 중요성을 안다”는 감정적 복구를 즉시 이해할 수 있다. 이번 구간에는 고유 제목 10개, 평균 9.8위였고 신규베스트에서는 77개 중 23개가 Top 20에 도달했다.",
+      "uniqueTitleCount": 10,
+      "previousUniqueTitleCount": 7,
+      "change": 3,
+      "trend": "강한 상승",
+      "lifeStage": "상승·고효율",
+      "occurrenceCount": 103,
+      "sharePercent": 8.3,
+      "averageRank": 9.8,
+      "bestRank": 1,
+      "top10TitleCount": 7,
+      "top30TitleCount": 10,
+      "categories": {
+        "무료": 50,
+        "선호작": 43,
+        "유료": 8,
+        "선독점": 2
+      },
+      "representativeTitles": [
+        "핵심 특허가 내 건 줄 모르고 해고당함",
+        "잘렸더니 회사가 매일 전화함",
+        "권고사직 명단에 올랐는데 최고 에이스임",
+        "퇴사당하자 거래처가 전부 따라옴"
+      ],
+      "normalizedOccurrenceChangePercent": 21.4,
+      "newBest": {
+        "titleCount": 77,
+        "top20Count": 23,
+        "top50Count": 39,
+        "top100Count": 54,
+        "bestRank": 1
+      }
+    },
+    {
+      "key": "institution_judgment",
+      "name": "거대 조직이 개인의 가치를 판정하는 형",
+      "formula": "[말단·배제된 개인] + [국가·정보기관·재벌·월클] + [집착·두려움·공식 인정]",
+      "reason": "주인공이 대단하다고 직접 말하기보다 국가·정보기관·재벌·월클 같은 외부 집단의 반응으로 사회적 가치를 증명한다. 원시 고유 제목은 8개에서 12개로 늘었지만 이번 구간이 9일이어서, 일평균 노출률로 보정하면 약 13% 낮아졌다. 다만 외계어·천재해커처럼 SF 능력과 기관 반응을 결합한 변주는 계속 살아 있었다.",
+      "uniqueTitleCount": 12,
+      "previousUniqueTitleCount": 8,
+      "change": 4,
+      "trend": "소폭 하락",
+      "lifeStage": "원시 수 증가·일평균 둔화",
+      "occurrenceCount": 94,
+      "sharePercent": 10.0,
+      "averageRank": 17.1,
+      "bestRank": 2,
+      "top10TitleCount": 3,
+      "top30TitleCount": 12,
+      "categories": {
+        "선독점": 22,
+        "선호작": 19,
+        "유료": 18,
+        "베스트셀러": 18,
+        "무료": 17
+      },
+      "representativeTitles": [
+        "미국 국세청 말단인데, 온갖 거물들이 나를 두려워함",
+        "외계어를 나만 알아듣자 전 세계가 집착함",
+        "정보기관이 집착하는 천재해커가 되었다",
+        "국가 버림 받은 영웅의 아들이 전능한 힘을 각성함"
+      ],
+      "normalizedOccurrenceChangePercent": -13.0,
+      "newBest": {
+        "titleCount": 28,
+        "top20Count": 4,
+        "top50Count": 12,
+        "top100Count": 17,
+        "bestRank": 5
+      }
+    },
+    {
+      "key": "religion_business",
+      "name": "무속·사이비 능력을 사업으로 바꾸는 형",
+      "formula": "[무당·신내림·사이비 교주·성물] + [연예계·인방·판매·사업] + [과잉 인정]",
+      "reason": "무당·신점·사이비 교주 같은 초월적 권위를 연예계·인방·판매·사업에 옮긴다. 신비 능력의 결과가 돈·고객·팬으로 바뀌어 이해하기 쉬운 생활형 보상이 된다. 이번 구간에는 고유 제목 4개, 평균 15.0위였고 신규베스트에서는 0개 중 0개가 Top 20에 도달했다.",
+      "uniqueTitleCount": 4,
+      "previousUniqueTitleCount": 2,
+      "change": 2,
+      "trend": "강한 상승",
+      "lifeStage": "확장 중",
+      "occurrenceCount": 37,
+      "sharePercent": 3.3,
+      "averageRank": 15.0,
+      "bestRank": 3,
+      "top10TitleCount": 1,
+      "top30TitleCount": 4,
+      "categories": {
+        "유료": 11,
+        "선독점": 11,
+        "베스트셀러": 9,
+        "무료": 3,
+        "선호작": 3
+      },
+      "representativeTitles": [
+        "회장님, 신점 보시려면 줄부터 서세요",
+        "무당 매니저가 탑스타들을 극락 보냄",
+        "전능한 사이비 교주가 인방에서 사업을 잘함",
+        "헌터님들, 사이비 교주가 성물 팝니다"
+      ],
+      "normalizedOccurrenceChangePercent": 30.8,
+      "newBest": {
+        "titleCount": 0,
+        "top20Count": 0,
+        "top50Count": 0,
+        "top100Count": 0,
+        "bestRank": null
+      }
+    },
+    {
+      "key": "fall_then_rise",
+      "name": "버림·퇴직 뒤 보상을 회수하는 형",
+      "formula": "[해고·버림·은퇴·파혼] + [숨은 능력/새 자산] + [재평가·각성·보상]",
+      "reason": "부당한 손실을 먼저 제시해 독자에게 감정적 빚을 만든 뒤, 더 큰 능력·자산·지위로 회수할 것을 약속한다. 손실과 보상이 한 제목 안에 함께 있어 초반 목표가 분명하다. 이번 구간에는 고유 제목 11개, 평균 11.5위였고 신규베스트에서는 87개 중 17개가 Top 20에 도달했다.",
+      "uniqueTitleCount": 11,
+      "previousUniqueTitleCount": 10,
+      "change": 1,
+      "trend": "상승",
+      "lifeStage": "상승·고효율",
+      "occurrenceCount": 112,
+      "sharePercent": 9.2,
+      "averageRank": 11.5,
+      "bestRank": 1,
+      "top10TitleCount": 5,
+      "top30TitleCount": 11,
+      "categories": {
+        "선호작": 42,
+        "무료": 38,
+        "유료": 23,
+        "베스트셀러": 5,
+        "선독점": 4
+      },
+      "representativeTitles": [
+        "해고당한 만년 차장은 업계 최고임",
+        "퇴사 당했는데 파워볼 당첨되어 미국에서 호텔영업합니다",
+        "해고당한 삼촌이 천재 기타리스트라고?",
+        "좌천당한 김 과장이 너무 유능하다"
+      ],
+      "normalizedOccurrenceChangePercent": 8.9,
+      "newBest": {
+        "titleCount": 87,
+        "top20Count": 17,
+        "top50Count": 35,
+        "top100Count": 53,
+        "bestRank": 1
+      }
+    },
+    {
+      "key": "identity_contrast",
+      "name": "신분·상태를 뒤집는 모순 문장형",
+      "formula": "[강한 신분·능력 또는 평범한 직업] + [인데·나만·모른다·숨긴다] + [상식과 반대되는 사건]",
+      "reason": "앞뒤가 충돌하는 문장을 만들어 설명되지 않은 빈칸을 남긴다. “왜 강한데 잘렸는가”, “왜 부자인데 평범하게 사는가”, “왜 모두 갇혔는데 혼자 움직이는가”를 확인하려는 클릭을 유도한다. 이번 구간에는 고유 제목 24개, 평균 14.4위였고 신규베스트에서는 72개 중 16개가 Top 20에 도달했다.",
+      "uniqueTitleCount": 24,
+      "previousUniqueTitleCount": 22,
+      "change": 2,
+      "trend": "소폭 하락",
+      "lifeStage": "약화 중",
+      "occurrenceCount": 238,
+      "sharePercent": 20.0,
+      "averageRank": 14.4,
+      "bestRank": 1,
+      "top10TitleCount": 13,
+      "top30TitleCount": 24,
+      "categories": {
+        "무료": 64,
+        "유료": 53,
+        "선독점": 48,
+        "선호작": 46,
+        "베스트셀러": 27
+      },
+      "representativeTitles": [
+        "나 혼자 마법사인데 탑 등반",
+        "선협에서 땅굴을 숨김",
+        "왜 자꾸 드라마가 잘되는데!",
+        "12살 소년공인데 대문호로 착각당했다"
+      ],
+      "normalizedOccurrenceChangePercent": -6.0,
+      "newBest": {
+        "titleCount": 72,
+        "top20Count": 16,
+        "top50Count": 29,
+        "top100Count": 42,
+        "bestRank": 1
+      }
+    },
+    {
+      "key": "max_grade_genius",
+      "name": "능력 등급을 제목에서 선공개하는 형",
+      "formula": "[천재·전능·EX/SSS·만렙] + [직업·장르 정체성] + [압도적 성과 암시]",
+      "reason": "주인공의 성장 상한선과 장르적 우위를 제목에서 미리 공개한다. 이해 비용은 낮지만 천재·EX·만렙이 기본값이 되면서 구체 직업·조직 반응·모순과 결합해야 차별화된다. 이번 구간에는 고유 제목 23개, 평균 16.6위였고 신규베스트에서는 60개 중 8개가 Top 20에 도달했다.",
+      "uniqueTitleCount": 23,
+      "previousUniqueTitleCount": 22,
+      "change": 1,
+      "trend": "소폭 하락",
+      "lifeStage": "약화 중",
+      "occurrenceCount": 182,
+      "sharePercent": 19.2,
+      "averageRank": 16.6,
+      "bestRank": 1,
+      "top10TitleCount": 6,
+      "top30TitleCount": 23,
+      "categories": {
+        "선호작": 67,
+        "무료": 52,
+        "베스트셀러": 32,
+        "유료": 22,
+        "선독점": 9
+      },
+      "representativeTitles": [
+        "멸망할 우주의 만렙 플레이어",
+        "전능의 뇌를 얻었다",
+        "해고당한 삼촌이 천재 기타리스트라고?",
+        "우주 게임에서 나만 만렙이다"
+      ],
+      "normalizedOccurrenceChangePercent": -10.4,
+      "newBest": {
+        "titleCount": 60,
+        "top20Count": 8,
+        "top50Count": 17,
+        "top100Count": 28,
+        "bestRank": 5
+      }
+    },
+    {
+      "key": "historical_alt_role",
+      "name": "국가·시대 좌표에 역할을 박는 형",
+      "formula": "[실존 국가·시대] + [현대적 직업·낯선 역할] + [역사 개변·생존·성공]",
+      "reason": "실존 시대·국가가 세계관의 규모와 갈등을 대신 설명하고, 현대적 직업이나 기술이 역사를 어떻게 바꿀지 호기심을 만든다. 무료 유입보다 유료·선독점 장르 독자에게 안정적으로 작동하는 경향이 있다. 이번 구간에는 고유 제목 18개, 평균 18.0위였고 신규베스트에서는 19개 중 0개가 Top 20에 도달했다.",
+      "uniqueTitleCount": 18,
+      "previousUniqueTitleCount": 19,
+      "change": -1,
+      "trend": "유지",
+      "lifeStage": "안정적 반복",
+      "occurrenceCount": 261,
+      "sharePercent": 15.0,
+      "averageRank": 18.0,
+      "bestRank": 1,
+      "top10TitleCount": 8,
+      "top30TitleCount": 18,
+      "categories": {
+        "선독점": 90,
+        "유료": 72,
+        "베스트셀러": 72,
+        "무료": 14,
+        "선호작": 13
+      },
+      "representativeTitles": [
+        "소비에트가 쓰러지지 않아!",
+        "허난설헌의 남편이 되었다?",
+        "19세기 대영제국에서 K-빵집으로 대박남",
+        "러시아 황제가 독재를 너무 잘함"
+      ],
+      "normalizedOccurrenceChangePercent": 0.5,
+      "newBest": {
+        "titleCount": 19,
+        "top20Count": 0,
+        "top50Count": 0,
+        "top100Count": 6,
+        "bestRank": 67
+      }
+    },
+    {
+      "key": "too_good_professional",
+      "name": "직업 유능함을 결과로 압축하는 형",
+      "formula": "[구체 직업·역할] + [핵심 업무] + [너무 잘함·업계 최고·압도적 유능함]",
+      "reason": "직업과 핵심 성과를 바로 붙여 주인공의 유능함을 직접 약속한다. “천재”보다 구체적이지만, 단독 사용보다는 해고·새 무대·기관 반응을 함께 붙일 때 힘이 커진다. 이번 구간에는 고유 제목 10개, 평균 13.2위였고 신규베스트에서는 37개 중 7개가 Top 20에 도달했다.",
+      "uniqueTitleCount": 10,
+      "previousUniqueTitleCount": 9,
+      "change": 1,
+      "trend": "상승",
+      "lifeStage": "확장 중",
+      "occurrenceCount": 125,
+      "sharePercent": 8.3,
+      "averageRank": 13.2,
+      "bestRank": 1,
+      "top10TitleCount": 7,
+      "top30TitleCount": 10,
+      "categories": {
+        "유료": 33,
+        "선독점": 27,
+        "무료": 25,
+        "선호작": 22,
+        "베스트셀러": 18
+      },
+      "representativeTitles": [
+        "29살 시장이 도시를 너무 잘 키움",
+        "해고당한 만년 차장은 업계 최고임",
+        "좌천당한 김 과장이 너무 유능하다",
+        "해고 당한 과장이 업계를 뒤집어 놓음."
+      ],
+      "normalizedOccurrenceChangePercent": 8.0,
+      "newBest": {
+        "titleCount": 37,
+        "top20Count": 7,
+        "top50Count": 10,
+        "top100Count": 20,
+        "bestRank": 1
+      }
+    },
+    {
+      "key": "sf_everyday_hook",
+      "name": "SF를 직장·돈·생존으로 번역하는 형",
+      "formula": "[서버·AI·우주·특이점·텔레포트] + [퇴사·직장·돈·생존] + [즉시 이해되는 보상]",
+      "reason": "낯선 과학 개념을 서버관리자·개발자·퇴사·돈·생존 같은 현실 언어로 번역한다. 독자는 기술을 완전히 이해하지 않아도 주인공이 무엇을 얻고 잃는지 즉시 파악할 수 있다. 이번 구간에는 고유 제목 6개, 평균 13.1위였고 신규베스트에서는 5개 중 2개가 Top 20에 도달했다.",
+      "uniqueTitleCount": 6,
+      "previousUniqueTitleCount": 6,
+      "change": 0,
+      "trend": "유지",
+      "lifeStage": "안정적 반복",
+      "occurrenceCount": 78,
+      "sharePercent": 5.0,
+      "averageRank": 13.1,
+      "bestRank": 1,
+      "top10TitleCount": 3,
+      "top30TitleCount": 6,
+      "categories": {
+        "선호작": 45,
+        "무료": 33
+      },
+      "representativeTitles": [
+        "1000조 셸터의 주인이 되었다",
+        "나 혼자 전산담당인데 퇴사당함",
+        "나 혼자 서버관리자인데 퇴사당함",
+        "텔레포트 하나로 현실에서도 쌀먹합니다"
+      ],
+      "normalizedOccurrenceChangePercent": -0.5,
+      "newBest": {
+        "titleCount": 5,
+        "top20Count": 2,
+        "top50Count": 3,
+        "top100Count": 3,
+        "bestRank": 7
+      }
+    },
+    {
+      "key": "cash_escape",
+      "name": "돈·자산을 먼저 지급하는 현실 탈출형",
+      "formula": "[평범하거나 추락한 신분] + [파워볼·코인·상속·자산] + [즉시 부와 현실 탈출]",
+      "reason": "긴 성장 과정을 생략하고 바로 사용할 수 있는 돈·자산·사업권을 보상으로 내세운다. 현실 탈출 욕구가 직관적이지만, 숫자와 자산명만 바꾸는 복제는 빠르게 과포화될 수 있다. 이번 구간에는 고유 제목 13개, 평균 16.4위였고 신규베스트에서는 65개 중 11개가 Top 20에 도달했다.",
+      "uniqueTitleCount": 13,
+      "previousUniqueTitleCount": 17,
+      "change": -4,
+      "trend": "하락",
+      "lifeStage": "약화 중",
+      "occurrenceCount": 127,
+      "sharePercent": 10.8,
+      "averageRank": 16.4,
+      "bestRank": 1,
+      "top10TitleCount": 4,
+      "top30TitleCount": 13,
+      "categories": {
+        "선호작": 33,
+        "선독점": 31,
+        "무료": 27,
+        "유료": 27,
+        "베스트셀러": 9
+      },
+      "representativeTitles": [
+        "1000조 셸터의 주인이 되었다",
+        "퇴사 당했는데 파워볼 당첨되어 미국에서 호텔영업합니다",
+        "19세기 대영제국에서 K-빵집으로 대박남",
+        "이번 생은 무역왕"
+      ],
+      "normalizedOccurrenceChangePercent": -24.0,
+      "newBest": {
+        "titleCount": 65,
+        "top20Count": 11,
+        "top50Count": 24,
+        "top100Count": 39,
+        "bestRank": 5
+      }
+    }
+  ],
+  "risingPatterns": [
+    "religion_business",
+    "workplace_regret",
+    "fall_then_rise",
+    "too_good_professional"
+  ],
+  "fallingPatterns": [
+    "cash_escape",
+    "institution_judgment",
+    "max_grade_genius",
+    "identity_contrast"
+  ],
+  "watchlist": [
+    "회사가 핵심 인재를 잘못 내보내는 형",
+    "무속·사이비 능력을 사업으로 바꾸는 형",
+    "거대 조직이 개인의 가치를 판정하는 형",
+    "SF를 직장·돈·생존으로 번역하는 형"
+  ],
+  "newBest": {
+    "available": true,
+    "dayCount": 9,
+    "snapshotCount": 25,
+    "titleCount": 407,
+    "note": "2026-10-05~2026-10-13 신규베스트 9일, 유효 스냅샷 25개, 고유 작품 407개를 보조 분석했습니다. 패턴별 수치는 신규베스트 200위 안에 한 번이라도 포착된 작품을 기준으로 하므로 전체 출품작의 진입 확률로 해석해서는 안 됩니다. 10월 13일 신규베스트는 한국시간 02시대 당일 초반 스냅샷만 포함합니다.",
+    "signals": [
+      {
+        "key": "workplace_regret",
+        "titleCount": 77,
+        "top20Count": 23,
+        "top50Count": 39,
+        "top100Count": 54,
+        "bestRank": 1
+      },
+      {
+        "key": "institution_judgment",
+        "titleCount": 28,
+        "top20Count": 4,
+        "top50Count": 12,
+        "top100Count": 17,
+        "bestRank": 5
+      },
+      {
+        "key": "fall_then_rise",
+        "titleCount": 87,
+        "top20Count": 17,
+        "top50Count": 35,
+        "top100Count": 53,
+        "bestRank": 1
+      },
+      {
+        "key": "identity_contrast",
+        "titleCount": 72,
+        "top20Count": 16,
+        "top50Count": 29,
+        "top100Count": 42,
+        "bestRank": 1
+      },
+      {
+        "key": "max_grade_genius",
+        "titleCount": 60,
+        "top20Count": 8,
+        "top50Count": 17,
+        "top100Count": 28,
+        "bestRank": 5
+      },
+      {
+        "key": "historical_alt_role",
+        "titleCount": 19,
+        "top20Count": 0,
+        "top50Count": 0,
+        "top100Count": 6,
+        "bestRank": 67
+      },
+      {
+        "key": "too_good_professional",
+        "titleCount": 37,
+        "top20Count": 7,
+        "top50Count": 10,
+        "top100Count": 20,
+        "bestRank": 1
+      },
+      {
+        "key": "sf_everyday_hook",
+        "titleCount": 5,
+        "top20Count": 2,
+        "top50Count": 3,
+        "top100Count": 3,
+        "bestRank": 7
+      },
+      {
+        "key": "cash_escape",
+        "titleCount": 65,
+        "top20Count": 11,
+        "top50Count": 24,
+        "top100Count": 39,
+        "bestRank": 5
+      }
+    ],
+    "representativeTitles": [
+      "공모전 히트곡 다 써줬더니 해고당했다",
+      "핵심 특허가 내 건 줄 모르고 해고당함",
+      "좌천당한 김 과장이 너무 유능하다",
+      "잘렸더니 회사가 매일 전화함",
+      "해고 당한 과장이 업계를 뒤집어 놓음."
+    ]
+  }
+}
