@@ -1,0 +1,32 @@
+name: Test automation safety (offline)
+
+on:
+  pull_request:
+    branches: [main]
+    paths:
+      - '.github/workflows/**'
+      - 'scripts/push-data.sh'
+      - 'scripts/verify-public.py'
+      - 'tests/**'
+
+permissions:
+  contents: read
+
+jobs:
+  test:
+    runs-on: ubuntu-latest
+    timeout-minutes: 5
+    steps:
+      - uses: actions/checkout@v4
+      - uses: actions/setup-node@v4
+        with:
+          node-version: 24
+      - uses: actions/setup-python@v5
+        with:
+          python-version: '3.12'
+      - name: Test data and analytics
+        run: npm test
+      - name: Test isolated Git races and public response fixtures
+        run: python -m unittest discover -s tests -v
+      - name: Check publish shell syntax
+        run: bash -n scripts/push-data.sh
