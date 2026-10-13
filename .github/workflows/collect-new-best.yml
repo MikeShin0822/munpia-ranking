@@ -12,15 +12,25 @@ on:
 permissions:
   contents: write
 
+# All branch writers share this queue, including verification commits.
+# queue:max avoids silently replacing another collector's pending run.
 concurrency:
-  group: munpia-new-best
+  group: munpia-data-${{ github.head_ref || github.ref_name }}
   cancel-in-progress: false
+  queue: max
+
+env:
+  TARGET_BRANCH: ${{ github.head_ref || github.ref_name }}
 
 jobs:
   collect:
     runs-on: ubuntu-latest
+    timeout-minutes: 20
     steps:
       - uses: actions/checkout@v4
+        with:
+          ref: ${{ env.TARGET_BRANCH }}
+          fetch-depth: 0
       - uses: actions/setup-python@v5
         with:
           python-version: '3.12'
@@ -64,5 +74,13 @@ jobs:
             exit 0
           fi
           git commit -m 'data: collect Munpia new best'
-          git pull --rebase origin main
-          git push origin HEAD:main
+          bash scripts/push-data.sh "$TARGET_BRANCH"
+      - name: Preserve unpublished data and diagnostics
+        if: failure()
+        uses: actions/upload-artifact@v4
+        with:
+          name: automation-diagnostics-${{ github.workflow }}-${{ github.run_id }}-${{ github.run_attempt }}
+          path: .automation-diagnostics/
+          include-hidden-files: true
+          if-no-files-found: ignore
+          retention-days: 14

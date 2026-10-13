@@ -9,212 +9,33 @@ on:
 permissions:
   contents: write
 
+# All branch writers share this queue, including verification commits.
+# queue:max avoids silently replacing another collector's pending run.
+concurrency:
+  group: munpia-data-${{ github.head_ref || github.ref_name }}
+  cancel-in-progress: false
+  queue: max
+
+env:
+  TARGET_BRANCH: ${{ github.head_ref || github.ref_name }}
+
 jobs:
   verify:
     runs-on: ubuntu-latest
+    timeout-minutes: 20
     steps:
       - uses: actions/checkout@v4
+        with:
+          ref: ${{ env.TARGET_BRANCH }}
+          fetch-depth: 0
+      - uses: actions/setup-node@v4
+        with:
+          node-version: 24
+      - uses: actions/setup-python@v5
+        with:
+          python-version: '3.12'
       - name: Verify public site and latest data
-        shell: bash
-        run: |
-          set -euo pipefail
-          expected_date=$(TZ=Asia/Seoul date +%F)
-          checked_at=$(TZ=Asia/Seoul date --iso-8601=seconds)
-
-          site='https://mikeshin0822.github.io/munpia-ranking/'
-          data='https://raw.githubusercontent.com/MikeShin0822/munpia-ranking/main/data/rankings.json'
-          new_index='https://raw.githubusercontent.com/MikeShin0822/munpia-ranking/main/data/new-best/index.json'
-          new_latest='https://raw.githubusercontent.com/MikeShin0822/munpia-ranking/main/data/new-best/latest.json'
-          new_js='https://mikeshin0822.github.io/munpia-ranking/new-best.js'
-          new_css='https://mikeshin0822.github.io/munpia-ranking/new-best.css'
-          free_index='https://raw.githubusercontent.com/MikeShin0822/munpia-ranking/main/data/free-today/index.json'
-          free_latest='https://raw.githubusercontent.com/MikeShin0822/munpia-ranking/main/data/free-today/latest.json'
-          free_js='https://mikeshin0822.github.io/munpia-ranking/free-today.js'
-          free_css='https://mikeshin0822.github.io/munpia-ranking/free-today.css'
-          weekly_index='https://raw.githubusercontent.com/MikeShin0822/munpia-ranking/main/data/weekly-patterns/index.json'
-          weekly_latest='https://raw.githubusercontent.com/MikeShin0822/munpia-ranking/main/data/weekly-patterns/latest.json'
-          weekly_js='https://mikeshin0822.github.io/munpia-ranking/weekly-patterns.js'
-          weekly_css='https://mikeshin0822.github.io/munpia-ranking/weekly-patterns.css'
-
-          fetch_code() {
-            local url=$1
-            local output=$2
-            curl -L -sS -o "$output" -w '%{http_code}' "$url"
-          }
-
-          site_code=$(fetch_code "$site" /tmp/site.html)
-          data_code=$(fetch_code "$data" /tmp/rankings.json)
-          new_index_code=$(fetch_code "$new_index" /tmp/new-index.json)
-          new_latest_code=$(fetch_code "$new_latest" /tmp/new-latest.json)
-          new_js_code=$(fetch_code "$new_js" /tmp/new-best.js)
-          new_css_code=$(fetch_code "$new_css" /tmp/new-best.css)
-          free_index_code=$(fetch_code "$free_index" /tmp/free-index.json)
-          free_latest_code=$(fetch_code "$free_latest" /tmp/free-latest.json)
-          free_js_code=$(fetch_code "$free_js" /tmp/free-today.js)
-          free_css_code=$(fetch_code "$free_css" /tmp/free-today.css)
-          weekly_index_code=$(fetch_code "$weekly_index" /tmp/weekly-index.json)
-          weekly_latest_code=$(fetch_code "$weekly_latest" /tmp/weekly-latest.json)
-          weekly_js_code=$(fetch_code "$weekly_js" /tmp/weekly-patterns.js)
-          weekly_css_code=$(fetch_code "$weekly_css" /tmp/weekly-patterns.css)
-
-          site_ok=false
-          data_ok=false
-          new_tab_ok=false
-          movers_ok=false
-          cutoff_chart_ok=false
-          new_js_syntax_ok=false
-          new_data_ok=false
-          free_tab_ok=false
-          free_js_syntax_ok=false
-          free_data_ok=false
-          weekly_tab_ok=false
-          weekly_js_syntax_ok=false
-          weekly_data_ok=false
-
-          grep -q '문피아 제목 레이더' /tmp/site.html && site_ok=true
-          grep -q '"snapshots"' /tmp/rankings.json && data_ok=true
-
-          if grep -q 'data-view="new-best"' /tmp/site.html && grep -q 'NEW BEST RADAR' /tmp/site.html; then
-            new_tab_ok=true
-          fi
-          if grep -q 'id="new-best-rising"' /tmp/site.html && grep -q 'id="new-best-falling"' /tmp/site.html && grep -q '급상승 · 급하락' /tmp/site.html; then
-            movers_ok=true
-          fi
-          if grep -q 'id="cutoff-chart"' /tmp/site.html && grep -q '조회수 컷 일중 변화' /tmp/site.html; then
-            cutoff_chart_ok=true
-          fi
-          node --check /tmp/new-best.js && new_js_syntax_ok=true
-          if grep -q '"status": "complete"' /tmp/new-latest.json \
-             && grep -q '"count": 200' /tmp/new-latest.json \
-             && grep -q "\"latestDate\": \"$expected_date\"" /tmp/new-index.json; then
-            new_data_ok=true
-          fi
-
-          if grep -q "button.dataset.view = 'free-today'" /tmp/free-today.js \
-             && grep -q 'FREE TODAY RADAR' /tmp/free-today.js \
-             && grep -q 'free-today-view' /tmp/free-today.js; then
-            free_tab_ok=true
-          fi
-          node --check /tmp/free-today.js && free_js_syntax_ok=true
-          if grep -q '"status": "complete"' /tmp/free-latest.json \
-             && grep -q '"count": 200' /tmp/free-latest.json \
-             && grep -q '"visibleCount"' /tmp/free-latest.json \
-             && grep -q '"unavailableCount"' /tmp/free-latest.json \
-             && grep -q "\"latestDate\": \"$expected_date\"" /tmp/free-index.json; then
-            free_data_ok=true
-          fi
-
-          if grep -q "button.dataset.view = 'weekly-patterns'" /tmp/weekly-patterns.js \
-             && grep -q 'WEEKLY TITLE GRAMMAR' /tmp/weekly-patterns.js \
-             && grep -q 'weekly-patterns-view' /tmp/weekly-patterns.js; then
-            weekly_tab_ok=true
-          fi
-          node --check /tmp/weekly-patterns.js && weekly_js_syntax_ok=true
-
-          if python - <<'PY'
-          import json
-          from datetime import date
-          from pathlib import Path
-
-          index = json.loads(Path('/tmp/weekly-index.json').read_text(encoding='utf-8'))
-          latest = json.loads(Path('/tmp/weekly-latest.json').read_text(encoding='utf-8'))
-
-          start = date.fromisoformat(latest['startDate'])
-          end = date.fromisoformat(latest['endDate'])
-          span_days = (end - start).days + 1
-          expected_days = latest['dataQuality']['expectedDays']
-          collected_days = latest['dataQuality']['collectedDays']
-          period_type = latest.get('periodType', 'weekly')
-          key = f"{latest['startDate']}_{latest['endDate']}"
-
-          assert index['latestKey'] == key
-          assert any(item['key'] == key for item in index.get('reports', []))
-          assert len(index.get('reports', [])) >= 2
-          assert latest['dataQuality']['complete'] is True
-          assert latest['dataQuality'].get('missingDays', []) == []
-          assert expected_days == span_days
-          assert collected_days == expected_days
-          assert start.weekday() == 0
-          if period_type == 'weekly':
-              assert expected_days == 7
-              assert end.weekday() == 6
-          elif period_type == 'extended_9_day':
-              assert expected_days == 9
-          else:
-              raise AssertionError(f'unsupported periodType: {period_type}')
-          assert latest.get('analysisMethod') == 'llm_semantic_with_quantitative_support'
-          assert len(latest.get('patterns', [])) >= 8
-          PY
-          then
-            weekly_data_ok=true
-          fi
-
-          echo "site=$site_code site_ok=$site_ok data=$data_code data_ok=$data_ok new_tab=$new_tab_ok movers=$movers_ok cutoff_chart=$cutoff_chart_ok new_js=$new_js_code js_syntax=$new_js_syntax_ok new_css=$new_css_code new_index=$new_index_code new_latest=$new_latest_code new_data=$new_data_ok free_tab=$free_tab_ok free_js=$free_js_code free_js_syntax=$free_js_syntax_ok free_css=$free_css_code free_index=$free_index_code free_latest=$free_latest_code free_data=$free_data_ok weekly_tab=$weekly_tab_ok weekly_js=$weekly_js_code weekly_js_syntax=$weekly_js_syntax_ok weekly_css=$weekly_css_code weekly_index=$weekly_index_code weekly_latest=$weekly_latest_code weekly_data=$weekly_data_ok"
-
-          mkdir -p data
-          cat > data/public-verification.json <<EOF
-          {
-            "checkedAt": "$checked_at",
-            "expectedDate": "$expected_date",
-            "siteUrl": "$site",
-            "siteStatus": $site_code,
-            "siteContentOk": $site_ok,
-            "dataUrl": "$data",
-            "dataStatus": $data_code,
-            "rankingDataReadable": $data_ok,
-            "newBestTabPublished": $new_tab_ok,
-            "newBestMoversPublished": $movers_ok,
-            "newBestCutoffChartPublished": $cutoff_chart_ok,
-            "newBestJsStatus": $new_js_code,
-            "newBestJsSyntaxOk": $new_js_syntax_ok,
-            "newBestCssStatus": $new_css_code,
-            "newBestIndexStatus": $new_index_code,
-            "newBestLatestStatus": $new_latest_code,
-            "newBestDataComplete": $new_data_ok,
-            "freeTodayTabPublished": $free_tab_ok,
-            "freeTodayJsStatus": $free_js_code,
-            "freeTodayJsSyntaxOk": $free_js_syntax_ok,
-            "freeTodayCssStatus": $free_css_code,
-            "freeTodayIndexStatus": $free_index_code,
-            "freeTodayLatestStatus": $free_latest_code,
-            "freeTodayDataComplete": $free_data_ok,
-            "weeklyPatternTabPublished": $weekly_tab_ok,
-            "weeklyPatternJsStatus": $weekly_js_code,
-            "weeklyPatternJsSyntaxOk": $weekly_js_syntax_ok,
-            "weeklyPatternCssStatus": $weekly_css_code,
-            "weeklyPatternIndexStatus": $weekly_index_code,
-            "weeklyPatternLatestStatus": $weekly_latest_code,
-            "weeklyPatternDataComplete": $weekly_data_ok
-          }
-          EOF
-
-          test "$site_code" = '200'
-          test "$data_code" = '200'
-          test "$site_ok" = 'true'
-          test "$data_ok" = 'true'
-          test "$new_tab_ok" = 'true'
-          test "$movers_ok" = 'true'
-          test "$cutoff_chart_ok" = 'true'
-          test "$new_js_code" = '200'
-          test "$new_js_syntax_ok" = 'true'
-          test "$new_css_code" = '200'
-          test "$new_index_code" = '200'
-          test "$new_latest_code" = '200'
-          test "$new_data_ok" = 'true'
-          test "$free_tab_ok" = 'true'
-          test "$free_js_code" = '200'
-          test "$free_js_syntax_ok" = 'true'
-          test "$free_css_code" = '200'
-          test "$free_index_code" = '200'
-          test "$free_latest_code" = '200'
-          test "$free_data_ok" = 'true'
-          test "$weekly_tab_ok" = 'true'
-          test "$weekly_js_code" = '200'
-          test "$weekly_js_syntax_ok" = 'true'
-          test "$weekly_css_code" = '200'
-          test "$weekly_index_code" = '200'
-          test "$weekly_latest_code" = '200'
-          test "$weekly_data_ok" = 'true'
+        run: python scripts/verify-public.py
       - name: Commit verification result
         shell: bash
         run: |
@@ -226,5 +47,13 @@ jobs:
             exit 0
           fi
           git commit -m "ci: record public dashboard verification"
-          git pull --rebase origin main
-          git push origin HEAD:main
+          bash scripts/push-data.sh "$TARGET_BRANCH"
+      - name: Preserve unpublished data and diagnostics
+        if: failure()
+        uses: actions/upload-artifact@v4
+        with:
+          name: automation-diagnostics-${{ github.workflow }}-${{ github.run_id }}-${{ github.run_attempt }}
+          path: .automation-diagnostics/
+          include-hidden-files: true
+          if-no-files-found: ignore
+          retention-days: 14
