@@ -3,6 +3,7 @@ from __future__ import annotations
 import json
 import re
 import sys
+import time
 import urllib.request
 from datetime import datetime, timedelta
 from pathlib import Path
@@ -18,6 +19,7 @@ ROOT = Path(__file__).resolve().parents[1]
 DATA_DIR = ROOT / "data" / "new-best"
 RAW_DIR = ROOT / "raw"
 USER_AGENT = "Mozilla/5.0 (compatible; MunpiaTitleArchive/1.3; +https://github.com/MikeShin0822/munpia-ranking)"
+RETRY_DELAYS = (15, 45)  # Three requests maximum; no retries after a complete response.
 
 
 def clean(value: str | None) -> str:
@@ -35,7 +37,7 @@ def clean_genre(value: str) -> str:
     return clean(value).lstrip(",/ ")
 
 
-def fetch_html() -> str:
+def fetch_html(*, revalidate: bool = False) -> str:
     request = urllib.request.Request(
         SOURCE_URL,
         headers={
@@ -44,6 +46,9 @@ def fetch_html() -> str:
             "Accept": "text/html,application/xhtml+xml,application/xml;q=0.9,*/*;q=0.8",
         },
     )
+    if revalidate:
+        request.add_header("Cache-Control", "no-cache")
+        request.add_header("Pragma", "no-cache")
     with urllib.request.urlopen(request, timeout=45) as response:
         if response.status != 200:
             raise RuntimeError(f"HTTP {response.status}")
@@ -194,23 +199,19 @@ def write_data(snapshot: dict, now: datetime) -> None:
     index_path.write_text(json.dumps(index, ensure_ascii=False, indent=2) + "\n", encoding="utf-8")
 
 
-def main() -> int:
-    now = datetime.now(TZ).replace(microsecond=0)
-    RAW_DIR.mkdir(parents=True, exist_ok=True)
-    try:
-        html = fetch_html()
-    except Exception as exc:
-        print(f"Fetch failed: {exc}", file=sys.stderr)
-        return 1
-
-    (RAW_DIR / "new-best.html").write_text(html, encoding="utf-8")
+def parse_response(html: str, now: datetime) -> tuple[dict, dict]:
     soup = BeautifulSoup(html, "html.parser")
     top_five = parse_top_five(soup)
     rank_list = parse_rank_list(soup)
     by_rank = {item["rank"]: item for item in [*top_five, *rank_list]}
     rankings = [by_rank[rank] for rank in sorted(by_rank) if 1 <= rank <= 200]
     missing = sorted(set(range(1, 201)) - set(by_rank))
-    status = "complete" if len(rankings) == 200 and not missing else "partial"
+    # Reject conflicting rows instead of silently hiding them in the rank map.
+    # Top-five cards and list rows may legitimately overlap, so check each separately.
+    duplicates = sorted({item["rank"] for group in (top_five, rank_list)
+                         for item in group
+                         if sum(row["rank"] == item["rank"] for row in group) > 1})
+    status = "complete" if len(rankings) == 200 and not missing and not duplicates else "partial"
 
     snapshot = {
         "source": SOURCE_URL,
@@ -229,19 +230,74 @@ def main() -> int:
         "totalCount": len(rankings),
         "missingRanks": missing,
         "aggregateAt": snapshot["aggregateAt"],
+        "duplicateRanks": duplicates,
     }
+    # Broader than the production direct-child selector: retain evidence of rows
+    # that exist but were rejected (e.g. empty title) or nested under a wrapper.
+    # Marker absence is a diagnostic hint, not proof of an upstream server defect.
+    markers = {to_int(node.get_text(" ", strip=True))
+               for node in soup.select("#best-rank-list-display .num")}
+    debug.update({
+        "topFiveCardCount": len(soup.select(".novel-top5 a.novel-wrap")),
+        "rankListRowCount": len(soup.select("#best-rank-list-display > a")),
+        "rankMarkers": sorted(rank for rank in markers if rank is not None and 1 <= rank <= 200),
+        "missingWithRankMarker": [rank for rank in missing if rank in markers],
+        "missingWithoutRankMarker": [rank for rank in missing if rank not in markers],
+    })
+    return snapshot, debug
+
+
+def main() -> int:
+    RAW_DIR.mkdir(parents=True, exist_ok=True)
+    # Only remove diagnostics owned by this collector, including stale retries.
+    for path in RAW_DIR.glob("new-best-attempt-*"):
+        if path.is_file():
+            path.unlink()
+    for name in ("new-best.html", "new-best-debug.json"):
+        (RAW_DIR / name).unlink(missing_ok=True)
+    attempts = []
+    for attempt in range(1, len(RETRY_DELAYS) + 2):
+        if attempt > 1:
+            time.sleep(RETRY_DELAYS[attempt - 2])
+        now = datetime.now(TZ).replace(microsecond=0)
+        try:
+            html = fetch_html(revalidate=attempt > 1)
+        except Exception as exc:
+            # Keep the existing fail-fast policy for transport errors. This
+            # retry budget specifically addresses successfully fetched partial HTML.
+            debug = {"attempt": attempt, "collectedAt": now.isoformat(),
+                     "fetchError": str(exc)}
+            attempts.append(debug)
+            save_debug(debug, attempts, attempt)
+            print(f"Fetch failed: {exc}", file=sys.stderr)
+            return 1
+
+        (RAW_DIR / "new-best.html").write_text(html, encoding="utf-8")
+        (RAW_DIR / f"new-best-attempt-{attempt}.html").write_text(html, encoding="utf-8")
+        # Never fill holes from a previous attempt or the last successful snapshot.
+        snapshot, debug = parse_response(html, now)
+        debug.update({"attempt": attempt, "collectedAt": now.isoformat()})
+        attempts.append(debug)
+        save_debug(debug, attempts, attempt)
+        print(json.dumps(debug, ensure_ascii=False), flush=True)
+        if snapshot["status"] == "complete":
+            write_data(snapshot, now)
+            print(f"Saved {len(snapshot['rankings'])} rankings at {snapshot['collectedAt']}")
+            return 0
+        print(f"Expected 200 unique rankings, got {snapshot['count']}. "
+              f"Missing: {snapshot['missingRanks']}; duplicates: {debug['duplicateRanks']}",
+              file=sys.stderr)
+        if attempt <= len(RETRY_DELAYS):
+            print(f"Retrying full response in {RETRY_DELAYS[attempt - 1]} seconds", flush=True)
+    return 2
+
+
+def save_debug(debug: dict, attempts: list[dict], attempt: int) -> None:
+    (RAW_DIR / f"new-best-attempt-{attempt}.json").write_text(
+        json.dumps(debug, ensure_ascii=False, indent=2) + "\n", encoding="utf-8")
     (RAW_DIR / "new-best-debug.json").write_text(
-        json.dumps(debug, ensure_ascii=False, indent=2) + "\n", encoding="utf-8"
-    )
-    print(json.dumps(debug, ensure_ascii=False))
-
-    if status != "complete":
-        print(f"Expected 200 rankings, got {len(rankings)}. Missing: {missing[:30]}", file=sys.stderr)
-        return 2
-
-    write_data(snapshot, now)
-    print(f"Saved {len(rankings)} rankings at {snapshot['collectedAt']}")
-    return 0
+        json.dumps({**debug, "attempts": attempts}, ensure_ascii=False, indent=2) + "\n",
+        encoding="utf-8")
 
 
 if __name__ == "__main__":
