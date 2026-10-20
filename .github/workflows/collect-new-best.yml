@@ -38,16 +38,18 @@ jobs:
         run: python -m pip install --disable-pip-version-check beautifulsoup4==4.13.4
       - name: Collect 1-200 new best rankings
         run: python scripts/collect_new_best.py
-      - name: Upload parser debug on failure
-        if: failure()
+      - name: Preserve parser diagnostics on failure or retry
+        if: always() && (failure() || hashFiles('raw/new-best-attempt-2.json') != '')
         uses: actions/upload-artifact@v4
         with:
           name: new-best-debug-${{ github.run_id }}
           path: |
             raw/new-best.html
             raw/new-best-debug.json
+            raw/new-best-attempt-*.html
+            raw/new-best-attempt-*.json
           if-no-files-found: ignore
-          retention-days: 1
+          retention-days: 14
       - name: Validate collected data
         shell: bash
         run: |

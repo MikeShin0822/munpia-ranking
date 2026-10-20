@@ -7,6 +7,7 @@ on:
       - '.github/workflows/**'
       - 'scripts/push-data.sh'
       - 'scripts/verify-public.py'
+      - 'scripts/collect_new_best.py'
       - 'tests/**'
 
 permissions:
@@ -24,6 +25,8 @@ jobs:
       - uses: actions/setup-python@v5
         with:
           python-version: '3.12'
+      - name: Install parser dependency
+        run: python -m pip install --disable-pip-version-check beautifulsoup4==4.13.4
       - name: Test data and analytics
         run: npm test
       - name: Test isolated Git races and public response fixtures
