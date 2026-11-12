@@ -1,6 +1,6 @@
 {
   "schemaVersion": 1,
-  "updatedAt": "2026-11-11T10:52:01+09:00",
+  "updatedAt": "2026-11-12T11:52:23+09:00",
   "snapshots": [
     {
       "date": "2026-07-23",
@@ -22376,13 +22376,89 @@
           ]
         }
       }
+    },
+    {
+      "date": "2026-11-12",
+      "rankings": {
+        "free_today": {
+          "label": "무료 베스트",
+          "collectedAt": "2026-11-12T11:52:23+09:00",
+          "collectionDate": null,
+          "status": "failed",
+          "source": "https://mm.munpia.com/?ajx=1&menu=best&action=list&section=today&keyword=&page=1",
+          "error": "1페이지 응답 없음; 2페이지 응답 없음; 3페이지 응답 없음",
+          "titles": []
+        },
+        "paid_today": {
+          "label": "유료 베스트",
+          "collectedAt": "2026-11-12T11:52:23+09:00",
+          "collectionDate": null,
+          "status": "failed",
+          "source": "https://mm.munpia.com/?ajx=1&menu=best&action=list&section=plsa.eachtoday&keyword=&page=1",
+          "error": "1페이지 응답 없음; 2페이지 응답 없음; 3페이지 응답 없음",
+          "titles": []
+        },
+        "exclusive_today": {
+          "label": "선독점 베스트",
+          "collectedAt": "2026-11-12T11:52:23+09:00",
+          "collectionDate": null,
+          "status": "complete",
+          "source": "https://www.munpia.com/best/plsa.exclusive-eachtoday",
+          "titles": [
+            "버림받은 단장이 라이벌팀의 구세주가 되었다",
+            "전능의 뇌를 얻었다",
+            "나 혼자 마법사인데 탑 등반",
+            "퇴사 당했는데 파워볼 당첨되어 미국에서 호텔영업합니다",
+            "내 훈수 한 번에 월클들의 고질병이 고쳐짐",
+            "소비에트가 쓰러지지 않아!",
+            "NBA의 폭군이 되었다",
+            "반강제적 제국주의자",
+            "버림받은 영웅의 아들이 전능한 힘을 각성함",
+            "막장드라마의 엔딩에 빙의했다",
+            "즉사기 들고 무림에 떨어지다",
+            "오스만은 로마다",
+            "갱단한테 곡 팔았더니 음악천재로 착각 당했다",
+            "고려에서 치트 없이 문명합니다",
+            "시간 정지 능력으로 탑 등반",
+            "중세 이단왕이 발전을 너무 잘함",
+            "17세기 스페인에서 귀농합니다.",
+            "별 그리는 그림 천재",
+            "즉사무기 들고 이세계로",
+            "12살 소년공인데 대문호로 착각당했다",
+            "허난설헌의 남편이 되었다?",
+            "전역하는 날 북한군이 쳐들어왔다",
+            "회장 대행이 경영을 너무 잘함",
+            "국정원 금강불괴 블랙요원",
+            "만주 군벌이 한국인을 숨김",
+            "비자발적 종신 독재자",
+            "미국 국세청 말단인데, 온갖 거물들이 나를 두려워함",
+            "단종 구하러 4군6진",
+            "우주 게임에서 나만 만렙이다",
+            "주인공이 1층에서 안 올라감"
+          ]
+        },
+        "favorites": {
+          "label": "선호작 베스트",
+          "collectedAt": "2026-11-12T11:52:23+09:00",
+          "collectionDate": null,
+          "status": "failed",
+          "source": "https://mm.munpia.com/?ajx=1&menu=best&action=list&section=prefer&keyword=&page=1",
+          "error": "1페이지 응답 없음; 2페이지 응답 없음; 3페이지 응답 없음",
+          "titles": []
+        },
+        "bestseller": {
+          "label": "베스트셀러",
+          "collectedAt": "2026-11-12T11:52:23+09:00",
+          "collectionDate": null,
+          "status": "failed",
+          "source": "https://mm.munpia.com/?ajx=1&menu=best&action=list&section=plsa.bestseller&keyword=&page=1",
+          "error": "1페이지 응답 없음; 2페이지 응답 없음; 3페이지 응답 없음",
+          "titles": []
+        }
+      }
     }
   ],
   "collectionLog": [
-    {
-      "date": "2026-09-18",
-      "message": "무료 베스트 30개 · 유료 베스트 30개 · 선독점 베스트 30개 · 선호작 베스트 30개 · 베스트셀러 30개"
-    },
     {
       "date": "2026-09-18",
       "message": "무료 베스트 30개 · 유료 베스트 30개 · 선독점 베스트 30개 · 선호작 베스트 30개 · 베스트셀러 30개"
@@ -22738,6 +22814,10 @@
     {
       "date": "2026-11-11",
       "message": "무료 베스트 30개 · 유료 베스트 30개 · 선독점 베스트 30개 · 선호작 베스트 30개 · 베스트셀러 30개"
+    },
+    {
+      "date": "2026-11-12",
+      "message": "무료 베스트 0개 (1페이지 응답 없음; 2페이지 응답 없음; 3페이지 응답 없음) · 유료 베스트 0개 (1페이지 응답 없음; 2페이지 응답 없음; 3페이지 응답 없음) · 선독점 베스트 30개 · 선호작 베스트 0개 (1페이지 응답 없음; 2페이지 응답 없음; 3페이지 응답 없음) · 베스트셀러 0개 (1페이지 응답 없음; 2페이지 응답 없음; 3페이지 응답 없음)"
     }
   ]
 }
