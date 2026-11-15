@@ -1,21 +1,21 @@
 {
   "source": "https://www.munpia.com/best/today?displayType=GRID",
-  "collectedAt": "2026-11-16T01:33:49+09:00",
-  "aggregateAt": "2026-11-16T01:00:00+09:00",
+  "collectedAt": "2026-11-16T08:09:08+09:00",
+  "aggregateAt": "2026-11-16T07:00:00+09:00",
   "status": "complete",
   "count": 200,
   "visibleCount": 199,
   "unavailableCount": 1,
   "unavailableRanks": [
-    189
+    192
   ],
   "missingRanks": [],
   "cutoffs": {
-    "10": 4280,
-    "20": 3243,
-    "50": 1190,
-    "100": 554,
-    "200": 158
+    "10": 5204,
+    "20": 3821,
+    "50": 1560,
+    "100": 629,
+    "200": 188
   },
   "rankings": [
     {
@@ -26,10 +26,10 @@
         "현대판타지",
         "전쟁·밀리터리"
       ],
-      "hours": 13,
-      "views": 11655,
-      "changeType": "up",
-      "change": "1",
+      "hours": 19,
+      "views": 12805,
+      "changeType": "same",
+      "change": "—",
       "url": "https://www.munpia.com/novel/detail/612837",
       "unavailable": false
     },
@@ -41,343 +41,344 @@
         "현대판타지",
         "판타지"
       ],
-      "hours": 14,
-      "views": 10878,
-      "changeType": "up",
-      "change": "1",
+      "hours": 20,
+      "views": 11722,
+      "changeType": "same",
+      "change": "—",
       "url": "https://www.munpia.com/novel/detail/612705",
       "unavailable": false
     },
     {
       "rank": 3,
+      "title": "고졸백수가 돈이 너무 많음.",
+      "author": "아토별",
+      "genres": [
+        "현대판타지"
+      ],
+      "hours": 9,
+      "views": 8214,
+      "changeType": "up",
+      "change": "3",
+      "url": "https://www.munpia.com/novel/detail/617716",
+      "unavailable": false
+    },
+    {
+      "rank": 4,
       "title": "해고했으면 지구는 알아서 지키세요",
       "author": "포참",
       "genres": [
         "현대판타지",
         "퓨전"
       ],
-      "hours": 12,
-      "views": 6779,
+      "hours": 18,
+      "views": 7846,
       "changeType": "up",
-      "change": "2",
+      "change": "1",
       "url": "https://www.munpia.com/novel/detail/619374",
       "unavailable": false
     },
     {
-      "rank": 4,
+      "rank": 5,
       "title": "범죄 미드 속 경찰은 오늘도 죽지 않는다",
       "author": "선우(仙宇)",
       "genres": [
         "현대판타지",
         "판타지"
       ],
-      "hours": 10,
-      "views": 6471,
-      "changeType": "same",
-      "change": "—",
+      "hours": 16,
+      "views": 7170,
+      "changeType": "down",
+      "change": "1",
       "url": "https://www.munpia.com/novel/detail/610537",
       "unavailable": false
     },
     {
-      "rank": 5,
+      "rank": 6,
+      "title": "D-365 종말의 예언서",
+      "author": "싱글레어",
+      "genres": [
+        "현대판타지",
+        "판타지"
+      ],
+      "hours": 7,
+      "views": 7164,
+      "changeType": "down",
+      "change": "3",
+      "url": "https://www.munpia.com/novel/detail/610470",
+      "unavailable": false
+    },
+    {
+      "rank": 7,
       "title": "헌터님 저한테 덤비면 즉사합니다",
       "author": "카피닌자",
       "genres": [
         "현대판타지"
       ],
-      "hours": 6,
-      "views": 5689,
+      "hours": 12,
+      "views": 6995,
       "changeType": "up",
-      "change": "7",
+      "change": "2",
       "url": "https://www.munpia.com/novel/detail/615888",
       "unavailable": false
     },
     {
-      "rank": 6,
-      "title": "고졸백수가 돈이 너무 많음.",
-      "author": "아토별",
+      "rank": 8,
+      "title": "주식옵션으로 대박났지만 동네에서 슈퍼합니다",
+      "author": "테드K",
       "genres": [
         "현대판타지"
       ],
-      "hours": 3,
-      "views": 5271,
+      "hours": 9,
+      "views": 6236,
       "changeType": "down",
-      "change": "5",
-      "url": "https://www.munpia.com/novel/detail/617716",
+      "change": "1",
+      "url": "https://www.munpia.com/novel/detail/608304",
       "unavailable": false
     },
     {
-      "rank": 7,
+      "rank": 9,
       "title": "평범한 줄 알았는데 규격 외 천재였다",
       "author": "공상소년",
       "genres": [
         "현대판타지"
       ],
-      "hours": 11,
-      "views": 5089,
+      "hours": 17,
+      "views": 5637,
       "changeType": "new",
       "change": "NEW",
       "url": "https://www.munpia.com/novel/detail/604686",
       "unavailable": false
     },
     {
-      "rank": 8,
+      "rank": 10,
       "title": "권고사직 명단에 올랐는데 최고 에이스임",
       "author": "연함™",
       "genres": [
         "현대판타지"
       ],
-      "hours": 16,
-      "views": 4850,
+      "hours": 22,
+      "views": 5204,
       "changeType": "down",
       "change": "2",
       "url": "https://www.munpia.com/novel/detail/608907",
       "unavailable": false
     },
     {
-      "rank": 9,
+      "rank": 11,
       "title": "할아버지 일을 물려받았더니 거물들이 몰려옴",
       "author": "네딸아빠",
       "genres": [
         "현대판타지"
       ],
-      "hours": 11,
-      "views": 4293,
+      "hours": 17,
+      "views": 4775,
       "changeType": "up",
       "change": "1",
       "url": "https://www.munpia.com/novel/detail/610846",
       "unavailable": false
     },
     {
-      "rank": 10,
+      "rank": 12,
       "title": "예능신 강림한 방송천재가 돈을 쓸어담음",
       "author": "김한가",
       "genres": [
         "현대판타지"
       ],
-      "hours": 13,
-      "views": 4280,
+      "hours": 19,
+      "views": 4623,
       "changeType": "down",
-      "change": "3",
+      "change": "1",
       "url": "https://www.munpia.com/novel/detail/610555",
       "unavailable": false
     },
     {
-      "rank": 11,
-      "title": "주식옵션으로 대박났지만 동네에서 슈퍼합니다",
-      "author": "테드K",
-      "genres": [
-        "현대판타지"
-      ],
-      "hours": 3,
-      "views": 4073,
-      "changeType": "down",
-      "change": "2",
-      "url": "https://www.munpia.com/novel/detail/608304",
-      "unavailable": false
-    },
-    {
-      "rank": 12,
+      "rank": 13,
       "title": "해고당한 헌터가 미국에서 잘나감",
       "author": "hsn22",
       "genres": [
         "현대판타지",
         "퓨전"
       ],
-      "hours": 9,
-      "views": 4046,
+      "hours": 15,
+      "views": 4619,
       "changeType": "down",
-      "change": "4",
+      "change": "3",
       "url": "https://www.munpia.com/novel/detail/612443",
       "unavailable": false
     },
     {
-      "rank": 13,
-      "title": "반도체 수율의 핵심이 나였는데 해고당함",
-      "author": "황금꼬미",
-      "genres": [
-        "현대판타지"
-      ],
-      "hours": 13,
-      "views": 3911,
-      "changeType": "down",
-      "change": "2",
-      "url": "https://www.munpia.com/novel/detail/610327",
-      "unavailable": false
-    },
-    {
       "rank": 14,
-      "title": "미국 노숙자인데 딸이 생김",
-      "author": "용린龍鱗",
-      "genres": [
-        "현대판타지"
-      ],
-      "hours": 8,
-      "views": 3661,
-      "changeType": "up",
-      "change": "1",
-      "url": "https://www.munpia.com/novel/detail/613000",
-      "unavailable": false
-    },
-    {
-      "rank": 15,
-      "title": "좋소 퇴사하고 범죄자만 터는 렉카로 대박남",
-      "author": "북골드",
-      "genres": [
-        "현대판타지"
-      ],
-      "hours": 17,
-      "views": 3650,
-      "changeType": "down",
-      "change": "2",
-      "url": "https://www.munpia.com/novel/detail/609474",
-      "unavailable": false
-    },
-    {
-      "rank": 16,
-      "title": "버려진 특성을 주웠더니 SSS급 토벌대원으로 각성함",
-      "author": "배불루",
-      "genres": [
-        "판타지",
-        "현대판타지"
-      ],
-      "hours": 18,
-      "views": 3633,
-      "changeType": "down",
-      "change": "2",
-      "url": "https://www.munpia.com/novel/detail/608730",
-      "unavailable": false
-    },
-    {
-      "rank": 17,
-      "title": "대충 쓴 습작인데 저작권료가 쏟아짐",
-      "author": "곽탁타",
-      "genres": [
-        "현대판타지"
-      ],
-      "hours": 12,
-      "views": 3510,
-      "changeType": "down",
-      "change": "1",
-      "url": "https://www.munpia.com/novel/detail/613881",
-      "unavailable": false
-    },
-    {
-      "rank": 18,
-      "title": "중세 영주로 살아남기",
-      "author": "청라수",
-      "genres": [
-        "판타지",
-        "전쟁·밀리터리"
-      ],
-      "hours": 8,
-      "views": 3504,
-      "changeType": "down",
-      "change": "1",
-      "url": "https://www.munpia.com/novel/detail/614434",
-      "unavailable": false
-    },
-    {
-      "rank": 19,
-      "title": "업계 탑티어를 섭섭하게 만들면 벌어지는 일",
-      "author": "서인하",
-      "genres": [
-        "현대판타지",
-        "드라마"
-      ],
-      "hours": 18,
-      "views": 3250,
-      "changeType": "same",
-      "change": "—",
-      "url": "https://www.munpia.com/novel/detail/619499",
-      "unavailable": false
-    },
-    {
-      "rank": 20,
       "title": "미국에서 은퇴당한 헌터가 귀촌 후 개꿀빱니다",
       "author": "테르치",
       "genres": [
         "현대판타지",
         "퓨전"
       ],
-      "hours": 4,
-      "views": 3243,
+      "hours": 10,
+      "views": 4408,
       "changeType": "same",
       "change": "—",
       "url": "https://www.munpia.com/novel/detail/614016",
       "unavailable": false
     },
     {
+      "rank": 15,
+      "title": "반도체 수율의 핵심이 나였는데 해고당함",
+      "author": "황금꼬미",
+      "genres": [
+        "현대판타지"
+      ],
+      "hours": 19,
+      "views": 4277,
+      "changeType": "down",
+      "change": "2",
+      "url": "https://www.munpia.com/novel/detail/610327",
+      "unavailable": false
+    },
+    {
+      "rank": 16,
+      "title": "미국 노숙자인데 딸이 생김",
+      "author": "용린龍鱗",
+      "genres": [
+        "현대판타지"
+      ],
+      "hours": 14,
+      "views": 4172,
+      "changeType": "down",
+      "change": "1",
+      "url": "https://www.munpia.com/novel/detail/613000",
+      "unavailable": false
+    },
+    {
+      "rank": 17,
+      "title": "중세 영주로 살아남기",
+      "author": "청라수",
+      "genres": [
+        "판타지",
+        "전쟁·밀리터리"
+      ],
+      "hours": 14,
+      "views": 3994,
+      "changeType": "same",
+      "change": "—",
+      "url": "https://www.munpia.com/novel/detail/614434",
+      "unavailable": false
+    },
+    {
+      "rank": 18,
+      "title": "버려진 특성을 주웠더니 SSS급 토벌대원으로 각성함",
+      "author": "배불루",
+      "genres": [
+        "판타지",
+        "현대판타지"
+      ],
+      "hours": 24,
+      "views": 3963,
+      "changeType": "down",
+      "change": "2",
+      "url": "https://www.munpia.com/novel/detail/608730",
+      "unavailable": false
+    },
+    {
+      "rank": 19,
+      "title": "좋소 퇴사하고 범죄자만 터는 렉카로 대박남",
+      "author": "북골드",
+      "genres": [
+        "현대판타지"
+      ],
+      "hours": 23,
+      "views": 3877,
+      "changeType": "down",
+      "change": "1",
+      "url": "https://www.munpia.com/novel/detail/609474",
+      "unavailable": false
+    },
+    {
+      "rank": 20,
+      "title": "대충 쓴 습작인데 저작권료가 쏟아짐",
+      "author": "곽탁타",
+      "genres": [
+        "현대판타지"
+      ],
+      "hours": 18,
+      "views": 3821,
+      "changeType": "down",
+      "change": "1",
+      "url": "https://www.munpia.com/novel/detail/613881",
+      "unavailable": false
+    },
+    {
       "rank": 21,
+      "title": "업계 탑티어를 섭섭하게 만들면 벌어지는 일",
+      "author": "서인하",
+      "genres": [
+        "현대판타지",
+        "드라마"
+      ],
+      "hours": 24,
+      "views": 3530,
+      "changeType": "same",
+      "change": "—",
+      "url": "https://www.munpia.com/novel/detail/619499",
+      "unavailable": false
+    },
+    {
+      "rank": 22,
       "title": "거짓말하면 죽는 국회의원이 여의도를 지배한다",
       "author": "글향",
       "genres": [
         "현대판타지"
       ],
-      "hours": 18,
-      "views": 3222,
+      "hours": 24,
+      "views": 3387,
       "changeType": "down",
-      "change": "3",
+      "change": "2",
       "url": "https://www.munpia.com/novel/detail/612029",
       "unavailable": false
     },
     {
-      "rank": 22,
+      "rank": 23,
       "title": "25살 신선이 명당을 알려줌",
       "author": "글밥",
       "genres": [
         "현대판타지",
         "퓨전"
       ],
-      "hours": 13,
-      "views": 3022,
+      "hours": 19,
+      "views": 3271,
       "changeType": "down",
       "change": "1",
       "url": "https://www.munpia.com/novel/detail/611945",
       "unavailable": false
     },
     {
-      "rank": 23,
-      "title": "외신급 귀환자인 줄 모르고 해고당함",
-      "author": "후양煦揚",
-      "genres": [
-        "판타지",
-        "퓨전"
-      ],
-      "hours": 19,
-      "views": 2922,
-      "changeType": "up",
-      "change": "2",
-      "url": "https://www.munpia.com/novel/detail/618857",
-      "unavailable": false
-    },
-    {
       "rank": 24,
-      "title": "퇴사하고 차린 함바집에 연예인들이 몰려옴",
-      "author": "땃땃땃쥐",
-      "genres": [
-        "현대판타지"
-      ],
-      "hours": 18,
-      "views": 2860,
-      "changeType": "down",
-      "change": "2",
-      "url": "https://www.munpia.com/novel/detail/607730",
-      "unavailable": false
-    },
-    {
-      "rank": 25,
       "title": "망한 재벌이 국가권력급 신기술을 독점함",
       "author": "유수流水",
       "genres": [
         "현대판타지",
         "판타지"
       ],
-      "hours": 11,
-      "views": 2839,
+      "hours": 17,
+      "views": 3100,
+      "changeType": "up",
+      "change": "2",
+      "url": "https://www.munpia.com/novel/detail/608741",
+      "unavailable": false
+    },
+    {
+      "rank": 25,
+      "title": "S급 헌터인 줄 모르고 팀에서 쫓겨남",
+      "author": "소래담",
+      "genres": [
+        "현대판타지",
+        "판타지"
+      ],
+      "hours": 9,
+      "views": 3084,
       "changeType": "down",
       "change": "1",
-      "url": "https://www.munpia.com/novel/detail/608741",
+      "url": "https://www.munpia.com/novel/detail/607997",
       "unavailable": false
     },
     {
@@ -387,158 +388,157 @@
       "genres": [
         "현대판타지"
       ],
-      "hours": 18,
-      "views": 2796,
+      "hours": 24,
+      "views": 3073,
       "changeType": "down",
-      "change": "3",
+      "change": "1",
       "url": "https://www.munpia.com/novel/detail/613173",
       "unavailable": false
     },
     {
       "rank": 27,
+      "title": "퇴사하고 차린 함바집에 연예인들이 몰려옴",
+      "author": "땃땃땃쥐",
+      "genres": [
+        "현대판타지"
+      ],
+      "hours": 24,
+      "views": 3031,
+      "changeType": "down",
+      "change": "4",
+      "url": "https://www.munpia.com/novel/detail/607730",
+      "unavailable": false
+    },
+    {
+      "rank": 28,
       "title": "해고당한 서포터가 EX급 루팅 합성을 각성함",
       "author": "착한소",
       "genres": [
         "현대판타지",
         "판타지"
       ],
-      "hours": 12,
-      "views": 2590,
-      "changeType": "same",
-      "change": "—",
+      "hours": 18,
+      "views": 2835,
+      "changeType": "down",
+      "change": "1",
       "url": "https://www.munpia.com/novel/detail/614684",
       "unavailable": false
     },
     {
-      "rank": 28,
-      "title": "해고당한 주방장이 너무 유능함",
-      "author": "긍은긍은",
+      "rank": 29,
+      "title": "외신급 귀환자인 줄 모르고 해고당함",
+      "author": "후양煦揚",
       "genres": [
-        "현대판타지"
+        "판타지",
+        "퓨전"
       ],
-      "hours": 13,
-      "views": 2559,
-      "changeType": "down",
-      "change": "2",
-      "url": "https://www.munpia.com/novel/detail/610256",
+      "hours": 18,
+      "views": 2835,
+      "changeType": "new",
+      "change": "NEW",
+      "url": "https://www.munpia.com/novel/detail/618857",
       "unavailable": false
     },
     {
-      "rank": 29,
+      "rank": 30,
       "title": "20년 전 사기당한 주식이 1조가 되어 있었다",
       "author": "강그린",
       "genres": [
         "현대판타지",
         "드라마"
       ],
-      "hours": 6,
-      "views": 2281,
-      "changeType": "up",
+      "hours": 12,
+      "views": 2790,
+      "changeType": "down",
       "change": "1",
       "url": "https://www.munpia.com/novel/detail/619203",
       "unavailable": false
     },
     {
-      "rank": 30,
-      "title": "해고당한 짐꾼의 S급 던전 생존기",
-      "author": "유리뼈",
+      "rank": 31,
+      "title": "해고당한 주방장이 너무 유능함",
+      "author": "긍은긍은",
       "genres": [
-        "판타지",
         "현대판타지"
       ],
-      "hours": 15,
-      "views": 2222,
-      "changeType": "up",
-      "change": "1",
-      "url": "https://www.munpia.com/novel/detail/612197",
+      "hours": 19,
+      "views": 2778,
+      "changeType": "down",
+      "change": "3",
+      "url": "https://www.munpia.com/novel/detail/610256",
       "unavailable": false
     },
     {
-      "rank": 31,
+      "rank": 32,
       "title": "선발 때려치웠더니 야구가 너무 쉬움",
       "author": "금문장",
       "genres": [
         "스포츠",
         "현대판타지"
       ],
-      "hours": 7,
-      "views": 2210,
+      "hours": 13,
+      "views": 2604,
       "changeType": "down",
-      "change": "2",
+      "change": "1",
       "url": "https://www.munpia.com/novel/detail/607203",
       "unavailable": false
     },
     {
-      "rank": 32,
+      "rank": 33,
+      "title": "퇴사 후 미국에서 세탁소 차렸더니 FBI가 집착함",
+      "author": "세디바",
+      "genres": [
+        "현대판타지"
+      ],
+      "hours": 10,
+      "views": 2495,
+      "changeType": "down",
+      "change": "3",
+      "url": "https://www.munpia.com/novel/detail/611522",
+      "unavailable": false
+    },
+    {
+      "rank": 34,
+      "title": "해고당한 짐꾼의 S급 던전 생존기",
+      "author": "유리뼈",
+      "genres": [
+        "판타지",
+        "현대판타지"
+      ],
+      "hours": 21,
+      "views": 2407,
+      "changeType": "down",
+      "change": "2",
+      "url": "https://www.munpia.com/novel/detail/612197",
+      "unavailable": false
+    },
+    {
+      "rank": 35,
       "title": "퇴사 후 아티팩트로 사우디 바다에서 금을 캠",
       "author": "낭만제조사",
       "genres": [
         "현대판타지",
         "판타지"
       ],
-      "hours": 16,
-      "views": 2090,
-      "changeType": "same",
-      "change": "—",
+      "hours": 22,
+      "views": 2245,
+      "changeType": "down",
+      "change": "2",
       "url": "https://www.munpia.com/novel/detail/607765",
       "unavailable": false
     },
     {
-      "rank": 33,
-      "title": "D-365 종말의 예언서",
-      "author": "싱글레어",
-      "genres": [
-        "현대판타지",
-        "판타지"
-      ],
-      "hours": 1,
-      "views": 2069,
-      "changeType": "down",
-      "change": "5",
-      "url": "https://www.munpia.com/novel/detail/610470",
-      "unavailable": false
-    },
-    {
-      "rank": 34,
-      "title": "S급 헌터인 줄 모르고 팀에서 쫓겨남",
-      "author": "소래담",
-      "genres": [
-        "현대판타지",
-        "판타지"
-      ],
-      "hours": 3,
-      "views": 1994,
-      "changeType": "same",
-      "change": "—",
-      "url": "https://www.munpia.com/novel/detail/607997",
-      "unavailable": false
-    },
-    {
-      "rank": 35,
+      "rank": 36,
       "title": "이혼할 때 전처가 버린 주식, 다음 날 3천억 됨",
       "author": "깡조",
       "genres": [
         "현대판타지"
       ],
-      "hours": 11,
-      "views": 1936,
-      "changeType": "up",
-      "change": "1",
-      "url": "https://www.munpia.com/novel/detail/619492",
-      "unavailable": false
-    },
-    {
-      "rank": 36,
-      "title": "퇴사 후 미국에서 세탁소 차렸더니 FBI가 집착함",
-      "author": "세디바",
-      "genres": [
-        "현대판타지"
-      ],
-      "hours": 4,
-      "views": 1870,
+      "hours": 17,
+      "views": 2206,
       "changeType": "down",
-      "change": "3",
-      "url": "https://www.munpia.com/novel/detail/611522",
+      "change": "2",
+      "url": "https://www.munpia.com/novel/detail/619492",
       "unavailable": false
     },
     {
@@ -549,8 +549,8 @@
         "무협",
         "퓨전"
       ],
-      "hours": 13,
-      "views": 1853,
+      "hours": 19,
+      "views": 1997,
       "changeType": "down",
       "change": "2",
       "url": "https://www.munpia.com/novel/detail/609889",
@@ -564,187 +564,188 @@
         "판타지",
         "현대판타지"
       ],
-      "hours": 18,
-      "views": 1759,
+      "hours": 24,
+      "views": 1924,
       "changeType": "up",
-      "change": "2",
+      "change": "3",
       "url": "https://www.munpia.com/novel/detail/614665",
       "unavailable": false
     },
     {
       "rank": 39,
-      "title": "전 프로가 유망주인 척 함",
-      "author": "엠보돌",
-      "genres": [
-        "현대판타지",
-        "스포츠"
-      ],
-      "hours": 16,
-      "views": 1647,
-      "changeType": "down",
-      "change": "2",
-      "url": "https://www.munpia.com/novel/detail/607496",
-      "unavailable": false
-    },
-    {
-      "rank": 40,
-      "title": "시청률 30％ 작가인 줄 모르고 하차당함",
-      "author": "전능원",
-      "genres": [
-        "현대판타지",
-        "드라마"
-      ],
-      "hours": 12,
-      "views": 1541,
-      "changeType": "up",
-      "change": "3",
-      "url": "https://www.munpia.com/novel/detail/618930",
-      "unavailable": false
-    },
-    {
-      "rank": 41,
-      "title": "280만 유튜버 만들어줬더니 해고당함",
-      "author": "새벽감자",
-      "genres": [
-        "현대판타지"
-      ],
-      "hours": 6,
-      "views": 1518,
-      "changeType": "down",
-      "change": "3",
-      "url": "https://www.munpia.com/novel/detail/612096",
-      "unavailable": false
-    },
-    {
-      "rank": 42,
-      "title": "해고당한 날 악수했다가 스킬 흡수함",
-      "author": "염비",
-      "genres": [
-        "현대판타지",
-        "퓨전"
-      ],
-      "hours": 15,
-      "views": 1510,
-      "changeType": "up",
-      "change": "2",
-      "url": "https://www.munpia.com/novel/detail/619702",
-      "unavailable": false
-    },
-    {
-      "rank": 43,
-      "title": "해고당한 김대리가 천재 킬러라고?",
-      "author": "지곡.",
-      "genres": [
-        "퓨전",
-        "현대판타지"
-      ],
-      "hours": 17,
-      "views": 1490,
-      "changeType": "down",
-      "change": "4",
-      "url": "https://www.munpia.com/novel/detail/615470",
-      "unavailable": false
-    },
-    {
-      "rank": 44,
-      "title": "튜토리얼 스킵 불가로 1층 부터 고인물",
-      "author": "단정한니트",
-      "genres": [
-        "현대판타지",
-        "퓨전"
-      ],
-      "hours": 17,
-      "views": 1485,
-      "changeType": "down",
-      "change": "3",
-      "url": "https://www.munpia.com/novel/detail/617340",
-      "unavailable": false
-    },
-    {
-      "rank": 45,
       "title": "퇴직금 90％ 삭감 해고 후 귀농했더니 헌터계가 뒤집힘",
       "author": "노빠꾸맨",
       "genres": [
         "현대판타지",
         "퓨전"
       ],
-      "hours": 5,
-      "views": 1426,
+      "hours": 11,
+      "views": 1876,
       "changeType": "up",
-      "change": "1",
+      "change": "3",
       "url": "https://www.munpia.com/novel/detail/618058",
       "unavailable": false
     },
     {
-      "rank": 46,
-      "title": "나태한 국선변호사의 분신술",
-      "author": "서칸더브이",
+      "rank": 40,
+      "title": "280만 유튜버 만들어줬더니 해고당함",
+      "author": "새벽감자",
       "genres": [
         "현대판타지"
       ],
-      "hours": 17,
-      "views": 1345,
+      "hours": 12,
+      "views": 1828,
       "changeType": "down",
       "change": "4",
-      "url": "https://www.munpia.com/novel/detail/612586",
+      "url": "https://www.munpia.com/novel/detail/612096",
       "unavailable": false
     },
     {
-      "rank": 47,
+      "rank": 41,
+      "title": "전 프로가 유망주인 척 함",
+      "author": "엠보돌",
+      "genres": [
+        "현대판타지",
+        "스포츠"
+      ],
+      "hours": 22,
+      "views": 1765,
+      "changeType": "down",
+      "change": "3",
+      "url": "https://www.munpia.com/novel/detail/607496",
+      "unavailable": false
+    },
+    {
+      "rank": 42,
+      "title": "나는 오래된 물건의 경험치를 흡수할 수 있다",
+      "author": "초씽",
+      "genres": [
+        "현대판타지",
+        "판타지"
+      ],
+      "hours": 7,
+      "views": 1757,
+      "changeType": "down",
+      "change": "5",
+      "url": "https://www.munpia.com/novel/detail/614188",
+      "unavailable": false
+    },
+    {
+      "rank": 43,
+      "title": "시청률 30％ 작가인 줄 모르고 하차당함",
+      "author": "전능원",
+      "genres": [
+        "현대판타지",
+        "드라마"
+      ],
+      "hours": 18,
+      "views": 1715,
+      "changeType": "up",
+      "change": "4",
+      "url": "https://www.munpia.com/novel/detail/618930",
+      "unavailable": false
+    },
+    {
+      "rank": 44,
+      "title": "해고당한 날 악수했다가 스킬 흡수함",
+      "author": "염비",
+      "genres": [
+        "현대판타지",
+        "퓨전"
+      ],
+      "hours": 21,
+      "views": 1711,
+      "changeType": "up",
+      "change": "4",
+      "url": "https://www.munpia.com/novel/detail/619702",
+      "unavailable": false
+    },
+    {
+      "rank": 45,
+      "title": "맵핵 능력을 각성했더니 전세계가 집착함",
+      "author": "Ashmor",
+      "genres": [
+        "현대판타지",
+        "퓨전"
+      ],
+      "hours": 9,
+      "views": 1686,
+      "changeType": "up",
+      "change": "6",
+      "url": "https://www.munpia.com/novel/detail/617111",
+      "unavailable": false
+    },
+    {
+      "rank": 46,
       "title": "망한 미국 동물원을 샀더니 돈이 복사됨",
       "author": "운향림",
       "genres": [
         "현대판타지"
       ],
-      "hours": 4,
-      "views": 1273,
-      "changeType": "up",
-      "change": "2",
+      "hours": 10,
+      "views": 1665,
+      "changeType": "down",
+      "change": "1",
       "url": "https://www.munpia.com/novel/detail/607137",
       "unavailable": false
     },
     {
+      "rank": 47,
+      "title": "천재 코치는 야구가 너무 쉽다",
+      "author": "정예",
+      "genres": [
+        "스포츠",
+        "현대판타지"
+      ],
+      "hours": 8,
+      "views": 1654,
+      "changeType": "new",
+      "change": "NEW",
+      "url": "https://www.munpia.com/novel/detail/610623",
+      "unavailable": false
+    },
+    {
       "rank": 48,
+      "title": "해고당한 김대리가 천재 킬러라고?",
+      "author": "지곡.",
+      "genres": [
+        "퓨전",
+        "현대판타지"
+      ],
+      "hours": 23,
+      "views": 1643,
+      "changeType": "down",
+      "change": "8",
+      "url": "https://www.munpia.com/novel/detail/615470",
+      "unavailable": false
+    },
+    {
+      "rank": 49,
+      "title": "튜토리얼 스킵 불가로 1층 부터 고인물",
+      "author": "단정한니트",
+      "genres": [
+        "현대판타지",
+        "퓨전"
+      ],
+      "hours": 23,
+      "views": 1609,
+      "changeType": "down",
+      "change": "6",
+      "url": "https://www.munpia.com/novel/detail/617340",
+      "unavailable": false
+    },
+    {
+      "rank": 50,
       "title": "병가 거절당한 평민 기사는 세계 최강임",
       "author": "땃쮜",
       "genres": [
         "판타지"
       ],
-      "hours": 6,
-      "views": 1210,
+      "hours": 12,
+      "views": 1560,
       "changeType": "up",
-      "change": "22",
+      "change": "10",
       "url": "https://www.munpia.com/novel/detail/619194",
-      "unavailable": false
-    },
-    {
-      "rank": 49,
-      "title": "예쁜 아내와 농사 지으며 힐링하는데 탑 등반도 잘함",
-      "author": "개벽S",
-      "genres": [
-        "현대판타지",
-        "퓨전"
-      ],
-      "hours": 6,
-      "views": 1193,
-      "changeType": "down",
-      "change": "1",
-      "url": "https://www.munpia.com/novel/detail/603599",
-      "unavailable": false
-    },
-    {
-      "rank": 50,
-      "title": "퇴사했더니 잊고 있던 코인이 2천억이었다",
-      "author": "최고얍",
-      "genres": [
-        "현대판타지",
-        "퓨전"
-      ],
-      "hours": 20,
-      "views": 1190,
-      "changeType": "down",
-      "change": "5",
-      "url": "https://www.munpia.com/novel/detail/619553",
       "unavailable": false
     },
     {
@@ -754,616 +755,613 @@
       "genres": [
         "현대판타지"
       ],
-      "hours": 5,
-      "views": 1176,
+      "hours": 11,
+      "views": 1538,
       "changeType": "down",
-      "change": "4",
+      "change": "7",
       "url": "https://www.munpia.com/novel/detail/607688",
       "unavailable": false
     },
     {
       "rank": 52,
-      "title": "미국이 탐내고 중국이 죽이고 싶은 탑 관리자가 되었다",
-      "author": "낙필",
-      "genres": [
-        "현대판타지"
-      ],
-      "hours": 17,
-      "views": 1087,
-      "changeType": "same",
-      "change": "—",
-      "url": "https://www.munpia.com/novel/detail/615438",
-      "unavailable": false
-    },
-    {
-      "rank": 53,
-      "title": "아포칼립스에서 아공간 쉘터 키우기",
-      "author": "김판",
-      "genres": [
-        "현대판타지",
-        "퓨전"
-      ],
-      "hours": 9,
-      "views": 1076,
-      "changeType": "down",
-      "change": "2",
-      "url": "https://www.munpia.com/novel/detail/616606",
-      "unavailable": false
-    },
-    {
-      "rank": 54,
-      "title": "맵핵 능력을 각성했더니 전세계가 집착함",
-      "author": "Ashmor",
-      "genres": [
-        "현대판타지",
-        "퓨전"
-      ],
-      "hours": 3,
-      "views": 1047,
-      "changeType": "up",
-      "change": "7",
-      "url": "https://www.munpia.com/novel/detail/617111",
-      "unavailable": false
-    },
-    {
-      "rank": 55,
-      "title": "미국복권 당첨된 공무원이 하고싶은대로 다 함",
-      "author": "나이막",
-      "genres": [
-        "현대판타지",
-        "퓨전"
-      ],
-      "hours": 14,
-      "views": 1021,
-      "changeType": "down",
-      "change": "1",
-      "url": "https://www.munpia.com/novel/detail/610450",
-      "unavailable": false
-    },
-    {
-      "rank": 56,
-      "title": "S급 헌터들이 내 소환수인 걸 모르고 버림받음.",
-      "author": "제로필터",
-      "genres": [
-        "현대판타지",
-        "퓨전"
-      ],
-      "hours": 11,
-      "views": 1013,
-      "changeType": "down",
-      "change": "3",
-      "url": "https://www.munpia.com/novel/detail/613544",
-      "unavailable": false
-    },
-    {
-      "rank": 57,
-      "title": "메이저리그 먹튀의 회귀",
-      "author": "크림커피",
-      "genres": [
-        "현대판타지",
-        "스포츠"
-      ],
-      "hours": 13,
-      "views": 1000,
-      "changeType": "down",
-      "change": "7",
-      "url": "https://www.munpia.com/novel/detail/616072",
-      "unavailable": false
-    },
-    {
-      "rank": 58,
       "title": "5초 먼저보는 펀드매니저를 해고했더니 펀드가 박살남",
       "author": "킹스롬",
       "genres": [
         "현대판타지",
         "퓨전"
       ],
-      "hours": 3,
-      "views": 986,
-      "changeType": "up",
-      "change": "1",
+      "hours": 9,
+      "views": 1528,
+      "changeType": "down",
+      "change": "3",
       "url": "https://www.munpia.com/novel/detail/610774",
       "unavailable": false
     },
     {
-      "rank": 59,
-      "title": "조선이 교체되었다.",
-      "author": "슈타인호프",
-      "genres": [
-        "대체역사",
-        "전쟁·밀리터리"
-      ],
-      "hours": 16,
-      "views": 982,
-      "changeType": "down",
-      "change": "4",
-      "url": "https://www.munpia.com/novel/detail/617942",
-      "unavailable": false
-    },
-    {
-      "rank": 60,
-      "title": "회귀한 한국은행 팀장이 월가를 집어삼킴",
-      "author": "폭우(暴雨)",
+      "rank": 53,
+      "title": "예쁜 아내와 농사 지으며 힐링하는데 탑 등반도 잘함",
+      "author": "개벽S",
       "genres": [
         "현대판타지",
-        "대체역사"
+        "퓨전"
       ],
-      "hours": 10,
-      "views": 969,
-      "changeType": "up",
-      "change": "3",
-      "url": "https://www.munpia.com/novel/detail/617233",
+      "hours": 12,
+      "views": 1471,
+      "changeType": "down",
+      "change": "7",
+      "url": "https://www.munpia.com/novel/detail/603599",
       "unavailable": false
     },
     {
-      "rank": 61,
+      "rank": 54,
+      "title": "나태한 국선변호사의 분신술",
+      "author": "서칸더브이",
+      "genres": [
+        "현대판타지"
+      ],
+      "hours": 23,
+      "views": 1433,
+      "changeType": "down",
+      "change": "4",
+      "url": "https://www.munpia.com/novel/detail/612586",
+      "unavailable": false
+    },
+    {
+      "rank": 55,
+      "title": "해고당한 계약직은 대체불가였다",
+      "author": "마지막검사",
+      "genres": [
+        "판타지"
+      ],
+      "hours": 7,
+      "views": 1347,
+      "changeType": "down",
+      "change": "3",
+      "url": "https://www.munpia.com/novel/detail/615299",
+      "unavailable": false
+    },
+    {
+      "rank": 56,
       "title": "전 세계 1위 코인 고래가 사는 법",
       "author": "신선임",
       "genres": [
         "현대판타지",
         "드라마"
       ],
-      "hours": 6,
-      "views": 954,
+      "hours": 12,
+      "views": 1233,
       "changeType": "down",
       "change": "3",
       "url": "https://www.munpia.com/novel/detail/611314",
       "unavailable": false
     },
     {
-      "rank": 62,
-      "title": "건물 상속 받고 힐링함",
-      "author": "울산깍쟁이",
+      "rank": 57,
+      "title": "아포칼립스에서 아공간 쉘터 키우기",
+      "author": "김판",
       "genres": [
         "현대판타지",
-        "판타지"
+        "퓨전"
       ],
-      "hours": 11,
-      "views": 938,
-      "changeType": "same",
-      "change": "—",
-      "url": "https://www.munpia.com/novel/detail/613353",
+      "hours": 15,
+      "views": 1226,
+      "changeType": "down",
+      "change": "3",
+      "url": "https://www.munpia.com/novel/detail/616606",
+      "unavailable": false
+    },
+    {
+      "rank": 58,
+      "title": "미국이 탐내고 중국이 죽이고 싶은 탑 관리자가 되었다",
+      "author": "낙필",
+      "genres": [
+        "현대판타지"
+      ],
+      "hours": 23,
+      "views": 1176,
+      "changeType": "down",
+      "change": "1",
+      "url": "https://www.munpia.com/novel/detail/615438",
+      "unavailable": false
+    },
+    {
+      "rank": 59,
+      "title": "S급 헌터들이 내 소환수인 걸 모르고 버림받음.",
+      "author": "제로필터",
+      "genres": [
+        "현대판타지",
+        "퓨전"
+      ],
+      "hours": 17,
+      "views": 1131,
+      "changeType": "down",
+      "change": "4",
+      "url": "https://www.munpia.com/novel/detail/613544",
+      "unavailable": false
+    },
+    {
+      "rank": 60,
+      "title": "메이저리그 먹튀의 회귀",
+      "author": "크림커피",
+      "genres": [
+        "현대판타지",
+        "스포츠"
+      ],
+      "hours": 19,
+      "views": 1102,
+      "changeType": "down",
+      "change": "4",
+      "url": "https://www.munpia.com/novel/detail/616072",
+      "unavailable": false
+    },
+    {
+      "rank": 61,
+      "title": "회귀한 한국은행 팀장이 월가를 집어삼킴",
+      "author": "폭우(暴雨)",
+      "genres": [
+        "현대판타지",
+        "대체역사"
+      ],
+      "hours": 16,
+      "views": 1080,
+      "changeType": "up",
+      "change": "7",
+      "url": "https://www.munpia.com/novel/detail/617233",
+      "unavailable": false
+    },
+    {
+      "rank": 62,
+      "title": "미국복권 당첨된 공무원이 하고싶은대로 다 함",
+      "author": "나이막",
+      "genres": [
+        "현대판타지",
+        "퓨전"
+      ],
+      "hours": 20,
+      "views": 1079,
+      "changeType": "down",
+      "change": "3",
+      "url": "https://www.munpia.com/novel/detail/610450",
       "unavailable": false
     },
     {
       "rank": 63,
-      "title": "재벌집 막내아들 비트코인으로 인생역전",
-      "author": "소수림",
-      "genres": [
-        "현대판타지"
-      ],
-      "hours": 14,
-      "views": 915,
-      "changeType": "down",
-      "change": "7",
-      "url": "https://www.munpia.com/novel/detail/616632",
-      "unavailable": false
-    },
-    {
-      "rank": 64,
-      "title": "7천억 물려받은 줄 모르고 퇴사당함",
-      "author": "무한와규",
-      "genres": [
-        "현대판타지",
-        "드라마"
-      ],
-      "hours": 11,
-      "views": 910,
-      "changeType": "down",
-      "change": "7",
-      "url": "https://www.munpia.com/novel/detail/614226",
-      "unavailable": false
-    },
-    {
-      "rank": 65,
-      "title": "나 혼자 헬 난이도에서 고유특성으로 꿀 빰",
-      "author": "간딴",
-      "genres": [
-        "판타지",
-        "퓨전"
-      ],
-      "hours": 13,
-      "views": 889,
-      "changeType": "up",
-      "change": "3",
-      "url": "https://www.munpia.com/novel/detail/608190",
-      "unavailable": false
-    },
-    {
-      "rank": 66,
-      "title": "해고당한 힐러가 차린 온천이 너무 잘됨",
-      "author": "힐링화원",
-      "genres": [
-        "현대판타지"
-      ],
-      "hours": 14,
-      "views": 866,
-      "changeType": "down",
-      "change": "1",
-      "url": "https://www.munpia.com/novel/detail/610682",
-      "unavailable": false
-    },
-    {
-      "rank": 67,
-      "title": "선협에서 EX급 쌍수공법으로 수선한다",
-      "author": "뭉낑깡",
-      "genres": [
-        "무협",
-        "퓨전"
-      ],
-      "hours": 17,
-      "views": 852,
-      "changeType": "up",
-      "change": "6",
-      "url": "https://www.munpia.com/novel/detail/617903",
-      "unavailable": false
-    },
-    {
-      "rank": 68,
-      "title": "천재 코치는 야구가 너무 쉽다",
-      "author": "정예",
-      "genres": [
-        "스포츠",
-        "현대판타지"
-      ],
-      "hours": 2,
-      "views": 849,
-      "changeType": "new",
-      "change": "NEW",
-      "url": "https://www.munpia.com/novel/detail/610623",
-      "unavailable": false
-    },
-    {
-      "rank": 69,
-      "title": "날 해고한 회사의 공장이 멈췄다",
-      "author": "잡탕드래곤",
-      "genres": [
-        "현대판타지"
-      ],
-      "hours": 14,
-      "views": 841,
-      "changeType": "down",
-      "change": "5",
-      "url": "https://www.munpia.com/novel/detail/616122",
-      "unavailable": false
-    },
-    {
-      "rank": 70,
-      "title": "해고후 파워볼당첨돼 미국서 힐링하려는데 장사가 너무잘됨",
-      "author": "나없고",
-      "genres": [
-        "현대판타지",
-        "판타지"
-      ],
-      "hours": 13,
-      "views": 827,
-      "changeType": "down",
-      "change": "1",
-      "url": "https://www.munpia.com/novel/detail/614602",
-      "unavailable": false
-    },
-    {
-      "rank": 71,
-      "title": "해고당했는데 나만 게이트 무역을 씹어 먹음",
-      "author": "뜨끈아이스",
-      "genres": [
-        "판타지",
-        "현대판타지"
-      ],
-      "hours": 17,
-      "views": 823,
-      "changeType": "down",
-      "change": "11",
-      "url": "https://www.munpia.com/novel/detail/613070",
-      "unavailable": false
-    },
-    {
-      "rank": 72,
-      "title": "계약 해지당한 가맹점에 사람들이 자꾸 줄섬",
-      "author": "원일더",
-      "genres": [
-        "현대판타지",
-        "판타지"
-      ],
-      "hours": 5,
-      "views": 819,
-      "changeType": "down",
-      "change": "1",
-      "url": "https://www.munpia.com/novel/detail/612947",
-      "unavailable": false
-    },
-    {
-      "rank": 73,
-      "title": "전설의 용병이 키운 아들이 너무 강하다",
-      "author": "블랙카드",
-      "genres": [
-        "현대판타지",
-        "판타지"
-      ],
-      "hours": 6,
-      "views": 810,
-      "changeType": "up",
-      "change": "2",
-      "url": "https://www.munpia.com/novel/detail/612396",
-      "unavailable": false
-    },
-    {
-      "rank": 74,
-      "title": "1800억이 생긴 김에 인생 좀 즐기겠습니다.",
-      "author": "BlackSwan.",
-      "genres": [
-        "현대판타지"
-      ],
-      "hours": 20,
-      "views": 801,
-      "changeType": "down",
-      "change": "7",
-      "url": "https://www.munpia.com/novel/detail/612206",
-      "unavailable": false
-    },
-    {
-      "rank": 75,
-      "title": "신도 씹어먹는 무당이 되었다",
-      "author": "전장범",
-      "genres": [
-        "현대판타지"
-      ],
-      "hours": 17,
-      "views": 800,
-      "changeType": "down",
-      "change": "9",
-      "url": "https://www.munpia.com/novel/detail/613175",
-      "unavailable": false
-    },
-    {
-      "rank": 76,
-      "title": "이혼하고 퇴사당해 전업투자자가 됐는데 인생이 재밌어졌다",
-      "author": "밥땅",
-      "genres": [
-        "현대판타지",
-        "드라마"
-      ],
-      "hours": 19,
-      "views": 777,
-      "changeType": "down",
-      "change": "2",
-      "url": "https://www.munpia.com/novel/detail/618412",
-      "unavailable": false
-    },
-    {
-      "rank": 77,
-      "title": "물려받은 미국 땅에서 온천으로 대박 났습니다",
-      "author": "풍기킹",
-      "genres": [
-        "현대판타지",
-        "판타지"
-      ],
-      "hours": 8,
-      "views": 764,
-      "changeType": "up",
-      "change": "3",
-      "url": "https://www.munpia.com/novel/detail/607514",
-      "unavailable": false
-    },
-    {
-      "rank": 78,
-      "title": "면직당한 블랙요원이 너무 유능하다",
-      "author": "안재인",
-      "genres": [
-        "현대판타지",
-        "전쟁·밀리터리"
-      ],
-      "hours": 14,
-      "views": 757,
-      "changeType": "new",
-      "change": "NEW",
-      "url": "https://www.munpia.com/novel/detail/616672",
-      "unavailable": false
-    },
-    {
-      "rank": 79,
-      "title": "미국 사막에 K-마트를 열었더니 모두가 집착함",
-      "author": "몬도리아",
-      "genres": [
-        "현대판타지",
-        "드라마"
-      ],
-      "hours": 19,
-      "views": 745,
-      "changeType": "up",
-      "change": "11",
-      "url": "https://www.munpia.com/novel/detail/618863",
-      "unavailable": false
-    },
-    {
-      "rank": 80,
-      "title": "방출된 타자가 재능을 수집함",
-      "author": "주창범",
-      "genres": [
-        "스포츠",
-        "현대판타지"
-      ],
-      "hours": 5,
-      "views": 742,
-      "changeType": "up",
-      "change": "9",
-      "url": "https://www.munpia.com/novel/detail/612110",
-      "unavailable": false
-    },
-    {
-      "rank": 81,
-      "title": "나 하나 해고했다고 100조짜리 구단이 무너짐",
-      "author": "자유수달",
-      "genres": [
-        "현대판타지"
-      ],
-      "hours": 7,
-      "views": 728,
-      "changeType": "down",
-      "change": "2",
-      "url": "https://www.munpia.com/novel/detail/616494",
-      "unavailable": false
-    },
-    {
-      "rank": 82,
-      "title": "아포칼립스에서 나만 답이 보임",
-      "author": "강철민",
-      "genres": [
-        "현대판타지"
-      ],
-      "hours": 13,
-      "views": 721,
-      "changeType": "down",
-      "change": "4",
-      "url": "https://www.munpia.com/novel/detail/617066",
-      "unavailable": false
-    },
-    {
-      "rank": 83,
-      "title": "철종, 제국의 시대",
-      "author": "박명의하늘",
-      "genres": [
-        "대체역사",
-        "전쟁·밀리터리"
-      ],
-      "hours": 8,
-      "views": 716,
-      "changeType": "down",
-      "change": "6",
-      "url": "https://www.munpia.com/novel/detail/603811",
-      "unavailable": false
-    },
-    {
-      "rank": 84,
-      "title": "헌터 시대에 나 혼자 부적술사",
-      "author": "하우트",
-      "genres": [
-        "무협",
-        "현대판타지"
-      ],
-      "hours": 8,
-      "views": 701,
-      "changeType": "down",
-      "change": "3",
-      "url": "https://www.munpia.com/novel/detail/612123",
-      "unavailable": false
-    },
-    {
-      "rank": 85,
       "title": "KBO에서 방출된 타자는 MLB 홈런왕",
       "author": "신지님",
       "genres": [
         "스포츠",
         "현대판타지"
       ],
-      "hours": 3,
-      "views": 682,
+      "hours": 9,
+      "views": 1058,
       "changeType": "down",
-      "change": "9",
+      "change": "5",
       "url": "https://www.munpia.com/novel/detail/608314",
       "unavailable": false
     },
     {
-      "rank": 86,
-      "title": "미래를 아는 천재 박사가 다 해먹음",
-      "author": "율담",
-      "genres": [
-        "현대판타지"
-      ],
-      "hours": 15,
-      "views": 637,
-      "changeType": "up",
-      "change": "9",
-      "url": "https://www.munpia.com/novel/detail/616346",
-      "unavailable": false
-    },
-    {
-      "rank": 87,
-      "title": "업계 최고인데, 월급 도둑이라며 해고 당함",
-      "author": "신유(愼惟)",
+      "rank": 64,
+      "title": "건물 상속 받고 힐링함",
+      "author": "울산깍쟁이",
       "genres": [
         "현대판타지",
         "판타지"
       ],
-      "hours": 7,
-      "views": 636,
-      "changeType": "down",
+      "hours": 17,
+      "views": 1024,
+      "changeType": "up",
       "change": "1",
-      "url": "https://www.munpia.com/novel/detail/614734",
+      "url": "https://www.munpia.com/novel/detail/613353",
       "unavailable": false
     },
     {
-      "rank": 88,
+      "rank": 65,
+      "title": "조선이 교체되었다.",
+      "author": "슈타인호프",
+      "genres": [
+        "대체역사",
+        "전쟁·밀리터리"
+      ],
+      "hours": 22,
+      "views": 1020,
+      "changeType": "down",
+      "change": "1",
+      "url": "https://www.munpia.com/novel/detail/617942",
+      "unavailable": false
+    },
+    {
+      "rank": 66,
+      "title": "전설의 용병이 키운 아들이 너무 강하다",
+      "author": "블랙카드",
+      "genres": [
+        "현대판타지",
+        "판타지"
+      ],
+      "hours": 12,
+      "views": 1005,
+      "changeType": "up",
+      "change": "4",
+      "url": "https://www.munpia.com/novel/detail/612396",
+      "unavailable": false
+    },
+    {
+      "rank": 67,
+      "title": "7천억 물려받은 줄 모르고 퇴사당함",
+      "author": "무한와규",
+      "genres": [
+        "현대판타지",
+        "드라마"
+      ],
+      "hours": 17,
+      "views": 998,
+      "changeType": "down",
+      "change": "6",
+      "url": "https://www.munpia.com/novel/detail/614226",
+      "unavailable": false
+    },
+    {
+      "rank": 68,
+      "title": "재벌집 막내아들 비트코인으로 인생역전",
+      "author": "소수림",
+      "genres": [
+        "현대판타지"
+      ],
+      "hours": 20,
+      "views": 997,
+      "changeType": "down",
+      "change": "6",
+      "url": "https://www.munpia.com/novel/detail/616632",
+      "unavailable": false
+    },
+    {
+      "rank": 69,
+      "title": "나 혼자 헬 난이도에서 고유특성으로 꿀 빰",
+      "author": "간딴",
+      "genres": [
+        "판타지",
+        "퓨전"
+      ],
+      "hours": 19,
+      "views": 995,
+      "changeType": "up",
+      "change": "5",
+      "url": "https://www.munpia.com/novel/detail/608190",
+      "unavailable": false
+    },
+    {
+      "rank": 70,
+      "title": "계약 해지당한 가맹점에 사람들이 자꾸 줄섬",
+      "author": "원일더",
+      "genres": [
+        "현대판타지",
+        "판타지"
+      ],
+      "hours": 11,
+      "views": 995,
+      "changeType": "down",
+      "change": "4",
+      "url": "https://www.munpia.com/novel/detail/612947",
+      "unavailable": false
+    },
+    {
+      "rank": 71,
+      "title": "해고당한 힐러가 차린 온천이 너무 잘됨",
+      "author": "힐링화원",
+      "genres": [
+        "현대판타지"
+      ],
+      "hours": 20,
+      "views": 931,
+      "changeType": "same",
+      "change": "—",
+      "url": "https://www.munpia.com/novel/detail/610682",
+      "unavailable": false
+    },
+    {
+      "rank": 72,
+      "title": "방출된 타자가 재능을 수집함",
+      "author": "주창범",
+      "genres": [
+        "스포츠",
+        "현대판타지"
+      ],
+      "hours": 11,
+      "views": 926,
+      "changeType": "up",
+      "change": "6",
+      "url": "https://www.munpia.com/novel/detail/612110",
+      "unavailable": false
+    },
+    {
+      "rank": 73,
+      "title": "신도 씹어먹는 무당이 되었다",
+      "author": "전장범",
+      "genres": [
+        "현대판타지"
+      ],
+      "hours": 23,
+      "views": 921,
+      "changeType": "down",
+      "change": "1",
+      "url": "https://www.munpia.com/novel/detail/613175",
+      "unavailable": false
+    },
+    {
+      "rank": 74,
+      "title": "선협에서 EX급 쌍수공법으로 수선한다",
+      "author": "뭉낑깡",
+      "genres": [
+        "무협",
+        "퓨전"
+      ],
+      "hours": 23,
+      "views": 919,
+      "changeType": "up",
+      "change": "8",
+      "url": "https://www.munpia.com/novel/detail/617903",
+      "unavailable": false
+    },
+    {
+      "rank": 75,
+      "title": "날 해고한 회사의 공장이 멈췄다",
+      "author": "잡탕드래곤",
+      "genres": [
+        "현대판타지"
+      ],
+      "hours": 20,
+      "views": 909,
+      "changeType": "down",
+      "change": "6",
+      "url": "https://www.munpia.com/novel/detail/616122",
+      "unavailable": false
+    },
+    {
+      "rank": 76,
+      "title": "삼국지에서 18제후 포신으로 살아남기",
+      "author": "다작김절필",
+      "genres": [
+        "대체역사"
+      ],
+      "hours": 8,
+      "views": 899,
+      "changeType": "same",
+      "change": "—",
+      "url": "https://www.munpia.com/novel/detail/615486",
+      "unavailable": false
+    },
+    {
+      "rank": 77,
+      "title": "해고후 파워볼당첨돼 미국서 힐링하려는데 장사가 너무잘됨",
+      "author": "나없고",
+      "genres": [
+        "현대판타지",
+        "판타지"
+      ],
+      "hours": 19,
+      "views": 895,
+      "changeType": "down",
+      "change": "2",
+      "url": "https://www.munpia.com/novel/detail/614602",
+      "unavailable": false
+    },
+    {
+      "rank": 78,
+      "title": "물려받은 미국 땅에서 온천으로 대박 났습니다",
+      "author": "풍기킹",
+      "genres": [
+        "현대판타지",
+        "판타지"
+      ],
+      "hours": 14,
+      "views": 889,
+      "changeType": "up",
+      "change": "2",
+      "url": "https://www.munpia.com/novel/detail/607514",
+      "unavailable": false
+    },
+    {
+      "rank": 79,
+      "title": "해고당했는데 나만 게이트 무역을 씹어 먹음",
+      "author": "뜨끈아이스",
+      "genres": [
+        "판타지",
+        "현대판타지"
+      ],
+      "hours": 23,
+      "views": 882,
+      "changeType": "down",
+      "change": "12",
+      "url": "https://www.munpia.com/novel/detail/613070",
+      "unavailable": false
+    },
+    {
+      "rank": 80,
       "title": "해고당한 네크로맨서가 초월특전을 받음",
       "author": "남다른",
       "genres": [
         "현대판타지",
         "퓨전"
       ],
-      "hours": 4,
-      "views": 621,
+      "hours": 10,
+      "views": 871,
       "changeType": "down",
-      "change": "4",
+      "change": "7",
       "url": "https://www.munpia.com/novel/detail/616750",
       "unavailable": false
     },
     {
-      "rank": 89,
-      "title": "청소 마법만 썼는데 헬 난이도가 너무 쉬움",
-      "author": "비요뜨귀신",
+      "rank": 81,
+      "title": "해고당했더니 폐기템에서 S급 스킬이 나옴",
+      "author": "엘루아.",
+      "genres": [
+        "현대판타지"
+      ],
+      "hours": 9,
+      "views": 855,
+      "changeType": "up",
+      "change": "5",
+      "url": "https://www.munpia.com/novel/detail/618283",
+      "unavailable": false
+    },
+    {
+      "rank": 82,
+      "title": "면직당한 블랙요원이 너무 유능하다",
+      "author": "안재인",
       "genres": [
         "현대판타지",
-        "퓨전"
+        "전쟁·밀리터리"
+      ],
+      "hours": 20,
+      "views": 852,
+      "changeType": "new",
+      "change": "NEW",
+      "url": "https://www.munpia.com/novel/detail/616672",
+      "unavailable": false
+    },
+    {
+      "rank": 83,
+      "title": "나 하나 해고했다고 100조짜리 구단이 무너짐",
+      "author": "자유수달",
+      "genres": [
+        "현대판타지"
       ],
       "hours": 13,
-      "views": 618,
-      "changeType": "up",
-      "change": "9",
-      "url": "https://www.munpia.com/novel/detail/619619",
+      "views": 834,
+      "changeType": "down",
+      "change": "2",
+      "url": "https://www.munpia.com/novel/detail/616494",
       "unavailable": false
     },
     {
-      "rank": 90,
-      "title": "초한지 금쪽이 항우 클리닉",
-      "author": "간절히",
+      "rank": 84,
+      "title": "아포칼립스에서 나만 답이 보임",
+      "author": "강철민",
       "genres": [
-        "대체역사"
+        "현대판타지"
+      ],
+      "hours": 19,
+      "views": 807,
+      "changeType": "down",
+      "change": "1",
+      "url": "https://www.munpia.com/novel/detail/617066",
+      "unavailable": false
+    },
+    {
+      "rank": 85,
+      "title": "1조 당첨된 감사팀 과장은 제주도로 쫓겨나고 싶다",
+      "author": "구구나나",
+      "genres": [
+        "현대판타지"
+      ],
+      "hours": 10,
+      "views": 805,
+      "changeType": "same",
+      "change": "—",
+      "url": "https://www.munpia.com/novel/detail/617726",
+      "unavailable": false
+    },
+    {
+      "rank": 86,
+      "title": "철종, 제국의 시대",
+      "author": "박명의하늘",
+      "genres": [
+        "대체역사",
+        "전쟁·밀리터리"
       ],
       "hours": 14,
-      "views": 607,
-      "changeType": "up",
-      "change": "3",
-      "url": "https://www.munpia.com/novel/detail/616714",
+      "views": 800,
+      "changeType": "down",
+      "change": "7",
+      "url": "https://www.munpia.com/novel/detail/603811",
       "unavailable": false
     },
     {
-      "rank": 91,
-      "title": "해고당한 천하제일인은 조용히 살고 싶다",
-      "author": "자까떼껄룩",
+      "rank": 87,
+      "title": "헌터 시대에 나 혼자 부적술사",
+      "author": "하우트",
       "genres": [
         "무협",
-        "판타지"
+        "현대판타지"
       ],
       "hours": 14,
-      "views": 603,
-      "changeType": "down",
-      "change": "4",
-      "url": "https://www.munpia.com/novel/detail/605247",
+      "views": 790,
+      "changeType": "same",
+      "change": "—",
+      "url": "https://www.munpia.com/novel/detail/612123",
       "unavailable": false
     },
     {
-      "rank": 92,
+      "rank": 88,
+      "title": "권고사직 당했더니 각성함",
+      "author": ".로튼애플.",
+      "genres": [
+        "현대판타지"
+      ],
+      "hours": 9,
+      "views": 775,
+      "changeType": "up",
+      "change": "1",
+      "url": "https://www.munpia.com/novel/detail/617814",
+      "unavailable": false
+    },
+    {
+      "rank": 89,
       "title": "김 대리가 잘리자마자 S급 헌터들이 미쳐 날뜀",
       "author": "굶주린청년",
       "genres": [
         "현대판타지",
         "판타지"
       ],
-      "hours": 7,
-      "views": 593,
+      "hours": 13,
+      "views": 755,
       "changeType": "up",
-      "change": "8",
+      "change": "6",
       "url": "https://www.munpia.com/novel/detail/617980",
+      "unavailable": false
+    },
+    {
+      "rank": 90,
+      "title": "업계 최고인데, 월급 도둑이라며 해고 당함",
+      "author": "신유(愼惟)",
+      "genres": [
+        "현대판타지",
+        "판타지"
+      ],
+      "hours": 13,
+      "views": 736,
+      "changeType": "down",
+      "change": "6",
+      "url": "https://www.munpia.com/novel/detail/614734",
+      "unavailable": false
+    },
+    {
+      "rank": 91,
+      "title": "서울에서 흡혈귀로 살아남기",
+      "author": "태양물고기",
+      "genres": [
+        "현대판타지",
+        "퓨전"
+      ],
+      "hours": 6,
+      "views": 731,
+      "changeType": "down",
+      "change": "28",
+      "url": "https://www.munpia.com/novel/detail/605444",
+      "unavailable": false
+    },
+    {
+      "rank": 92,
+      "title": "청소 마법만 썼는데 헬 난이도가 너무 쉬움",
+      "author": "비요뜨귀신",
+      "genres": [
+        "현대판타지",
+        "퓨전"
+      ],
+      "hours": 19,
+      "views": 715,
+      "changeType": "up",
+      "change": "6",
+      "url": "https://www.munpia.com/novel/detail/619619",
       "unavailable": false
     },
     {
@@ -1373,56 +1371,53 @@
       "genres": [
         "현대판타지"
       ],
-      "hours": 12,
-      "views": 591,
+      "hours": 18,
+      "views": 689,
       "changeType": "up",
-      "change": "17",
+      "change": "16",
       "url": "https://www.munpia.com/novel/detail/618813",
       "unavailable": false
     },
     {
       "rank": 94,
-      "title": "게임속 게이트를 건넜더니 현실이 되었다.",
-      "author": "홍정태",
+      "title": "미래를 아는 천재 박사가 다 해먹음",
+      "author": "율담",
       "genres": [
-        "판타지",
         "현대판타지"
       ],
-      "hours": 16,
-      "views": 579,
-      "changeType": "down",
-      "change": "3",
-      "url": "https://www.munpia.com/novel/detail/611987",
+      "hours": 21,
+      "views": 682,
+      "changeType": "up",
+      "change": "7",
+      "url": "https://www.munpia.com/novel/detail/616346",
       "unavailable": false
     },
     {
       "rank": 95,
-      "title": "방송국 때려치고 여행 유튜버로 힐링함",
-      "author": "그레이c",
+      "title": "(귀)신들린 연기자",
+      "author": "burn8",
       "genres": [
-        "현대판타지",
-        "드라마"
+        "현대판타지"
       ],
-      "hours": 17,
-      "views": 576,
+      "hours": 11,
+      "views": 665,
       "changeType": "down",
-      "change": "3",
-      "url": "https://www.munpia.com/novel/detail/612097",
+      "change": "7",
+      "url": "https://www.munpia.com/novel/detail/612354",
       "unavailable": false
     },
     {
       "rank": 96,
-      "title": "쫓겨난 중세 십자군 기사가 너무 강함",
-      "author": "적백赤白",
+      "title": "초한지 금쪽이 항우 클리닉",
+      "author": "간절히",
       "genres": [
-        "대체역사",
-        "판타지"
+        "대체역사"
       ],
-      "hours": 14,
-      "views": 574,
+      "hours": 20,
+      "views": 664,
       "changeType": "up",
       "change": "1",
-      "url": "https://www.munpia.com/novel/detail/618525",
+      "url": "https://www.munpia.com/novel/detail/616714",
       "unavailable": false
     },
     {
@@ -1433,186 +1428,188 @@
         "현대판타지",
         "판타지"
       ],
-      "hours": 11,
-      "views": 571,
+      "hours": 17,
+      "views": 653,
       "changeType": "down",
-      "change": "9",
+      "change": "5",
       "url": "https://www.munpia.com/novel/detail/616394",
       "unavailable": false
     },
     {
       "rank": 98,
-      "title": "나는 오래된 물건의 경험치를 흡수할 수 있다",
-      "author": "초씽",
+      "title": "해고당한 천하제일인은 조용히 살고 싶다",
+      "author": "자까떼껄룩",
       "genres": [
-        "현대판타지",
+        "무협",
         "판타지"
       ],
-      "hours": 1,
-      "views": 567,
+      "hours": 20,
+      "views": 638,
       "changeType": "down",
       "change": "4",
-      "url": "https://www.munpia.com/novel/detail/614188",
+      "url": "https://www.munpia.com/novel/detail/605247",
       "unavailable": false
     },
     {
       "rank": 99,
-      "title": "퇴사 메일 받은 날, 1조 5천억 터짐",
-      "author": "라봉이",
+      "title": "쫓겨난 중세 십자군 기사가 너무 강함",
+      "author": "적백赤白",
       "genres": [
-        "판타지",
-        "현대판타지"
+        "대체역사",
+        "판타지"
       ],
-      "hours": 16,
-      "views": 560,
+      "hours": 20,
+      "views": 636,
       "changeType": "up",
-      "change": "4",
-      "url": "https://www.munpia.com/novel/detail/618551",
+      "change": "3",
+      "url": "https://www.munpia.com/novel/detail/618525",
       "unavailable": false
     },
     {
       "rank": 100,
-      "title": "(귀)신들린 연기자",
-      "author": "burn8",
-      "genres": [
-        "현대판타지"
-      ],
-      "hours": 5,
-      "views": 554,
-      "changeType": "down",
-      "change": "18",
-      "url": "https://www.munpia.com/novel/detail/612354",
-      "unavailable": false
-    },
-    {
-      "rank": 101,
-      "title": "증여받은 무인도가 보물들을 쏟아냄",
-      "author": "한매화",
-      "genres": [
-        "현대판타지",
-        "드라마"
-      ],
-      "hours": 13,
-      "views": 543,
-      "changeType": "down",
-      "change": "2",
-      "url": "https://www.munpia.com/novel/detail/616933",
-      "unavailable": false
-    },
-    {
-      "rank": 102,
-      "title": "지구 멸망했는데 내 쉘터만 너무 쾌적함",
-      "author": "[쥬시]",
-      "genres": [
-        "현대판타지",
-        "퓨전"
-      ],
-      "hours": 13,
-      "views": 540,
-      "changeType": "up",
-      "change": "5",
-      "url": "https://www.munpia.com/novel/detail/619590",
-      "unavailable": false
-    },
-    {
-      "rank": 103,
-      "title": "해고당했더니 폐기템에서 S급 스킬이 나옴",
-      "author": "엘루아.",
-      "genres": [
-        "현대판타지"
-      ],
-      "hours": 3,
-      "views": 538,
-      "changeType": "up",
-      "change": "1",
-      "url": "https://www.munpia.com/novel/detail/618283",
-      "unavailable": false
-    },
-    {
-      "rank": 104,
-      "title": "1조 당첨된 감사팀 과장은 제주도로 쫓겨나고 싶다",
-      "author": "구구나나",
-      "genres": [
-        "현대판타지"
-      ],
-      "hours": 4,
-      "views": 537,
-      "changeType": "down",
-      "change": "3",
-      "url": "https://www.munpia.com/novel/detail/617726",
-      "unavailable": false
-    },
-    {
-      "rank": 105,
-      "title": "군필 여배우가 블록버스터 대작만 찍음",
-      "author": "필드스틱",
-      "genres": [
-        "현대판타지",
-        "드라마"
-      ],
-      "hours": 7,
-      "views": 517,
-      "changeType": "down",
-      "change": "9",
-      "url": "https://www.munpia.com/novel/detail/612941",
-      "unavailable": false
-    },
-    {
-      "rank": 106,
-      "title": "권고사직 당했더니 각성함",
-      "author": ".로튼애플.",
-      "genres": [
-        "현대판타지"
-      ],
-      "hours": 3,
-      "views": 510,
-      "changeType": "up",
-      "change": "3",
-      "url": "https://www.munpia.com/novel/detail/617814",
-      "unavailable": false
-    },
-    {
-      "rank": 107,
       "title": "삼국지 유창전",
       "author": "運月",
       "genres": [
         "대체역사",
         "판타지"
       ],
-      "hours": 5,
-      "views": 497,
+      "hours": 11,
+      "views": 629,
       "changeType": "down",
-      "change": "22",
+      "change": "9",
       "url": "https://www.munpia.com/novel/detail/616404",
       "unavailable": false
     },
     {
-      "rank": 108,
-      "title": "하룻밤 보낸 미망인이 왕위 계승자였다",
-      "author": "취랑(醉郞)",
+      "rank": 101,
+      "title": "게임속 게이트를 건넜더니 현실이 되었다.",
+      "author": "홍정태",
       "genres": [
-        "대체역사",
-        "판타지"
+        "판타지",
+        "현대판타지"
       ],
-      "hours": 17,
-      "views": 490,
+      "hours": 22,
+      "views": 626,
       "changeType": "up",
-      "change": "80",
-      "url": "https://www.munpia.com/novel/detail/619220",
+      "change": "4",
+      "url": "https://www.munpia.com/novel/detail/611987",
+      "unavailable": false
+    },
+    {
+      "rank": 102,
+      "title": "퇴사 메일 받은 날, 1조 5천억 터짐",
+      "author": "라봉이",
+      "genres": [
+        "판타지",
+        "현대판타지"
+      ],
+      "hours": 22,
+      "views": 625,
+      "changeType": "up",
+      "change": "4",
+      "url": "https://www.munpia.com/novel/detail/618551",
+      "unavailable": false
+    },
+    {
+      "rank": 103,
+      "title": "외계 행성에서 살아남기",
+      "author": "체엔",
+      "genres": [
+        "SF"
+      ],
+      "hours": 9,
+      "views": 623,
+      "changeType": "down",
+      "change": "4",
+      "url": "https://www.munpia.com/novel/detail/599567",
+      "unavailable": false
+    },
+    {
+      "rank": 104,
+      "title": "방송국 때려치고 여행 유튜버로 힐링함",
+      "author": "그레이c",
+      "genres": [
+        "현대판타지",
+        "드라마"
+      ],
+      "hours": 23,
+      "views": 615,
+      "changeType": "down",
+      "change": "8",
+      "url": "https://www.munpia.com/novel/detail/612097",
+      "unavailable": false
+    },
+    {
+      "rank": 105,
+      "title": "코인 떡상한 줄 모르고 해고당함",
+      "author": "롱파르파",
+      "genres": [
+        "현대판타지"
+      ],
+      "hours": 9,
+      "views": 614,
+      "changeType": "down",
+      "change": "12",
+      "url": "https://www.munpia.com/novel/detail/614018",
+      "unavailable": false
+    },
+    {
+      "rank": 106,
+      "title": "1800억이 생긴 김에 인생 좀 즐기겠습니다.",
+      "author": "BlackSwan.",
+      "genres": [
+        "현대판타지"
+      ],
+      "hours": 13,
+      "views": 602,
+      "changeType": "new",
+      "change": "NEW",
+      "url": "https://www.munpia.com/novel/detail/612206",
+      "unavailable": false
+    },
+    {
+      "rank": 107,
+      "title": "지구 멸망했는데 내 쉘터만 너무 쾌적함",
+      "author": "[쥬시]",
+      "genres": [
+        "현대판타지",
+        "퓨전"
+      ],
+      "hours": 19,
+      "views": 595,
+      "changeType": "up",
+      "change": "4",
+      "url": "https://www.munpia.com/novel/detail/619590",
+      "unavailable": false
+    },
+    {
+      "rank": 108,
+      "title": "증여받은 무인도가 보물들을 쏟아냄",
+      "author": "한매화",
+      "genres": [
+        "현대판타지",
+        "드라마"
+      ],
+      "hours": 19,
+      "views": 580,
+      "changeType": "down",
+      "change": "5",
+      "url": "https://www.munpia.com/novel/detail/616933",
       "unavailable": false
     },
     {
       "rank": 109,
-      "title": "해고당한 이혼남은 국가권력급",
-      "author": "리얼탄산",
+      "title": "군필 여배우가 블록버스터 대작만 찍음",
+      "author": "필드스틱",
       "genres": [
-        "현대판타지"
+        "현대판타지",
+        "드라마"
       ],
-      "hours": 15,
-      "views": 482,
-      "changeType": "up",
-      "change": "5",
-      "url": "https://www.munpia.com/novel/detail/618253",
+      "hours": 13,
+      "views": 579,
+      "changeType": "down",
+      "change": "9",
+      "url": "https://www.munpia.com/novel/detail/612941",
       "unavailable": false
     },
     {
@@ -1622,10 +1619,10 @@
       "genres": [
         "현대판타지"
       ],
-      "hours": 7,
-      "views": 480,
+      "hours": 13,
+      "views": 577,
       "changeType": "up",
-      "change": "21",
+      "change": "13",
       "url": "https://www.munpia.com/novel/detail/619839",
       "unavailable": false
     },
@@ -1637,319 +1634,319 @@
         "현대판타지",
         "퓨전"
       ],
-      "hours": 7,
-      "views": 470,
+      "hours": 13,
+      "views": 562,
       "changeType": "up",
-      "change": "4",
+      "change": "2",
       "url": "https://www.munpia.com/novel/detail/610835",
       "unavailable": false
     },
     {
       "rank": 112,
-      "title": "삼국지, 상태창이 있으니 천재는 내가 다 데려가겠습니다",
-      "author": "휴일",
-      "genres": [
-        "대체역사",
-        "판타지"
-      ],
-      "hours": 11,
-      "views": 468,
-      "changeType": "down",
-      "change": "7",
-      "url": "https://www.munpia.com/novel/detail/613967",
-      "unavailable": false
-    },
-    {
-      "rank": 113,
-      "title": "버림받은 F급 광물채집자의 미국 힐링 라이프",
-      "author": "몽꾼",
-      "genres": [
-        "현대판타지",
-        "판타지"
-      ],
-      "hours": 9,
-      "views": 451,
-      "changeType": "up",
-      "change": "11",
-      "url": "https://www.munpia.com/novel/detail/615796",
-      "unavailable": false
-    },
-    {
-      "rank": 114,
       "title": "회귀 후 바로 3000억이 생겼다",
       "author": "메인작가",
       "genres": [
         "현대판타지"
       ],
-      "hours": 7,
-      "views": 445,
+      "hours": 13,
+      "views": 549,
       "changeType": "down",
       "change": "2",
       "url": "https://www.munpia.com/novel/detail/550818",
       "unavailable": false
     },
     {
-      "rank": 115,
-      "title": "삼국지: 망해버린 가문의 가주가 되었다",
-      "author": "지돌띠",
+      "rank": 113,
+      "title": "이혼에 해고까지 당한 데릴사위에게 회장님이 무릎 꿇음",
+      "author": "만전",
       "genres": [
-        "대체역사",
-        "전쟁·밀리터리"
+        "현대판타지"
       ],
       "hours": 11,
-      "views": 445,
+      "views": 544,
       "changeType": "down",
-      "change": "4",
-      "url": "https://www.munpia.com/novel/detail/606357",
+      "change": "5",
+      "url": "https://www.munpia.com/novel/detail/613472",
+      "unavailable": false
+    },
+    {
+      "rank": 114,
+      "title": "하룻밤 보낸 미망인이 왕위 계승자였다",
+      "author": "취랑(醉郞)",
+      "genres": [
+        "대체역사",
+        "판타지"
+      ],
+      "hours": 23,
+      "views": 541,
+      "changeType": "up",
+      "change": "67",
+      "url": "https://www.munpia.com/novel/detail/619220",
+      "unavailable": false
+    },
+    {
+      "rank": 115,
+      "title": "만년 대리 정서민은 로또 1등이라 퇴사합니다",
+      "author": "유우리",
+      "genres": [
+        "현대판타지"
+      ],
+      "hours": 11,
+      "views": 529,
+      "changeType": "down",
+      "change": "11",
+      "url": "https://www.munpia.com/novel/detail/612364",
       "unavailable": false
     },
     {
       "rank": 116,
-      "title": "은퇴한 농구천재는 NBA로 가야 합니다",
-      "author": "트라이즈",
+      "title": "해고당한 이혼남은 국가권력급",
+      "author": "리얼탄산",
       "genres": [
-        "스포츠",
         "현대판타지"
       ],
-      "hours": 12,
-      "views": 444,
+      "hours": 21,
+      "views": 528,
       "changeType": "up",
-      "change": "7",
-      "url": "https://www.munpia.com/novel/detail/617148",
+      "change": "2",
+      "url": "https://www.munpia.com/novel/detail/618253",
       "unavailable": false
     },
     {
       "rank": 117,
-      "title": "외계 행성에서 살아남기",
-      "author": "체엔",
+      "title": "버림받은 F급 광물채집자의 미국 힐링 라이프",
+      "author": "몽꾼",
       "genres": [
-        "SF"
+        "현대판타지",
+        "판타지"
       ],
-      "hours": 3,
-      "views": 432,
+      "hours": 15,
+      "views": 514,
       "changeType": "up",
-      "change": "10",
-      "url": "https://www.munpia.com/novel/detail/599567",
+      "change": "2",
+      "url": "https://www.munpia.com/novel/detail/615796",
       "unavailable": false
     },
     {
       "rank": 118,
+      "title": "삼국지, 상태창이 있으니 천재는 내가 다 데려가겠습니다",
+      "author": "휴일",
+      "genres": [
+        "대체역사",
+        "판타지"
+      ],
+      "hours": 17,
+      "views": 511,
+      "changeType": "down",
+      "change": "4",
+      "url": "https://www.munpia.com/novel/detail/613967",
+      "unavailable": false
+    },
+    {
+      "rank": 119,
       "title": "삼국지, 도겸네 장남이 조조보다 잘남",
       "author": "날여우",
       "genres": [
         "대체역사",
         "현대판타지"
       ],
-      "hours": 6,
-      "views": 430,
+      "hours": 12,
+      "views": 492,
       "changeType": "up",
-      "change": "12",
+      "change": "3",
       "url": "https://www.munpia.com/novel/detail/609716",
       "unavailable": false
     },
     {
-      "rank": 119,
-      "title": "이혼에 해고까지 당한 데릴사위에게 회장님이 무릎 꿇음",
-      "author": "만전",
-      "genres": [
-        "현대판타지"
-      ],
-      "hours": 5,
-      "views": 429,
-      "changeType": "down",
-      "change": "2",
-      "url": "https://www.munpia.com/novel/detail/613472",
-      "unavailable": false
-    },
-    {
       "rank": 120,
-      "title": "아포칼립스에서 도망쳤더니 선협세상",
-      "author": "히버",
+      "title": "은퇴한 농구천재는 NBA로 가야 합니다",
+      "author": "트라이즈",
       "genres": [
-        "무협",
+        "스포츠",
         "현대판타지"
       ],
       "hours": 18,
-      "views": 427,
-      "changeType": "same",
-      "change": "—",
-      "url": "https://www.munpia.com/novel/detail/613475",
+      "views": 486,
+      "changeType": "up",
+      "change": "5",
+      "url": "https://www.munpia.com/novel/detail/617148",
       "unavailable": false
     },
     {
       "rank": 121,
-      "title": "만년 대리 정서민은 로또 1등이라 퇴사합니다",
-      "author": "유우리",
+      "title": "시골 보건소의 침술 천재",
+      "author": "yespro",
       "genres": [
         "현대판타지"
       ],
-      "hours": 5,
-      "views": 424,
-      "changeType": "down",
-      "change": "3",
-      "url": "https://www.munpia.com/novel/detail/612364",
+      "hours": 12,
+      "views": 482,
+      "changeType": "up",
+      "change": "13",
+      "url": "https://www.munpia.com/novel/detail/618297",
       "unavailable": false
     },
     {
       "rank": 122,
-      "title": "귀환한 삼촌의 드래곤이 귀엽다",
-      "author": "바바루",
+      "title": "삼국지: 망해버린 가문의 가주가 되었다",
+      "author": "지돌띠",
       "genres": [
-        "현대판타지",
-        "퓨전"
+        "대체역사",
+        "전쟁·밀리터리"
       ],
-      "hours": 13,
-      "views": 424,
+      "hours": 17,
+      "views": 481,
       "changeType": "down",
-      "change": "9",
-      "url": "https://www.munpia.com/novel/detail/611893",
+      "change": "7",
+      "url": "https://www.munpia.com/novel/detail/606357",
       "unavailable": false
     },
     {
       "rank": 123,
-      "title": "해고당한 셰프가 너무 유능함",
-      "author": "탈주병",
-      "genres": [
-        "현대판타지",
-        "퓨전"
-      ],
-      "hours": 18,
-      "views": 422,
-      "changeType": "up",
-      "change": "3",
-      "url": "https://www.munpia.com/novel/detail/619162",
-      "unavailable": false
-    },
-    {
-      "rank": 124,
-      "title": "월가의 전설은 동네 백수였다",
-      "author": "팥빵맨",
-      "genres": [
-        "판타지",
-        "현대판타지"
-      ],
-      "hours": 14,
-      "views": 415,
-      "changeType": "new",
-      "change": "NEW",
-      "url": "https://www.munpia.com/novel/detail/619801",
-      "unavailable": false
-    },
-    {
-      "rank": 125,
-      "title": "해고 대신 좌천된 김과장, 우주선 주운 후 계속 출근함",
-      "author": "퇴근후우주",
-      "genres": [
-        "현대판타지",
-        "SF"
-      ],
-      "hours": 14,
-      "views": 410,
-      "changeType": "down",
-      "change": "4",
-      "url": "https://www.munpia.com/novel/detail/613485",
-      "unavailable": false
-    },
-    {
-      "rank": 126,
       "title": "이혼당한 데릴사위가 운빨이 너무 좋음",
       "author": "풍기킹",
       "genres": [
         "현대판타지",
         "퓨전"
       ],
-      "hours": 8,
-      "views": 403,
+      "hours": 14,
+      "views": 478,
       "changeType": "down",
-      "change": "10",
+      "change": "11",
       "url": "https://www.munpia.com/novel/detail/608902",
       "unavailable": false
     },
     {
+      "rank": 124,
+      "title": "해고당한 셰프가 너무 유능함",
+      "author": "탈주병",
+      "genres": [
+        "현대판타지",
+        "퓨전"
+      ],
+      "hours": 24,
+      "views": 474,
+      "changeType": "up",
+      "change": "7",
+      "url": "https://www.munpia.com/novel/detail/619162",
+      "unavailable": false
+    },
+    {
+      "rank": 125,
+      "title": "5조 들고 귀향했더니 마을이 떡상함",
+      "author": "비엔나작가",
+      "genres": [
+        "현대판타지"
+      ],
+      "hours": 9,
+      "views": 462,
+      "changeType": "down",
+      "change": "5",
+      "url": "https://www.munpia.com/novel/detail/611753",
+      "unavailable": false
+    },
+    {
+      "rank": 126,
+      "title": "해고 대신 좌천된 김과장, 우주선 주운 후 계속 출근함",
+      "author": "퇴근후우주",
+      "genres": [
+        "현대판타지",
+        "SF"
+      ],
+      "hours": 20,
+      "views": 457,
+      "changeType": "down",
+      "change": "2",
+      "url": "https://www.munpia.com/novel/detail/613485",
+      "unavailable": false
+    },
+    {
       "rank": 127,
-      "title": "회장님들이 줄 서는 신점 스트리밍",
-      "author": "벨노트",
+      "title": "월가의 전설은 동네 백수였다",
+      "author": "팥빵맨",
       "genres": [
         "판타지",
         "현대판타지"
       ],
-      "hours": 13,
-      "views": 397,
-      "changeType": "down",
-      "change": "2",
-      "url": "https://www.munpia.com/novel/detail/614334",
+      "hours": 20,
+      "views": 456,
+      "changeType": "new",
+      "change": "NEW",
+      "url": "https://www.munpia.com/novel/detail/619801",
       "unavailable": false
     },
     {
       "rank": 128,
-      "title": "선협에서 운명이 다 보임",
-      "author": "이찬솔",
-      "genres": [
-        "무협",
-        "퓨전"
-      ],
-      "hours": 11,
-      "views": 395,
-      "changeType": "same",
-      "change": "—",
-      "url": "https://www.munpia.com/novel/detail/605172",
-      "unavailable": false
-    },
-    {
-      "rank": 129,
-      "title": "시골 보건소의 침술 천재",
-      "author": "yespro",
-      "genres": [
-        "현대판타지"
-      ],
-      "hours": 6,
-      "views": 390,
-      "changeType": "up",
-      "change": "8",
-      "url": "https://www.munpia.com/novel/detail/618297",
-      "unavailable": false
-    },
-    {
-      "rank": 130,
       "title": "북한의 비트코인 10조원을 해킹으로 빼돌렸다",
       "author": "크로노크",
       "genres": [
         "현대판타지"
       ],
-      "hours": 12,
-      "views": 389,
+      "hours": 18,
+      "views": 454,
       "changeType": "up",
-      "change": "10",
+      "change": "5",
       "url": "https://www.munpia.com/novel/detail/621062",
       "unavailable": false
     },
     {
-      "rank": 131,
-      "title": "코인 떡상한 줄 모르고 해고당함",
-      "author": "롱파르파",
+      "rank": 129,
+      "title": "퇴사하고 퇴마 방송으로 대박남",
+      "author": "한연HY",
       "genres": [
-        "현대판타지"
+        "현대판타지",
+        "퓨전"
       ],
-      "hours": 3,
-      "views": 384,
+      "hours": 10,
+      "views": 451,
       "changeType": "down",
-      "change": "25",
-      "url": "https://www.munpia.com/novel/detail/614018",
+      "change": "12",
+      "url": "https://www.munpia.com/novel/detail/615236",
+      "unavailable": false
+    },
+    {
+      "rank": 130,
+      "title": "귀환한 삼촌의 드래곤이 귀엽다",
+      "author": "바바루",
+      "genres": [
+        "현대판타지",
+        "퓨전"
+      ],
+      "hours": 19,
+      "views": 443,
+      "changeType": "down",
+      "change": "14",
+      "url": "https://www.munpia.com/novel/detail/611893",
+      "unavailable": false
+    },
+    {
+      "rank": 131,
+      "title": "아기 드워프가 인천에서 살아가는 법",
+      "author": "kangyou",
+      "genres": [
+        "판타지",
+        "퓨전"
+      ],
+      "hours": 12,
+      "views": 443,
+      "changeType": "down",
+      "change": "1",
+      "url": "https://www.munpia.com/novel/detail/613148",
       "unavailable": false
     },
     {
       "rank": 132,
-      "title": "겜판을 정상화하는 디렉터가 됐다",
-      "author": "라구.B.P",
+      "title": "국가권력급 헌터가 해고당하자, 새로운 탑이 생김",
+      "author": "필쏘글",
       "genres": [
         "현대판타지",
-        "SF"
+        "판타지"
       ],
-      "hours": 14,
-      "views": 383,
-      "changeType": "new",
-      "change": "NEW",
-      "url": "https://www.munpia.com/novel/detail/598780",
+      "hours": 11,
+      "views": 436,
+      "changeType": "up",
+      "change": "18",
+      "url": "https://www.munpia.com/novel/detail/620770",
       "unavailable": false
     },
     {
@@ -1960,820 +1957,867 @@
         "스포츠",
         "현대판타지"
       ],
-      "hours": 9,
-      "views": 381,
+      "hours": 15,
+      "views": 430,
       "changeType": "down",
-      "change": "4",
+      "change": "6",
       "url": "https://www.munpia.com/novel/detail/615644",
       "unavailable": false
     },
     {
       "rank": 134,
-      "title": "아기 드워프가 인천에서 살아가는 법",
-      "author": "kangyou",
+      "title": "회장님들이 줄 서는 신점 스트리밍",
+      "author": "벨노트",
       "genres": [
         "판타지",
-        "퓨전"
+        "현대판타지"
       ],
-      "hours": 6,
-      "views": 377,
-      "changeType": "same",
-      "change": "—",
-      "url": "https://www.munpia.com/novel/detail/613148",
+      "hours": 19,
+      "views": 424,
+      "changeType": "down",
+      "change": "8",
+      "url": "https://www.munpia.com/novel/detail/614334",
       "unavailable": false
     },
     {
       "rank": 135,
-      "title": "삼국지에서 18제후 포신으로 살아남기",
-      "author": "다작김절필",
-      "genres": [
-        "대체역사"
-      ],
-      "hours": 2,
-      "views": 373,
-      "changeType": "down",
-      "change": "3",
-      "url": "https://www.munpia.com/novel/detail/615486",
-      "unavailable": false
-    },
-    {
-      "rank": 136,
-      "title": "장애인이 탑 공략을 너무 잘함",
-      "author": "데프프픗",
-      "genres": [
-        "현대판타지",
-        "퓨전"
-      ],
-      "hours": 12,
-      "views": 372,
-      "changeType": "up",
-      "change": "12",
-      "url": "https://www.munpia.com/novel/detail/621801",
-      "unavailable": false
-    },
-    {
-      "rank": 137,
-      "title": "해고당한 계약직은 대체불가였다",
-      "author": "마지막검사",
-      "genres": [
-        "판타지"
-      ],
-      "hours": 1,
-      "views": 369,
-      "changeType": "down",
-      "change": "18",
-      "url": "https://www.munpia.com/novel/detail/615299",
-      "unavailable": false
-    },
-    {
-      "rank": 138,
-      "title": "나, 트럼프가 되었다!",
-      "author": "배천",
-      "genres": [
-        "대체역사",
-        "현대판타지"
-      ],
-      "hours": 13,
-      "views": 350,
-      "changeType": "up",
-      "change": "7",
-      "url": "https://www.munpia.com/novel/detail/611132",
-      "unavailable": false
-    },
-    {
-      "rank": 139,
       "title": "회귀한 셰프는 비트코인으로 인생역전",
       "author": "박보스",
       "genres": [
         "현대판타지"
       ],
-      "hours": 5,
-      "views": 347,
+      "hours": 11,
+      "views": 422,
       "changeType": "down",
-      "change": "4",
+      "change": "7",
       "url": "https://www.munpia.com/novel/detail/615251",
       "unavailable": false
     },
     {
-      "rank": 140,
-      "title": "해고당하고 취미로 일하는데 자꾸 대박남",
-      "author": "신기한작가",
+      "rank": 136,
+      "title": "선협에서 운명이 다 보임",
+      "author": "이찬솔",
       "genres": [
-        "현대판타지",
-        "드라마"
+        "무협",
+        "퓨전"
       ],
-      "hours": 6,
-      "views": 342,
+      "hours": 17,
+      "views": 418,
       "changeType": "down",
-      "change": "2",
-      "url": "https://www.munpia.com/novel/detail/615636",
+      "change": "4",
+      "url": "https://www.munpia.com/novel/detail/605172",
       "unavailable": false
     },
     {
-      "rank": 141,
+      "rank": 137,
       "title": "나 혼자 전설 아이템 999,999,999개로 탑 날먹",
       "author": "시공전사",
       "genres": [
         "현대판타지",
         "판타지"
       ],
-      "hours": 6,
-      "views": 338,
+      "hours": 12,
+      "views": 413,
       "changeType": "down",
-      "change": "5",
+      "change": "8",
       "url": "https://www.munpia.com/novel/detail/615006",
       "unavailable": false
     },
     {
-      "rank": 142,
-      "title": "퇴사하고 퇴마 방송으로 대박남",
-      "author": "한연HY",
+      "rank": 138,
+      "title": "장애인이 탑 공략을 너무 잘함",
+      "author": "데프프픗",
       "genres": [
         "현대판타지",
         "퓨전"
       ],
-      "hours": 4,
-      "views": 338,
-      "changeType": "down",
-      "change": "9",
-      "url": "https://www.munpia.com/novel/detail/615236",
-      "unavailable": false
-    },
-    {
-      "rank": 143,
-      "title": "회귀한 줄 모르고 까불다 뒤짐",
-      "author": "팥빵맨",
-      "genres": [
-        "판타지",
-        "현대판타지"
-      ],
-      "hours": 14,
-      "views": 337,
+      "hours": 18,
+      "views": 411,
       "changeType": "up",
-      "change": "8",
-      "url": "https://www.munpia.com/novel/detail/617156",
+      "change": "6",
+      "url": "https://www.munpia.com/novel/detail/621801",
       "unavailable": false
     },
     {
-      "rank": 144,
-      "title": "전쟁이 좋아서 국방력에 올인했더니 전 세계가 경악 함",
-      "author": "미친재능",
+      "rank": 139,
+      "title": "해고당하고 취미로 일하는데 자꾸 대박남",
+      "author": "신기한작가",
       "genres": [
         "현대판타지",
         "드라마"
       ],
-      "hours": 16,
-      "views": 336,
-      "changeType": "up",
-      "change": "13",
-      "url": "https://www.munpia.com/novel/detail/620102",
-      "unavailable": false
-    },
-    {
-      "rank": 145,
-      "title": "퇴물 짐꾼의 회귀성장기",
-      "author": "J진정S",
-      "genres": [
-        "현대판타지",
-        "판타지"
-      ],
-      "hours": 18,
-      "views": 335,
-      "changeType": "up",
-      "change": "2",
-      "url": "https://www.munpia.com/novel/detail/614007",
-      "unavailable": false
-    },
-    {
-      "rank": 146,
-      "title": "배신당한 군인이 장비창을 각성함",
-      "author": "은퇴생활",
-      "genres": [
-        "현대판타지",
-        "판타지"
-      ],
-      "hours": 20,
-      "views": 335,
+      "hours": 12,
+      "views": 405,
       "changeType": "down",
       "change": "3",
-      "url": "https://www.munpia.com/novel/detail/616947",
+      "url": "https://www.munpia.com/novel/detail/615636",
       "unavailable": false
     },
     {
-      "rank": 147,
+      "rank": 140,
+      "title": "EX급 인첸터인 줄 모르고 버림받음",
+      "author": "가좌",
+      "genres": [
+        "현대판타지"
+      ],
+      "hours": 11,
+      "views": 403,
+      "changeType": "up",
+      "change": "1",
+      "url": "https://www.munpia.com/novel/detail/618106",
+      "unavailable": false
+    },
+    {
+      "rank": 141,
+      "title": "겜판을 정상화하는 디렉터가 됐다",
+      "author": "라구.B.P",
+      "genres": [
+        "현대판타지",
+        "SF"
+      ],
+      "hours": 20,
+      "views": 399,
+      "changeType": "new",
+      "change": "NEW",
+      "url": "https://www.munpia.com/novel/detail/598780",
+      "unavailable": false
+    },
+    {
+      "rank": 142,
+      "title": "미국 싫어서 기술력에 올인했더니 전 세계가 뒤집어짐",
+      "author": "연함™",
+      "genres": [
+        "현대판타지",
+        "판타지"
+      ],
+      "hours": 7,
+      "views": 383,
+      "changeType": "down",
+      "change": "5",
+      "url": "https://www.munpia.com/novel/detail/620251",
+      "unavailable": false
+    },
+    {
+      "rank": 143,
       "title": "회귀한 감독이 신인 배우인 척 함",
       "author": "자경(蔗境)",
       "genres": [
         "현대판타지",
         "드라마"
       ],
-      "hours": 12,
-      "views": 329,
-      "changeType": "down",
-      "change": "5",
+      "hours": 18,
+      "views": 377,
+      "changeType": "up",
+      "change": "2",
       "url": "https://www.munpia.com/novel/detail/616935",
       "unavailable": false
     },
     {
-      "rank": 148,
-      "title": "선협 세계 재벌가 망나니가 되었다",
-      "author": "리디아.",
-      "genres": [
-        "무협",
-        "현대판타지"
-      ],
-      "hours": 15,
-      "views": 328,
-      "changeType": "up",
-      "change": "17",
-      "url": "https://www.munpia.com/novel/detail/618289",
-      "unavailable": false
-    },
-    {
-      "rank": 149,
-      "title": "국가권력급 헌터가 해고당하자, 새로운 탑이 생김",
-      "author": "필쏘글",
-      "genres": [
-        "현대판타지",
-        "판타지"
-      ],
-      "hours": 5,
-      "views": 324,
-      "changeType": "up",
-      "change": "20",
-      "url": "https://www.munpia.com/novel/detail/620770",
-      "unavailable": false
-    },
-    {
-      "rank": 150,
+      "rank": 144,
       "title": "1907 이지스함대가 열강을 찢음",
       "author": "듀이문",
       "genres": [
         "대체역사",
         "퓨전"
       ],
-      "hours": 7,
-      "views": 322,
-      "changeType": "up",
-      "change": "3",
+      "hours": 13,
+      "views": 377,
+      "changeType": "down",
+      "change": "1",
       "url": "https://www.munpia.com/novel/detail/602323",
       "unavailable": false
     },
     {
-      "rank": 151,
-      "title": "해고 후 코스피 폭락함",
-      "author": "초선택자",
-      "genres": [
-        "현대판타지",
-        "판타지"
-      ],
-      "hours": 13,
-      "views": 320,
-      "changeType": "down",
-      "change": "2",
-      "url": "https://www.munpia.com/novel/detail/617312",
-      "unavailable": false
-    },
-    {
-      "rank": 152,
-      "title": "퇴사한 김 과장에 전세계 화학업계가 집착함",
-      "author": "MaUna",
-      "genres": [
-        "현대판타지"
-      ],
-      "hours": 17,
-      "views": 318,
-      "changeType": "down",
-      "change": "11",
-      "url": "https://www.munpia.com/novel/detail/610440",
-      "unavailable": false
-    },
-    {
-      "rank": 153,
-      "title": "300년 만에 돌아온 천재화가",
-      "author": "경우勁雨",
-      "genres": [
-        "현대판타지",
-        "일반소설"
-      ],
-      "hours": 14,
-      "views": 309,
-      "changeType": "down",
-      "change": "14",
-      "url": "https://www.munpia.com/novel/detail/613508",
-      "unavailable": false
-    },
-    {
-      "rank": 154,
-      "title": "방송하는 천재 감정사가 되었다",
-      "author": "김튀김",
-      "genres": [
-        "현대판타지",
-        "퓨전"
-      ],
-      "hours": 17,
-      "views": 307,
-      "changeType": "up",
-      "change": "39",
-      "url": "https://www.munpia.com/novel/detail/619101",
-      "unavailable": false
-    },
-    {
-      "rank": 155,
-      "title": "EX급 인첸터인 줄 모르고 버림받음",
-      "author": "가좌",
-      "genres": [
-        "현대판타지"
-      ],
-      "hours": 5,
-      "views": 298,
-      "changeType": "up",
-      "change": "7",
-      "url": "https://www.munpia.com/novel/detail/618106",
-      "unavailable": false
-    },
-    {
-      "rank": 156,
+      "rank": 145,
       "title": "미국에서 신화급 아이템이 내 건 줄 모르고 해고당함",
       "author": "현판한우물",
       "genres": [
         "현대판타지"
       ],
-      "hours": 7,
-      "views": 294,
+      "hours": 13,
+      "views": 377,
       "changeType": "down",
-      "change": "4",
+      "change": "7",
       "url": "https://www.munpia.com/novel/detail/618892",
       "unavailable": false
     },
     {
-      "rank": 157,
-      "title": "5조 들고 귀향했더니 마을이 떡상함",
-      "author": "비엔나작가",
-      "genres": [
-        "현대판타지"
-      ],
-      "hours": 3,
-      "views": 292,
-      "changeType": "down",
-      "change": "11",
-      "url": "https://www.munpia.com/novel/detail/611753",
-      "unavailable": false
-    },
-    {
-      "rank": 158,
-      "title": "내 금속 공장에 이세계 거물들이 집착함",
-      "author": "toAny",
-      "genres": [
-        "퓨전",
-        "현대판타지"
-      ],
-      "hours": 6,
-      "views": 289,
-      "changeType": "up",
-      "change": "1",
-      "url": "https://www.munpia.com/novel/detail/613613",
-      "unavailable": false
-    },
-    {
-      "rank": 159,
-      "title": "변리사를 해고하자 5천억 특허가 날아감",
-      "author": "간딴",
-      "genres": [
-        "현대판타지"
-      ],
-      "hours": 18,
-      "views": 284,
-      "changeType": "down",
-      "change": "15",
-      "url": "https://www.munpia.com/novel/detail/608858",
-      "unavailable": false
-    },
-    {
-      "rank": 160,
-      "title": "해고당한 감독이 애니로 일본을 지배함",
-      "author": "RUT",
+      "rank": 146,
+      "title": "퇴물 짐꾼의 회귀성장기",
+      "author": "J진정S",
       "genres": [
         "현대판타지",
-        "퓨전"
+        "판타지"
       ],
-      "hours": 14,
-      "views": 284,
-      "changeType": "up",
-      "change": "3",
-      "url": "https://www.munpia.com/novel/detail/613129",
-      "unavailable": false
-    },
-    {
-      "rank": 161,
-      "title": "해고 후 신내림으로 재벌 됨",
-      "author": "달백자기",
-      "genres": [
-        "현대판타지"
-      ],
-      "hours": 7,
-      "views": 274,
+      "hours": 24,
+      "views": 372,
       "changeType": "down",
       "change": "7",
-      "url": "https://www.munpia.com/novel/detail/615791",
+      "url": "https://www.munpia.com/novel/detail/614007",
       "unavailable": false
     },
     {
-      "rank": 162,
-      "title": "회귀했지만 아무것도 하기 싫다. 격렬히",
-      "author": "프프산",
+      "rank": 147,
+      "title": "나, 트럼프가 되었다!",
+      "author": "배천",
       "genres": [
+        "대체역사",
         "현대판타지"
       ],
-      "hours": 18,
-      "views": 274,
-      "changeType": "new",
-      "change": "NEW",
-      "url": "https://www.munpia.com/novel/detail/619355",
+      "hours": 19,
+      "views": 369,
+      "changeType": "up",
+      "change": "2",
+      "url": "https://www.munpia.com/novel/detail/611132",
       "unavailable": false
     },
     {
-      "rank": 163,
-      "title": "해고당한 한 차장이 회귀함",
-      "author": "해비베어",
+      "rank": 148,
+      "title": "회귀한 줄 모르고 까불다 뒤짐",
+      "author": "팥빵맨",
       "genres": [
         "판타지",
         "현대판타지"
       ],
-      "hours": 15,
-      "views": 272,
+      "hours": 20,
+      "views": 365,
       "changeType": "up",
-      "change": "1",
-      "url": "https://www.munpia.com/novel/detail/616822",
+      "change": "3",
+      "url": "https://www.munpia.com/novel/detail/617156",
       "unavailable": false
     },
     {
-      "rank": 164,
-      "title": "나 혼자 탑에서 낚시했더니 힐링이 미쳤다",
-      "author": "나이와키",
+      "rank": 149,
+      "title": "전쟁이 좋아서 국방력에 올인했더니 전 세계가 경악 함",
+      "author": "미친재능",
       "genres": [
-        "현대판타지"
+        "현대판타지",
+        "드라마"
       ],
-      "hours": 13,
-      "views": 265,
-      "changeType": "down",
-      "change": "6",
-      "url": "https://www.munpia.com/novel/detail/618620",
-      "unavailable": false
-    },
-    {
-      "rank": 165,
-      "title": "평양 증발시킨 외계함선의 주인이 되었다!",
-      "author": "LunStellar",
-      "genres": [
-        "대체역사",
-        "현대판타지"
-      ],
-      "hours": 5,
-      "views": 260,
-      "changeType": "down",
-      "change": "10",
-      "url": "https://www.munpia.com/novel/detail/612852",
-      "unavailable": false
-    },
-    {
-      "rank": 166,
-      "title": "S급 헌터들이 집착하는 세계유일급 대장장이가 되었다",
-      "author": "샤이텔하우",
-      "genres": [
-        "현대판타지"
-      ],
-      "hours": 4,
-      "views": 256,
+      "hours": 22,
+      "views": 362,
       "changeType": "up",
-      "change": "9",
-      "url": "https://www.munpia.com/novel/detail/609612",
+      "change": "14",
+      "url": "https://www.munpia.com/novel/detail/620102",
       "unavailable": false
     },
     {
-      "rank": 167,
-      "title": "삼국지: 백마의종 공손찬이 천하를 독식함",
-      "author": "맥스.",
-      "genres": [
-        "대체역사",
-        "판타지"
-      ],
-      "hours": 5,
-      "views": 254,
-      "changeType": "down",
-      "change": "7",
-      "url": "https://www.munpia.com/novel/detail/615853",
-      "unavailable": false
-    },
-    {
-      "rank": 168,
-      "title": "미국 시골 방송국에 미래식 방송을 풀었다",
-      "author": "고별",
-      "genres": [
-        "현대판타지"
-      ],
-      "hours": 6,
-      "views": 252,
-      "changeType": "up",
-      "change": "13",
-      "url": "https://www.munpia.com/novel/detail/620748",
-      "unavailable": false
-    },
-    {
-      "rank": 169,
-      "title": "각하의 정치가 대국적임",
-      "author": "빅타이거",
-      "genres": [
-        "대체역사",
-        "퓨전"
-      ],
-      "hours": 8,
-      "views": 240,
-      "changeType": "up",
-      "change": "7",
-      "url": "https://www.munpia.com/novel/detail/614739",
-      "unavailable": false
-    },
-    {
-      "rank": 170,
+      "rank": 150,
       "title": "입대 첫날 대대장이 되었다",
       "author": "개인전",
       "genres": [
         "현대판타지",
         "퓨전"
       ],
-      "hours": 3,
-      "views": 237,
+      "hours": 9,
+      "views": 357,
       "changeType": "down",
-      "change": "14",
+      "change": "15",
       "url": "https://www.munpia.com/novel/detail/612763",
       "unavailable": false
     },
     {
-      "rank": 171,
-      "title": "배신당할 줄 알고 특허를 숨김",
-      "author": "골방개발자",
+      "rank": 151,
+      "title": "내 금속 공장에 이세계 거물들이 집착함",
+      "author": "toAny",
       "genres": [
-        "현대판타지",
-        "SF"
+        "퓨전",
+        "현대판타지"
       ],
-      "hours": 18,
-      "views": 237,
-      "changeType": "down",
-      "change": "21",
-      "url": "https://www.munpia.com/novel/detail/610501",
+      "hours": 12,
+      "views": 356,
+      "changeType": "up",
+      "change": "1",
+      "url": "https://www.munpia.com/novel/detail/613613",
       "unavailable": false
     },
     {
-      "rank": 172,
-      "title": "재벌집에서 쫓겨났는데 내가 더 잘나감",
-      "author": "꼬노네",
+      "rank": 152,
+      "title": "선협 세계 재벌가 망나니가 되었다",
+      "author": "리디아.",
+      "genres": [
+        "무협",
+        "현대판타지"
+      ],
+      "hours": 21,
+      "views": 356,
+      "changeType": "up",
+      "change": "19",
+      "url": "https://www.munpia.com/novel/detail/618289",
+      "unavailable": false
+    },
+    {
+      "rank": 153,
+      "title": "해고 후 코스피 폭락함",
+      "author": "초선택자",
+      "genres": [
+        "현대판타지",
+        "판타지"
+      ],
+      "hours": 19,
+      "views": 355,
+      "changeType": "down",
+      "change": "5",
+      "url": "https://www.munpia.com/novel/detail/617312",
+      "unavailable": false
+    },
+    {
+      "rank": 154,
+      "title": "회귀했지만 아무것도 하기 싫다. 격렬히",
+      "author": "프프산",
       "genres": [
         "현대판타지"
       ],
-      "hours": 14,
-      "views": 237,
+      "hours": 24,
+      "views": 352,
       "changeType": "new",
       "change": "NEW",
-      "url": "https://www.munpia.com/novel/detail/619235",
+      "url": "https://www.munpia.com/novel/detail/619355",
       "unavailable": false
     },
     {
-      "rank": 173,
+      "rank": 155,
+      "title": "방송하는 천재 감정사가 되었다",
+      "author": "김튀김",
+      "genres": [
+        "현대판타지",
+        "퓨전"
+      ],
+      "hours": 23,
+      "views": 351,
+      "changeType": "up",
+      "change": "32",
+      "url": "https://www.munpia.com/novel/detail/619101",
+      "unavailable": false
+    },
+    {
+      "rank": 156,
+      "title": "평양 증발시킨 외계함선의 주인이 되었다!",
+      "author": "LunStellar",
+      "genres": [
+        "대체역사",
+        "현대판타지"
+      ],
+      "hours": 11,
+      "views": 340,
+      "changeType": "down",
+      "change": "16",
+      "url": "https://www.munpia.com/novel/detail/612852",
+      "unavailable": false
+    },
+    {
+      "rank": 157,
       "title": "해고 당했는데 철강 시세를 내가 정함",
       "author": "르블랑",
       "genres": [
         "현대판타지",
         "퓨전"
       ],
-      "hours": 4,
-      "views": 236,
-      "changeType": "down",
-      "change": "1",
+      "hours": 10,
+      "views": 334,
+      "changeType": "same",
+      "change": "—",
       "url": "https://www.munpia.com/novel/detail/619124",
       "unavailable": false
     },
     {
-      "rank": 174,
-      "title": "멸망을 달리는 캠핑카",
-      "author": "알콜성치매",
+      "rank": 158,
+      "title": "S급 헌터들이 집착하는 세계유일급 대장장이가 되었다",
+      "author": "샤이텔하우",
       "genres": [
-        "현대판타지",
-        "전쟁·밀리터리"
+        "현대판타지"
       ],
-      "hours": 17,
-      "views": 224,
-      "changeType": "down",
-      "change": "6",
-      "url": "https://www.munpia.com/novel/detail/619993",
+      "hours": 10,
+      "views": 331,
+      "changeType": "same",
+      "change": "—",
+      "url": "https://www.munpia.com/novel/detail/609612",
       "unavailable": false
     },
     {
-      "rank": 175,
-      "title": "10년간 준비한 아포칼립스",
-      "author": "느린생각",
+      "rank": 159,
+      "title": "300년 만에 돌아온 천재화가",
+      "author": "경우勁雨",
+      "genres": [
+        "현대판타지",
+        "일반소설"
+      ],
+      "hours": 20,
+      "views": 331,
+      "changeType": "down",
+      "change": "17",
+      "url": "https://www.munpia.com/novel/detail/613508",
+      "unavailable": false
+    },
+    {
+      "rank": 160,
+      "title": "미국 시골 방송국에 미래식 방송을 풀었다",
+      "author": "고별",
+      "genres": [
+        "현대판타지"
+      ],
+      "hours": 12,
+      "views": 330,
+      "changeType": "up",
+      "change": "20",
+      "url": "https://www.munpia.com/novel/detail/620748",
+      "unavailable": false
+    },
+    {
+      "rank": 161,
+      "title": "퇴사한 김 과장에 전세계 화학업계가 집착함",
+      "author": "MaUna",
+      "genres": [
+        "현대판타지"
+      ],
+      "hours": 23,
+      "views": 329,
+      "changeType": "down",
+      "change": "14",
+      "url": "https://www.munpia.com/novel/detail/610440",
+      "unavailable": false
+    },
+    {
+      "rank": 162,
+      "title": "해고 후 신내림으로 재벌 됨",
+      "author": "달백자기",
+      "genres": [
+        "현대판타지"
+      ],
+      "hours": 13,
+      "views": 320,
+      "changeType": "down",
+      "change": "16",
+      "url": "https://www.munpia.com/novel/detail/615791",
+      "unavailable": false
+    },
+    {
+      "rank": 163,
+      "title": "삼국지: 백마의종 공손찬이 천하를 독식함",
+      "author": "맥스.",
+      "genres": [
+        "대체역사",
+        "판타지"
+      ],
+      "hours": 11,
+      "views": 304,
+      "changeType": "down",
+      "change": "4",
+      "url": "https://www.munpia.com/novel/detail/615853",
+      "unavailable": false
+    },
+    {
+      "rank": 164,
+      "title": "해고당한 감독이 애니로 일본을 지배함",
+      "author": "RUT",
       "genres": [
         "현대판타지",
         "퓨전"
       ],
-      "hours": 5,
-      "views": 220,
-      "changeType": "down",
-      "change": "14",
-      "url": "https://www.munpia.com/novel/detail/612273",
+      "hours": 20,
+      "views": 302,
+      "changeType": "up",
+      "change": "5",
+      "url": "https://www.munpia.com/novel/detail/613129",
       "unavailable": false
     },
     {
-      "rank": 176,
-      "title": "거물들이 집착하는 주술천재 신입사원",
-      "author": "폭파중",
+      "rank": 165,
+      "title": "해고당한 한 차장이 회귀함",
+      "author": "해비베어",
       "genres": [
         "판타지",
         "현대판타지"
       ],
-      "hours": 6,
-      "views": 219,
+      "hours": 21,
+      "views": 300,
+      "changeType": "up",
+      "change": "5",
+      "url": "https://www.munpia.com/novel/detail/616822",
+      "unavailable": false
+    },
+    {
+      "rank": 166,
+      "title": "변리사를 해고하자 5천억 특허가 날아감",
+      "author": "간딴",
+      "genres": [
+        "현대판타지"
+      ],
+      "hours": 24,
+      "views": 295,
+      "changeType": "down",
+      "change": "13",
+      "url": "https://www.munpia.com/novel/detail/608858",
+      "unavailable": false
+    },
+    {
+      "rank": 167,
+      "title": "나 혼자 탑에서 낚시했더니 힐링이 미쳤다",
+      "author": "나이와키",
+      "genres": [
+        "현대판타지"
+      ],
+      "hours": 19,
+      "views": 292,
+      "changeType": "down",
+      "change": "7",
+      "url": "https://www.munpia.com/novel/detail/618620",
+      "unavailable": false
+    },
+    {
+      "rank": 168,
+      "title": "해고 후 선협에서 수선 문파 키우기",
+      "author": "난글",
+      "genres": [
+        "무협",
+        "퓨전"
+      ],
+      "hours": 8,
+      "views": 291,
+      "changeType": "up",
+      "change": "9",
+      "url": "https://www.munpia.com/novel/detail/619033",
+      "unavailable": false
+    },
+    {
+      "rank": 169,
+      "title": "고대의술 계승한 줄 모르고 버림받음",
+      "author": "글력",
+      "genres": [
+        "현대판타지"
+      ],
+      "hours": 10,
+      "views": 289,
+      "changeType": "down",
+      "change": "8",
+      "url": "https://www.munpia.com/novel/detail/617044",
+      "unavailable": false
+    },
+    {
+      "rank": 170,
+      "title": "코인 대박날 줄 모르고 해고에 이혼까지 당하고 버림받음",
+      "author": "늬파랑",
+      "genres": [
+        "현대판타지"
+      ],
+      "hours": 11,
+      "views": 284,
       "changeType": "up",
       "change": "3",
-      "url": "https://www.munpia.com/novel/detail/617728",
+      "url": "https://www.munpia.com/novel/detail/621007",
       "unavailable": false
     },
     {
-      "rank": 177,
-      "title": "퇴사 후 식당 차렸는데 거물들이 줄을 선다",
-      "author": "사바이",
-      "genres": [
-        "현대판타지",
-        "드라마"
-      ],
-      "hours": 15,
-      "views": 218,
-      "changeType": "up",
-      "change": "7",
-      "url": "https://www.munpia.com/novel/detail/612643",
-      "unavailable": false
-    },
-    {
-      "rank": 178,
+      "rank": 171,
       "title": "퓨전펑크 천재 해커는 외신을 해킹한다",
       "author": "범미르",
       "genres": [
         "SF",
         "퓨전"
       ],
-      "hours": 5,
-      "views": 216,
+      "hours": 11,
+      "views": 280,
       "changeType": "new",
       "change": "NEW",
       "url": "https://www.munpia.com/novel/detail/603762",
       "unavailable": false
     },
     {
-      "rank": 179,
+      "rank": 172,
+      "title": "10년간 준비한 아포칼립스",
+      "author": "느린생각",
+      "genres": [
+        "현대판타지",
+        "퓨전"
+      ],
+      "hours": 11,
+      "views": 279,
+      "changeType": "down",
+      "change": "16",
+      "url": "https://www.munpia.com/novel/detail/612273",
+      "unavailable": false
+    },
+    {
+      "rank": 173,
+      "title": "재벌집에서 쫓겨났는데 내가 더 잘나감",
+      "author": "꼬노네",
+      "genres": [
+        "현대판타지"
+      ],
+      "hours": 20,
+      "views": 279,
+      "changeType": "new",
+      "change": "NEW",
+      "url": "https://www.munpia.com/novel/detail/619235",
+      "unavailable": false
+    },
+    {
+      "rank": 174,
+      "title": "만렙 블랙 요원은 쉬고 싶다.",
+      "author": "임완",
+      "genres": [
+        "현대판타지",
+        "전쟁·밀리터리"
+      ],
+      "hours": 9,
+      "views": 268,
+      "changeType": "down",
+      "change": "8",
+      "url": "https://www.munpia.com/novel/detail/617136",
+      "unavailable": false
+    },
+    {
+      "rank": 175,
       "title": "퇴사 후 폐가를 고쳤더니 생츄어리가 되었다",
       "author": "일만권",
       "genres": [
         "현대판타지"
       ],
-      "hours": 18,
-      "views": 211,
+      "hours": 24,
+      "views": 268,
       "changeType": "new",
       "change": "NEW",
       "url": "https://www.munpia.com/novel/detail/618586",
       "unavailable": false
     },
     {
-      "rank": 180,
-      "title": "해고 당하면서 받은 코인이 1조가 됐다",
-      "author": "환승이직왕",
+      "rank": 176,
+      "title": "방출된 투수가 160km를 던짐",
+      "author": "검은은하",
       "genres": [
-        "현대판타지"
+        "스포츠",
+        "판타지"
       ],
-      "hours": 7,
-      "views": 204,
-      "changeType": "up",
-      "change": "10",
-      "url": "https://www.munpia.com/novel/detail/619917",
-      "unavailable": false
-    },
-    {
-      "rank": 181,
-      "title": "고대의술 계승한 줄 모르고 버림받음",
-      "author": "글력",
-      "genres": [
-        "현대판타지"
-      ],
-      "hours": 4,
-      "views": 201,
+      "hours": 9,
+      "views": 264,
       "changeType": "down",
-      "change": "11",
-      "url": "https://www.munpia.com/novel/detail/617044",
+      "change": "9",
+      "url": "https://www.munpia.com/novel/detail/613908",
       "unavailable": false
     },
     {
-      "rank": 182,
-      "title": "그만둔 보조작가 대본에 연예계가 난리남",
-      "author": "피자소주",
-      "genres": [
-        "현대판타지"
-      ],
-      "hours": 4,
-      "views": 198,
-      "changeType": "down",
-      "change": "2",
-      "url": "https://www.munpia.com/novel/detail/614755",
-      "unavailable": false
-    },
-    {
-      "rank": 183,
-      "title": "삼국지 회귀 마초, 영웅호걸을 싹쓸이하다",
-      "author": "골든라이언",
-      "genres": [
-        "대체역사",
-        "퓨전"
-      ],
-      "hours": 18,
-      "views": 198,
-      "changeType": "up",
-      "change": "4",
-      "url": "https://www.munpia.com/novel/detail/611026",
-      "unavailable": false
-    },
-    {
-      "rank": 184,
-      "title": "유배지로 쫓겨난 에이스가 일하는 방식",
-      "author": "몬도리아",
-      "genres": [
-        "현대판타지",
-        "드라마"
-      ],
-      "hours": 19,
-      "views": 197,
-      "changeType": "down",
-      "change": "6",
-      "url": "https://www.munpia.com/novel/detail/612399",
-      "unavailable": false
-    },
-    {
-      "rank": 185,
-      "title": "해고당한 헌터가 EX급 버퍼였다",
-      "author": "루리나",
-      "genres": [
-        "현대판타지"
-      ],
-      "hours": 13,
-      "views": 194,
-      "changeType": "down",
-      "change": "18",
-      "url": "https://www.munpia.com/novel/detail/618691",
-      "unavailable": false
-    },
-    {
-      "rank": 186,
-      "title": "코인 대박날 줄 모르고 해고에 이혼까지 당하고 버림받음",
-      "author": "늬파랑",
-      "genres": [
-        "현대판타지"
-      ],
-      "hours": 5,
-      "views": 191,
-      "changeType": "up",
-      "change": "14",
-      "url": "https://www.munpia.com/novel/detail/621007",
-      "unavailable": false
-    },
-    {
-      "rank": 187,
+      "rank": 177,
       "title": "나 하나 해고했다고, 대기업들이 줄줄이 부도남",
       "author": "또녜",
       "genres": [
         "판타지",
         "현대판타지"
       ],
-      "hours": 4,
-      "views": 187,
+      "hours": 10,
+      "views": 264,
       "changeType": "down",
-      "change": "16",
+      "change": "15",
       "url": "https://www.munpia.com/novel/detail/616369",
       "unavailable": false
     },
     {
+      "rank": 178,
+      "title": "거물들이 집착하는 주술천재 신입사원",
+      "author": "폭파중",
+      "genres": [
+        "판타지",
+        "현대판타지"
+      ],
+      "hours": 12,
+      "views": 263,
+      "changeType": "up",
+      "change": "5",
+      "url": "https://www.munpia.com/novel/detail/617728",
+      "unavailable": false
+    },
+    {
+      "rank": 179,
+      "title": "각하의 정치가 대국적임",
+      "author": "빅타이거",
+      "genres": [
+        "대체역사",
+        "퓨전"
+      ],
+      "hours": 14,
+      "views": 263,
+      "changeType": "up",
+      "change": "3",
+      "url": "https://www.munpia.com/novel/detail/614739",
+      "unavailable": false
+    },
+    {
+      "rank": 180,
+      "title": "변경백가 전설의 데릴사위",
+      "author": "베르헤라",
+      "genres": [
+        "판타지"
+      ],
+      "hours": 9,
+      "views": 261,
+      "changeType": "up",
+      "change": "6",
+      "url": "https://www.munpia.com/novel/detail/617386",
+      "unavailable": false
+    },
+    {
+      "rank": 181,
+      "title": "멸망을 달리는 캠핑카",
+      "author": "알콜성치매",
+      "genres": [
+        "현대판타지",
+        "전쟁·밀리터리"
+      ],
+      "hours": 23,
+      "views": 259,
+      "changeType": "down",
+      "change": "17",
+      "url": "https://www.munpia.com/novel/detail/619993",
+      "unavailable": false
+    },
+    {
+      "rank": 182,
+      "title": "해고 후 퇴직금으로 SS급 능력을 받았다",
+      "author": "기획자K",
+      "genres": [
+        "현대판타지",
+        "퓨전"
+      ],
+      "hours": 10,
+      "views": 257,
+      "changeType": "down",
+      "change": "17",
+      "url": "https://www.munpia.com/novel/detail/610284",
+      "unavailable": false
+    },
+    {
+      "rank": 183,
+      "title": "배신당할 줄 알고 특허를 숨김",
+      "author": "골방개발자",
+      "genres": [
+        "현대판타지",
+        "SF"
+      ],
+      "hours": 24,
+      "views": 255,
+      "changeType": "down",
+      "change": "29",
+      "url": "https://www.munpia.com/novel/detail/610501",
+      "unavailable": false
+    },
+    {
+      "rank": 184,
+      "title": "그만둔 보조작가 대본에 연예계가 난리남",
+      "author": "피자소주",
+      "genres": [
+        "현대판타지"
+      ],
+      "hours": 10,
+      "views": 253,
+      "changeType": "down",
+      "change": "10",
+      "url": "https://www.munpia.com/novel/detail/614755",
+      "unavailable": false
+    },
+    {
+      "rank": 185,
+      "title": "회귀한 신입사원의 눈에 비밀이 보임",
+      "author": "복면작가",
+      "genres": [
+        "현대판타지",
+        "드라마"
+      ],
+      "hours": 8,
+      "views": 251,
+      "changeType": "down",
+      "change": "6",
+      "url": "https://www.munpia.com/novel/detail/609116",
+      "unavailable": false
+    },
+    {
+      "rank": 186,
+      "title": "해고당한 삼촌이 국가권력급 헌터였다",
+      "author": "고독인간",
+      "genres": [
+        "현대판타지",
+        "퓨전"
+      ],
+      "hours": 13,
+      "views": 247,
+      "changeType": "new",
+      "change": "NEW",
+      "url": "https://www.munpia.com/novel/detail/619831",
+      "unavailable": false
+    },
+    {
+      "rank": 187,
+      "title": "퇴사 후 식당 차렸는데 거물들이 줄을 선다",
+      "author": "사바이",
+      "genres": [
+        "현대판타지",
+        "드라마"
+      ],
+      "hours": 21,
+      "views": 243,
+      "changeType": "up",
+      "change": "3",
+      "url": "https://www.munpia.com/novel/detail/612643",
+      "unavailable": false
+    },
+    {
       "rank": 188,
+      "title": "해고 당하면서 받은 코인이 1조가 됐다",
+      "author": "환승이직왕",
+      "genres": [
+        "현대판타지"
+      ],
+      "hours": 13,
+      "views": 243,
+      "changeType": "down",
+      "change": "13",
+      "url": "https://www.munpia.com/novel/detail/619917",
+      "unavailable": false
+    },
+    {
+      "rank": 189,
+      "title": "해고당한 헌터가 EX급 버퍼였다",
+      "author": "루리나",
+      "genres": [
+        "현대판타지"
+      ],
+      "hours": 19,
+      "views": 241,
+      "changeType": "down",
+      "change": "17",
+      "url": "https://www.munpia.com/novel/detail/618691",
+      "unavailable": false
+    },
+    {
+      "rank": 190,
+      "title": "종말의 각성자가 되었다",
+      "author": "짬뽕조아",
+      "genres": [
+        "현대판타지",
+        "SF"
+      ],
+      "hours": 8,
+      "views": 236,
+      "changeType": "new",
+      "change": "NEW",
+      "url": "https://www.munpia.com/novel/detail/599072",
+      "unavailable": false
+    },
+    {
+      "rank": 191,
       "title": "회귀한 공무원이 돈을 너무 잘 번다",
       "author": "리븐",
       "genres": [
         "현대판타지",
         "드라마"
       ],
-      "hours": 7,
-      "views": 186,
+      "hours": 13,
+      "views": 236,
       "changeType": "new",
       "change": "NEW",
       "url": "https://www.munpia.com/novel/detail/616446",
       "unavailable": false
     },
     {
-      "rank": 189,
+      "rank": 192,
       "title": "공개 페이지에서 비노출된 작품",
       "author": "",
       "genres": [],
@@ -2786,166 +2830,121 @@
       "unavailableReason": "로그인·성인 인증 또는 작품 상태로 세부 정보가 공개되지 않았습니다."
     },
     {
-      "rank": 190,
-      "title": "해고당한 삼촌이 국가권력급 헌터였다",
-      "author": "고독인간",
+      "rank": 193,
+      "title": "기사가 퀘스트로 강해짐",
+      "author": "칼튼90",
       "genres": [
-        "현대판타지",
+        "판타지",
         "퓨전"
-      ],
-      "hours": 7,
-      "views": 183,
-      "changeType": "new",
-      "change": "NEW",
-      "url": "https://www.munpia.com/novel/detail/619831",
-      "unavailable": false
-    },
-    {
-      "rank": 191,
-      "title": "꼼수로 섭종각 막았더니 해고당함",
-      "author": "곰산타",
-      "genres": [
-        "현대판타지",
-        "판타지"
       ],
       "hours": 8,
-      "views": 181,
+      "views": 231,
       "changeType": "down",
-      "change": "8",
-      "url": "https://www.munpia.com/novel/detail/616271",
-      "unavailable": false
-    },
-    {
-      "rank": 192,
-      "title": "해고 후 퇴직금으로 SS급 능력을 받았다",
-      "author": "기획자K",
-      "genres": [
-        "현대판타지",
-        "퓨전"
-      ],
-      "hours": 4,
-      "views": 172,
-      "changeType": "down",
-      "change": "15",
-      "url": "https://www.munpia.com/novel/detail/610284",
-      "unavailable": false
-    },
-    {
-      "rank": 193,
-      "title": "방출된 투수가 160km를 던짐",
-      "author": "검은은하",
-      "genres": [
-        "스포츠",
-        "판타지"
-      ],
-      "hours": 3,
-      "views": 167,
-      "changeType": "new",
-      "change": "NEW",
-      "url": "https://www.munpia.com/novel/detail/613908",
+      "change": "38",
+      "url": "https://www.munpia.com/novel/detail/614481",
       "unavailable": false
     },
     {
       "rank": 194,
-      "title": "몬스터 해체 9년차는 한 칼에 끝냄",
-      "author": "런타임",
+      "title": "해고당한 의사가 알고보니 천재 써전",
+      "author": "돼지복실이",
       "genres": [
-        "현대판타지",
-        "판타지"
+        "현대판타지"
       ],
-      "hours": 13,
-      "views": 166,
+      "hours": 8,
+      "views": 218,
       "changeType": "down",
-      "change": "20",
-      "url": "https://www.munpia.com/novel/detail/611487",
+      "change": "16",
+      "url": "https://www.munpia.com/novel/detail/615059",
       "unavailable": false
     },
     {
       "rank": 195,
-      "title": "미래 코드를 읽는 개발자는 차원이 다르다",
-      "author": "해물조림",
-      "genres": [
-        "현대판타지"
-      ],
-      "hours": 15,
-      "views": 166,
-      "changeType": "down",
-      "change": "13",
-      "url": "https://www.munpia.com/novel/detail/613480",
-      "unavailable": false
-    },
-    {
-      "rank": 196,
       "title": "측정불가 지능으로 회귀했다",
       "author": "팟장",
       "genres": [
         "현대판타지",
         "대체역사"
       ],
-      "hours": 5,
-      "views": 165,
+      "hours": 11,
+      "views": 216,
       "changeType": "down",
       "change": "2",
       "url": "https://www.munpia.com/novel/detail/608560",
       "unavailable": false
     },
     {
-      "rank": 197,
-      "title": "명예퇴직당한 전귀 (전투귀신.돈귀신)",
-      "author": "모모다",
+      "rank": 196,
+      "title": "삼국지 회귀 마초, 영웅호걸을 싹쓸이하다",
+      "author": "골든라이언",
       "genres": [
-        "무협",
+        "대체역사",
         "퓨전"
       ],
-      "hours": 19,
-      "views": 165,
-      "changeType": "up",
-      "change": "2",
-      "url": "https://www.munpia.com/novel/detail/608937",
+      "hours": 24,
+      "views": 208,
+      "changeType": "same",
+      "change": "—",
+      "url": "https://www.munpia.com/novel/detail/611026",
+      "unavailable": false
+    },
+    {
+      "rank": 197,
+      "title": "꼼수로 섭종각 막았더니 해고당함",
+      "author": "곰산타",
+      "genres": [
+        "현대판타지",
+        "판타지"
+      ],
+      "hours": 14,
+      "views": 200,
+      "changeType": "down",
+      "change": "6",
+      "url": "https://www.munpia.com/novel/detail/616271",
       "unavailable": false
     },
     {
       "rank": 198,
+      "title": "해고 당한 일용직 아빠한테 돈벼락이 쏟아짐",
+      "author": "류도율",
+      "genres": [
+        "현대판타지",
+        "판타지"
+      ],
+      "hours": 9,
+      "views": 196,
+      "changeType": "down",
+      "change": "1",
+      "url": "https://www.munpia.com/novel/detail/619416",
+      "unavailable": false
+    },
+    {
+      "rank": 199,
+      "title": "눈 떠보니 백작이 되어 있었다",
+      "author": "용은",
+      "genres": [
+        "판타지"
+      ],
+      "hours": 11,
+      "views": 194,
+      "changeType": "down",
+      "change": "10",
+      "url": "https://www.munpia.com/novel/detail/610664",
+      "unavailable": false
+    },
+    {
+      "rank": 200,
       "title": "삼국지, 무력 222 최강폭군이 되었다",
       "author": "운암선생",
       "genres": [
         "대체역사",
         "현대판타지"
       ],
-      "hours": 7,
-      "views": 163,
-      "changeType": "down",
-      "change": "9",
-      "url": "https://www.munpia.com/novel/detail/607040",
-      "unavailable": false
-    },
-    {
-      "rank": 199,
-      "title": "만렙 블랙 요원은 쉬고 싶다.",
-      "author": "임완",
-      "genres": [
-        "현대판타지",
-        "전쟁·밀리터리"
-      ],
-      "hours": 3,
-      "views": 161,
+      "hours": 13,
+      "views": 188,
       "changeType": "down",
       "change": "8",
-      "url": "https://www.munpia.com/novel/detail/617136",
-      "unavailable": false
-    },
-    {
-      "rank": 200,
-      "title": "변경백가 전설의 데릴사위",
-      "author": "베르헤라",
-      "genres": [
-        "판타지"
-      ],
-      "hours": 3,
-      "views": 158,
-      "changeType": "new",
-      "change": "NEW",
-      "url": "https://www.munpia.com/novel/detail/617386",
+      "url": "https://www.munpia.com/novel/detail/607040",
       "unavailable": false
     }
   ]
